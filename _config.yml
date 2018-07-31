@@ -1,0 +1,21 @@
+# Themes are encouraged to use these universal variables
+# so be sure to set them if your theme uses them.
+#
+title : Course Site for Political Science 209 -- Fall 2018
+author :
+  name : Florian M. Hollenbach
+  email : fhollenbach@tamu.edu
+  github : fhollenbach
+  twitter : nil
+  feedburner : nil
+
+markdown: kramdown
+theme: jekyll-theme-dinky
+
+exclude: [".rvmrc", ".rbenv-version", "ReadMe.md", "Rakefile", "changelog.md", "License.md"]
+
+
+production_url : https://fhollenbach.github.io/Polisci209_2018
+
+JB :
+  version : 0.3.0
