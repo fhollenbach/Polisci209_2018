@@ -13,13 +13,13 @@ __Office:__ 2061 Allen Building; __Phone:__ 979-845-5021
 __Office Hours:__ Monday, Wednesday, & Friday: 10:40am - 11:45am or by appointment
 
 ### Teaching Assistant:
-__John Niehaus__
+__TA A__
 
-__Email:__ niehausjm@tamu.edu
+__Email:__ aa@tamu.edu
 
-__Office:__  2044 Allen Building
+__Office:__   Allen Building
 
-__Office Hours:__  Tuesday 11am - noon & Thursday 9:00am - 10am.
+__Office Hours:__  TBA.
 
 
 
@@ -85,8 +85,8 @@ Friday. Classes will not simply be lecture based. We will cover programming, exa
 over problem sets. This class will cover a variety of
 (complicated) concepts. Generally concepts will first be covered in
 the readings and we will go over specific applications and your
-questions on these concepts in class. It is therefore important that
-you do the required reading before each class period. For most weeks,
+questions on these concepts in class. It is therefore important __for you to do
+you do the required reading before each class period__. For most weeks,
 the readings & topics covered can be quite technical and challenging,
 which means it is even more important that you try to understand the
 material before coming to class. If you do not understand part of the
@@ -130,13 +130,13 @@ grade
 	-  Attendance will be marked at the beginning of each
            class. You are allowed to have two free absences. After two
            absences, I will deduct one point from the 10 possible
-           attendance points for each absence. Excused absences do not
-           deduct from your free absences. I will decide what counts
+           attendance points for each unexcused absence. Excused absences are not
+           deducted from your grade. I will decide what counts
            as excused on a case-by-case basis, but in general absences
            will only be excused for good reasons. You must contact me
-           __before__ class.
-		   If you have more than 15 unexcused absences, you will
-           receive an F in the course. Similarly, while unexpected
+           __before__ missing class.
+		   __If you have more than 15 unexcused absences, you will
+           receive an F in the course.__ Similarly, while unexpected
            events can cause tardiness, if you repeatedly arrive
            late to class, I reserve the right to mark late arrivals as
            absences. Should you arrive to class late, be sure to let
@@ -146,6 +146,7 @@ grade
            attentive. If you repeatedly fail to pay attention
            (e.g. fall asleep or play on your cell phone), I may
            deduct points from your participation/attendance grade.
+    - If you do have health problems that do not allow you to perform well in class, please come talk to ma ASAP. I am willing to work with you, but this is only possible if you come talk to me early enough.
 
 - Three writing assignment: 30% of class grade (10% each)
 	- The writing assignments in this class will be short memos
@@ -156,18 +157,17 @@ grade
           each of the three assignment you will provide a first draft to a fellow
           student, who will provide comments. You will incorporate the
           comments and will then be graded on the final version.
-		  Your comments to your fellow students will be graded
-          pass/fail as a homework exercise.
-		  __The final version of the written assignments are to be
-          submitted via Turnitin on eCampus prior to class on the day
-          they are due.__
+		  Your comments to your fellow students will be graded as a homework exercise.
+		  __All versions of the written assignments (first & final draft) are to be
+          submitted via eCampus prior to class on the day
+          they are due. Peer-review feedback is also submitted on eCampus__
 		  
 - Exam 1: 15% of class grade
 	- The first exam will cover the first half of the semester and
           will be worth 15% of your class grade. The exams focus on
           all of the material covered up to the exam, includng the
-          readings, lectures, and exercises. The assigned exercises
-          should serve as excellent preparation for the exams
+          readings, lectures, and exercises. __The assigned exercises
+          should serve as excellent preparation for the exams.__
 		  
 - Final Exam (cumulative): 25% of class grade
 	- The final exam will cover the material from the whole
@@ -184,11 +184,10 @@ assignments, exams, and the overall class grade will be the following:
 
 
 Given that this course is an official writing course, you __must pass
-the writing__ part of the class to receive graduation credit. As noted
-on the website of the Texas A&M Writing Center: "If you complete a
+the writing__ part of the class, i.e., the written assignments, to receive graduation credit. As noted on the website of the Texas A&M Writing Center: "If you complete a
 course with a passing grade but have not passed the W or C portion of
 the course, you will not get the graduation credit for that W or C
-course."
+course." This is not negotiable.
 
 ### WRITING HELP:
 The University Writing Center (UWC), located in 214 Evans Library and
@@ -206,12 +205,12 @@ page at writingcenter.tamu.edu, or stop by in person.
 
 ### ACADEMIC HONESTY:
 All students should follow the highest standards of academic
-integrity. Cheating or plagiarism will not be tolerated in any way. If
+integrity. __Cheating or plagiarism will not be tolerated in any way.__ If
 you are unsure what entails plagiarism, come talk to me. For more
 info, see: [http://student-rules.tamu.edu/aggiecode &
 http://aggiehonor.tamu.edu](http://student-rules.tamu.edu/aggiecode &
 http://aggiehonor.tamu.edu). “An Aggie does not lie, cheat or steal, or
-tolerate those who do.”
+tolerate those who do.” Your written assignments are to be submitted via Turnitin, which makes the detection of plagiarism and cheating very easy. Any cases of cheating or plagiarism will be submitted to the academic honor council. 
 
 Regarding group work: Unless explicitly otherwise specified, your
 homework and assignments are not to be done in groups and should be
@@ -223,20 +222,11 @@ the problem yourself, otherwise you are only hindering your own
 learning.
 
 ### READINGS & SOFTWARE:
-We will primarily use one book, which is available in the Texas A&M
-bookstore. Unfortunately the book is quite pricey, but you should be
-able to find cheaper versions (used) online. I would strongly
-encourage you to acquire the hard copy of the __fourth edition__. All
-references will be made with respect to the __fourth edition__ of the
-book. If you do decide to get a different version, it will be your
-responsibility to make sure you are reading the correct parts and
-doing the correct exercises.
+We will primarily use Kosuke Imai's "Quantitative Social Science", which is available in the Texas A&M bookstore. You will need the hard copy of the book, otherwise it will be nearly impossible to pass the class. The book is comparatively affordable. If you truly can not afford to buy the book, come talk to me. 
 
-__Required book__: Freedman, David, Robert Pisani, and Roger
-Purves. 2007. Statistics. 4th Edition. W. W. Norton and Company. New
-York. ISBN: 0393929728.
+__Required book__: Imai, Kosuke. 2017. Quantitative Social Science: An Introduction. Princeton University Press. Princeton, NJ. ISBN: 978-0-691-16703-9.
 
-You should have the book within the first week of class.
+You should have the book prior to the first day of class.
 
 For part of this class we will be working on the computer with
 statistical software. We will use the statistical programming language
@@ -265,7 +255,7 @@ readings or only attending class will not be sufficient.
 
 
 I have decided that for the first time, laptops will not be allowed in
-class unless specifically announced. Laptops have been shown to be a
+class unless we are working in R together. Laptops have been shown to be a
 distraction not only to the students using them but also fellow
 class mates. [A recent study has found that not having laptops in class
 can have a similar effect as hiring a SAT tutor](https://www.washingtonpost.com/news/wonk/wp/2016/05/16/why-smart-kids-shouldnt-use-laptops-in-class/?utm_term=.5dd2e4949441) 
