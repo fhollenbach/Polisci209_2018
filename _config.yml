@@ -10,7 +10,7 @@ author :
   feedburner : nil
 
 markdown: kramdown
-theme: jekyll-theme-dinky
+theme: jekyll-theme-slate
 
 exclude: [".rvmrc", ".rbenv-version", "ReadMe.md", "Rakefile", "changelog.md", "License.md"]
 
