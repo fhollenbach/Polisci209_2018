@@ -63,18 +63,20 @@ At the end of the semester, after completing this course, students are expected 
 - Understand the concept of causality and experimental designs
 
 - Be able to do simple programming in R, such as:
-  - plot and interpret histograms, scatterplots, boxplots
-  - run simple statistical models
-  - simple mapping
+    - merge and subset data files
+    - plot and interpret histograms, scatterplots, boxplots
+    - run simple statistical models
   
 - Explain and understand simple descriptive, univariate, and bivariate
 statistical concepts, such as:
-	– mean
+    - concepts of causality
+    - fundamental problem of causal inference
+    - randomization
+    – mean
 	– (co)variance, correlation
 	– measurement
 	– Central Limit Theorem
 	– bivariate linear regression
-	– multivariate linear regression
 	- hypothesis tests
 
 
@@ -210,7 +212,7 @@ you are unsure what entails plagiarism, come talk to me. For more
 info, see: [http://student-rules.tamu.edu/aggiecode &
 http://aggiehonor.tamu.edu](http://student-rules.tamu.edu/aggiecode &
 http://aggiehonor.tamu.edu). “An Aggie does not lie, cheat or steal, or
-tolerate those who do.” Your written assignments are to be submitted via Turnitin, which makes the detection of plagiarism and cheating very easy. Any cases of cheating or plagiarism will be submitted to the academic honor council. 
+tolerate those who do.” Your written assignments are to be submitted via Turnitin, which makes the detection of plagiarism and cheating very easy. __Any cases of cheating or plagiarism will be submitted to the academic honor council, no exceptions.__
 
 Regarding group work: Unless explicitly otherwise specified, your
 homework and assignments are not to be done in groups and should be
@@ -361,153 +363,110 @@ notification.
 ### Week 1
 
 
-#### Monday, August 28th:  What are we doing in this class?
+#### Monday, August 27th:  What are we doing in this class?
 - Read Syllabus
-- Think of introduction of yourself
+- Think of an introduction of yourself
 - Buy book
 - Buy calculator
 
-#### Wednesday, August 30st: Questions 
-- Review [notes on Questions](../img/images/notes-02-questions.pdf)
+#### Wednesday, August 29st: Introduction to R 
+- Read & Work through Chapter 1, pages 1-30
 
 
+#### Friday, August 31st: PANEL
+- Panel with Polisci Alumni
 
-#### Friday, September 1st: Models
-- Review [notes on Models](../img/images/notes-03-models.pdf)
-- [Slides for Week1](../img/images/slides_209_week1.pdf)
 
 ### Week 2
+#### Monday, September 3rd: More introduction to R
+- Getting everyone up to speed
+- Finish SWIRL Exercises INTRO1 & INTRO2
+
+#### Wednesday, September 5th:  Review HW + Introduction to causality
+- Homework 1, QSS Exercise 1.5 due
+- Read & Work through QSS Chapter 2.1-2.4 
+
+#### Friday, September 7th: In class exercise on causality
+- Homework finish SWIRL Exercise CAUSALITY 1
+- [Download data here](link)
 
 
-#### Monday, September 4ht: Getting started in R
-- Review [notes on starting in R](../img/images/notes-04-computing.pdf)
-- Complete [Assignment 1](../img/images/assign1.pdf)
-- [R script for class](../img/images/rscript_introR.R)
 
 
-#### Wednesday, September 6th: Causal Inference
-- Read chp. 1-2 of FPP
 
 
-#### Friday, September 8th: Catching Up + Loading data into R & Histograms
-- Review [notes on loading data in R](../img/images/notes-05-loading-data.pdf)
-- [Slides for Week 2](../img/images/slidesRCausal.pdf)
-- [Data](../img/images/data.zip)
 
 ### Week 3
 
-#### Monday, September 11th: Catching Up + Histograms in R 
-- Read ch. 3 of FPP
-- Read [notes on Histogram](../img/images/notes-08-histograms-r.pdf)
-- Complete [Assignment 2](../img/images/assign2.pdf)
+#### Monday, September 10th: continue exercise on RCTs
+
+#### Wednesday, September 12th:  Review HW, Observational Studies
+- Homework 2 due: QSS exercise 2.8.2
+- Read & Work through QSS Chapter 2.5- 2.6
 
 
 
-
-#### Wednesday, September 13th: Catching Up + Average and SD
-- Read ch. 4 of FPP.
-- [Rcode Histograms](../img/images/RcodeHistograms.R)
-- [Data from class](../img/images/data.csv)
-
-
-
-
-
-
-
-#### Friday, September 15th: Starting Writing Assignment 1
-- Bring laptop if you have one
-- [Data for Writing Assignment](../img/images/data/nominate.csv)
-- [Writing Assignment 1](../img/images/WritingAssignment.pdf)
+#### Friday, September 14th: Observational Studies Continued
+- Homework finish SWIRL Exercise CAUSALITY 2
+- In class exercise on observational studies
 
 
 ### Week 4
 
-#### Monday, September 18th: Average and SD in R + Normal Approximation
-- [Review Notes on Average and SD in R](../img/images/notes-10-average-sd-r.pdf)
-- Read ch. 5 of FPP
+#### Monday, September 17th: Review Homework & Introduction to Measurement
+- Homework 3, QSS Exercise 2.8.3
+- Read & Work through QSS 3.1 - 3.4
+
+
+#### Wednesday, September 19th: Measurement Exercise
 
 
 
 
-#### Wednesday, September 20th: Catch-up Normal Approximation
-- [Review Notes on Average and SD in R](../img/images/notes-10-average-sd-r.pdf)
-- Read ch. 5 of FPP
-
-
-#### Friday, September 22th: Measurement + Measurement Exercise
-- Read ch. 6 of FPP.
-- __Email Writing Assignmment 1 to peer review partner__ 
-- [Slides from last week - Histogram, Mean, SD](../img/images/slidesHistogramsMeanSD.pdf)
-
-
+#### Friday, September 21st: Univariate Data Summaries
+- Homework finish SWIRL Exercise MEASUREMENT 1
 
 
 
 ### Week 5
 
-#### Monday, September 25th: Scatterplots and Correlation
-- Read chs. 7-8 of FPP
-- __Send Writing Assignment 1 Comments to peer review partner__ (counts as assignment 3)
+#### Monday, September 24th: Bivariate Relationships
+- Read & Work through QSS 3.5 - 3.7
 
 
-#### Wednesday, September 27th: Scatterplots and Correlation in R
-- [Slides on Correlation](../img/images/correlationScatterPlots.pdf)
-- [Play this game (web)](http://www.rossmanchance.com/applets/GuessCorrelation.html) and track your performance.
+#### Wednesday, September 26th: In class exercise Measurement & Bivariate Relationships
+- Homework finish SWIRL Exercise MEASUREMENT 1
 
 
-#### Friday, September 29th: Regression
-- [Review Notes on Scatterplots and Correlation in R](../img/images/notes-18-correlation-r.pdf)
-- [College Football Data](../img/images/CollegeFB.csv)
-- Read ch. 9.5 & 10 
-- __Writing Assignment due today__
-
-
+#### Friday, September 28th: Start working on Writing Assignment 1
 
 
 ### Week 6
 
-#### Monday, October 2th: Regression
-- Read ch. 11 of FPP
-- [Complete Assignment 4](../img/images/assign4.pdf)
+#### Monday, October 1st: Review HW & Introduction to Prediction
+- Homework 4, QSS Exercise 3.9.1
+- Read & Work through QSS 4.1
 
 
 
+#### Wednesday, October 3rd: Introduction to Prediction
+- Homework finish SWIRL Exercise PREDICTION 1
+- Read & Work through QSS 4.2 
 
-
-
-#### Wednesday, October 4th: Regression in R
-- Read ch. 12 of FPP
-- [Slides on Regression](../img/images/regression.pdf)
-
-
-#### Friday, October 6th: Review for Exam
- - [Complete Assignment 5](../img/images/assign5.pdf)
-
-
+#### Friday, October 5th: In class Exercise Prediction
 
 
 ### Week 7
 
-#### Monday, October 9th: Exam Review
+#### Monday, October 8th: Regression
+- Read & Work through QSS 4.3
+- Homework finish SWIRL Exercises PREDICTION 2
 
 
+#### Wednesday, October 10th: In class Exercise Prediction
+ - Homework finish SWIRL Exercises PREDICTION 3
 
-
-
-
-#### Wednesday, October 11th:  Exam 1 
-
-
-
-
-
-
-
-
-#### Friday, October 13th:  Exam 1 Results
-
-
+#### Friday, October 12th: Catch-Up Day & Regression Review
 
 
 
@@ -515,62 +474,26 @@ notification.
 
 ### Week 8
 
-#### Monday, October 16th:  Regression error RMS 
-- Chapter 11
-- [Review Notes on Scatterplots and Correlation in R](../img/images/notes-18-correlation-r.pdf)
+#### Monday, October 15th: __MIDTERM EXAM___
 
 
+#### Wednesday, October 17th:
 
-#### Wednesday, October 18th: - Notes on Regression in R & Multiple Regression
-- Read ch. 12 of FPP
-- [Notes on Regression in R](../img/images/notes-23-regression-r.pdf)
-- [Slides from class](../img/images/regression2.pdf)
-- [Rcode on Correlation/Regression from class](../img/images/rcode_cor.R)
-
-
-#### Friday, October 20th: Probability, Part 1
-- Read ch. 13 of FPP
-
-
-
-
-
-
-
-
-
-
+#### Friday, October 19th: Review HW + Intro Discovery
+- Homework 5, QSS exercise 4.5.1
+- Read & Work through QSS 5.1
 
 
 ### Week 9
 
-#### Monday, October 23rd: Getting Started on Writing Assignment 2
-- Bring laptop
-- [Complete Assignment 6](../img/images/assign6.pdf)
-- [Writing Assignment 2](../img/images/WritingAssignment2.pdf)
-- [Data for Writing Assignment](../img/images/data/Presdata.csv)
+#### Monday, October 22nd: In class Exercise Text as Data
+- Homework finish SWIRL Exercise DISCOVERY 1
 
 
+#### Wednesday, October 24th: Introduction to Probability
+- Read & Work through QSS 6.1
 
-
-
-
-
-
-#### Wednesday, October 25th: Probability, Part 2
--  Read ch. 14 of FPP
-
-
-
-
-#### Friday, October 27th: Law of Averages
-- Read ch. 16 of FPP. 
-
-
-
-
-
-
+#### Friday, October 26th: Playing Cards Exercises
 
 
 
@@ -582,67 +505,31 @@ notification.
 
 ### Week 10
 
-#### Monday, October 30: Expected Value and Standard Error
-- Read ch. 17 of FPP.
-- __Send writing assigment 2 to peer review partner__
+#### Monday, October 29th:  Reviewing Probability 1
+
+
+#### Wednesday, October 31st: Conditional Probability
+- Read & Work through QSS 6.2
 
 
 
 
-
-#### Wednesday, November 1st:  Normal Approximation for Probability Histograms
--  Read ch. 18 of FPP
-- __Send Writing Assignment 2 Comments to peer review partner__
-- [Slides from class](../img/images/probability.pdf)
-- [Rcode on Probability](../img/images/draws_forClass.R)
-
-
-
-
-#### Friday, November 3rd: Sample Surveys I
--  Read ch. 19 of FPP. 
-- __Writing Assignment 2 due today__
-
-
-
-
-
-
-
-
-
+#### Friday, November 2nd: In class Exercise on Probability
+- Read & Work through QSS 6.3
+- Homework finish SWIRL Exercise PROBABILITY 1
 
 
 
 ### Week 11
 
-#### Monday, November 6th: Sample Surveys II
-- Read ch. 20 of FPP.
+#### Monday, November 5th: More Probability
+- Read & Work through QSS 6.4 - 6.5
+- Homework finish SWIRL Exercise PROBABILITY 2
 
 
+#### Wednesday, November 7th: Reviewing Probability
 
-
-
-
-
-
-
-
-#### Wednesday, November 8th:  The Accuracy of Percentages
-- Read ch. 21 of FPP
-
-
-
-
-
-
-
-
-
-#### Friday, November 10th: The Accuracy of Percentages
-- Read ch. 21 of FPP
-- [Complete Assignment 8](../img/images/assign8.pdf)
-
+#### Friday, November 9th: Election Fraud in Russia Exercise
 
 
 
@@ -652,70 +539,49 @@ notification.
 
 ### Week 12
 
-#### Monday, November 13th: Surveys in the Real World
-- Read ch. 22 of FPP
-- [Writing Assignment 3](../img/images/WritingAssignment3.pdf)
-- [Data for Writing Assignment 3](../img/images/data/guns.csv)
-- [Slides Sampling](../img/images/sampling.pdf)
-- [Rcode Sampling](../img/images/draws_forClass.R)
+#### Monday, November 12th: Reviewing Homework 6
+Homework 6, QSS exercise 6.6.1 due
+
+#### Wednesday, November 14th:  Introduction to Uncertainty
+- Read & Work through QSS Chapter 7.1.1 - 7.1.4
 
 
+#### Friday, November 16th:  Exercises about Uncertainty
+- Read & Work through QSS Chapter 7.1.5 - 7.1.6
+- Homework finish SWIRL Exercise UNCERTAINTY 1
 
-#### Wednesday, November 15th:  The Accuracy of Averages
-- Read ch. 23 of FPP
-- [Slides Sampling](../img/images/sampling.pdf)
 
-
-#### Friday, November 17th: Class Canceled, Prof at conference
-- work on Writing Assignment
 
 ### Week 13
 
-#### Monday, November 20th: Alumni Panel
-- __Send writing assigment 3 to peer review partner via eCampus__
+#### Monday, November 19th: In class Exercises about Uncertainty
+- Read & Work through QSS Chapter 7.1.5 - 7.1.6
 
 
 
-
-#### Wednesday, November 22nd
+#### Wednesday, November 21st:
 Turkey Break!
 
 
 ### Week 14
+#### Monday, November 26th: In class Exercise about  Uncertainty 
+- Homework finish SWIRL Exercise UNCERTAINTY 2
 
-#### Monday, November 27th: Null hypothesis and Significance test \& More Tests for Averages 
-- Read ch. 26 of FFP
-- Read ch. 27 of FPP
-- __Send Writing Assignment 3 Comments to peer review partner__
-
-
+#### Wednesday, November 28th: Linear Regression with Uncertainty
+- Read & Work through QSS Chapter 7.3.1-7.3.4
 
 
-
-#### Wednesday, November 29nd: 
-
-
-
-
-
-
-
-#### Friday, December 1st: A closer look at significance
-- [Slides from Class](../img/images/testing.pdf)
-- [Practice Problems for Exam](../img/images/practice.pdf)
-
+#### Friday, November 30th: In class Exercise about Regression with Uncertainty
+- Read & Work through QSS Chapter 7.3.5-7.4
+- Homework finish SWIRL Exercise UNCERTAINTY 3
 
 
 
 ### Week 15
 
-#### Monday, December 4th: Maps in R
-- Review notes on Maps in R
-- __Writing Assignment 3 due before noon__
-- [Complete Assignment 9](../img/images/assign9.pdf)
+#### Monday, December 3rd: Review of Uncertainty
+- Homework 7, QSS exercise 7.5.3
 
-
-
-#### Wednesday, December 6th
+#### Wednesday, December 5th
 - Review for exam
 
