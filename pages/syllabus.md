@@ -13,9 +13,9 @@ __Office:__ 2061 Allen Building; __Phone:__ 979-845-5021
 __Office Hours:__ Monday, Wednesday, & Friday: 10:40am - 11:45am or by appointment
 
 ### Teaching Assistant:
-__TA A__
+__Hwalmin Jin__
 
-__Email:__ aa@tamu.edu
+__Email:__ jymh33@tamu.edu
 
 __Office:__   Allen Building
 
@@ -66,11 +66,11 @@ At the end of the semester, after completing this course, students are expected 
     - merge and subset data files
     - plot and interpret histograms, scatterplots, boxplots
     - run simple statistical models
+    - present data using graphics and descriptive statistics in a clear and informative manner
   
 - Explain and understand simple descriptive, univariate, and bivariate
 statistical concepts, such as:
     - concepts of causality
-    - fundamental problem of causal inference
     - randomization
     – mean
 	– (co)variance, correlation
@@ -78,7 +78,6 @@ statistical concepts, such as:
 	– Central Limit Theorem
 	– bivariate linear regression
 	- hypothesis tests
-
 
 ### COURSE STRUCTURE & REQUIREMENTS:
 
@@ -88,7 +87,7 @@ over problem sets. This class will cover a variety of
 (complicated) concepts. Generally concepts will first be covered in
 the readings and we will go over specific applications and your
 questions on these concepts in class. It is therefore important __for you to do
-you do the required reading before each class period__. For most weeks,
+you do the required reading and exercises before each class period__. Required readings and exercises for each day are listed under that date's header. For most weeks,
 the readings & topics covered can be quite technical and challenging,
 which means it is even more important that you try to understand the
 material before coming to class. If you do not understand part of the
@@ -120,13 +119,10 @@ I expect you to do the assigned readings for each class before the
 lecture, participate in class discussions, and come prepared with
 questions. Specifically, you will be graded on:
 
-- homework assignments/review exercises: 20% of class
+- homework assignments/review exercises: 30% of class
 grade
-	- homework assignments and review exercises will be graded on
-          pass/fail, i.e. your grade will be the percentage of
-          exercises you passed. You are allowed to miss two exercises
-          unexcused, i.e. if there are 20 total assignments your grade
-          will be the number of passed assignments divided by 18 (maximum 100%).
+	- SWIRL assignments will be graded on pass/fail and worth one point each, i.e. your grade will be the percentage of
+          the exercises you did. Other homework exercises will be graded and a full grade will count four points.
 
 - class attendance/participation: 10% of class grade
 	-  Attendance will be marked at the beginning of each
@@ -159,21 +155,18 @@ grade
           each of the three assignment you will provide a first draft to a fellow
           student, who will provide comments. You will incorporate the
           comments and will then be graded on the final version.
-		  Your comments to your fellow students will be graded as a homework exercise.
+		  Your comments to your fellow students will be graded like a homework exercise.
 		  __All versions of the written assignments (first & final draft) are to be
           submitted via eCampus prior to class on the day
           they are due. Peer-review feedback is also submitted on eCampus__
+		   
 		  
-- Exam 1: 15% of class grade
-	- The first exam will cover the first half of the semester and
-          will be worth 15% of your class grade. The exams focus on
-          all of the material covered up to the exam, includng the
+- Final Exam (cumulative): 30% of class grade
+	- The final exam will cover the material from the whole
+          class and will be worth 25% of your class grade. The exams focus on
+          all of the material covered up to the exam, including the
           readings, lectures, and exercises. __The assigned exercises
           should serve as excellent preparation for the exams.__
-		  
-- Final Exam (cumulative): 25% of class grade
-	- The final exam will cover the material from the whole
-          class and will be worth 25% of your class grade. 
 
 The grading scale (in %) used in this class for all written
 assignments, exams, and the overall class grade will be the following:
@@ -192,7 +185,7 @@ the course, you will not get the graduation credit for that W or C
 course." This is not negotiable.
 
 ### WRITING HELP:
-The University Writing Center (UWC), located in 214 Evans Library and
+The University Writing Center (UWC), located in 1.214 Sterling C. Evans Library and
 205 West Campus Library, offers one-on-one consultations to
 writers. UWC consultations are highly recommended but are not
 required. Help is available with brainstorming, researching, drafting,
@@ -202,7 +195,7 @@ editing skills. If you visit the UWC, take a copy of your writing
 assignment, a hard copy of your draft or any notes you may have, as
 well as any material you need help with. To find out more about UWC
 services or to schedule an appointment, call 458-1455, visit the web
-page at writingcenter.tamu.edu, or stop by in person.
+page at [writingcenter.tamu.edu](writingcenter.tamu.edu), or stop by in person. 
 
 
 ### ACADEMIC HONESTY:
@@ -255,8 +248,7 @@ homework, and the discussions in class. Thus, only doing the required
 readings or only attending class will not be sufficient.
 
 
-
-I have decided that for the first time, laptops will not be allowed in
+I have decided that laptops will not be allowed in
 class unless we are working in R together. Laptops have been shown to be a
 distraction not only to the students using them but also fellow
 class mates. [A recent study has found that not having laptops in class
@@ -355,8 +347,6 @@ I reserve the right to update/modify/clarify the syllabus with advance
 notification.
 
 
-
-
 ### Class Schedule
 
 
@@ -364,6 +354,7 @@ notification.
 
 
 #### Monday, August 27th:  What are we doing in this class?
+- Please fill out survey!
 - Read Syllabus
 - Think of an introduction of yourself
 - Buy book
@@ -373,22 +364,21 @@ notification.
 - Read & Work through Chapter 1, pages 1-30
 
 
-#### Friday, August 31st: PANEL
+#### Friday, August 31st: FASB PANEL
 - Panel with Polisci Alumni
 
 
 ### Week 2
 #### Monday, September 3rd: More introduction to R
-- Getting everyone up to speed
-- Finish SWIRL Exercises INTRO1 & INTRO2
+- Getting everyone up to speed with R
+- SWIRL Exercises INTRO1 & INTRO2
 
 #### Wednesday, September 5th:  Review HW + Introduction to causality
-- Homework 1, QSS Exercise 1.5 due
+- Assignment due: QSS Exercise 1.5
 - Read & Work through QSS Chapter 2.1-2.4 
 
 #### Friday, September 7th: In class exercise on causality
-- Homework finish SWIRL Exercise CAUSALITY 1
-- [Download data here](link)
+- [Download data for exercise here](link)
 
 
 
@@ -399,32 +389,32 @@ notification.
 ### Week 3
 
 #### Monday, September 10th: continue exercise on RCTs
+- Homework: SWIRL Exercise CAUSALITY 1
 
 #### Wednesday, September 12th:  Review HW, Observational Studies
-- Homework 2 due: QSS exercise 2.8.2
 - Read & Work through QSS Chapter 2.5- 2.6
 
 
 
 #### Friday, September 14th: Observational Studies Continued
-- Homework finish SWIRL Exercise CAUSALITY 2
 - In class exercise on observational studies
+- Homework: SWIRL Exercise CAUSALITY 2
 
 
 ### Week 4
 
 #### Monday, September 17th: Review Homework & Introduction to Measurement
-- Homework 3, QSS Exercise 2.8.3
 - Read & Work through QSS 3.1 - 3.4
 
 
 #### Wednesday, September 19th: Measurement Exercise
+- Assignment due: QSS Exercise 2.8.3
 
 
 
 
 #### Friday, September 21st: Univariate Data Summaries
-- Homework finish SWIRL Exercise MEASUREMENT 1
+- Homework: SWIRL Exercise MEASUREMENT 1
 
 
 
@@ -444,17 +434,16 @@ notification.
 ### Week 6
 
 #### Monday, October 1st: Review HW & Introduction to Prediction
-- Homework 4, QSS Exercise 3.9.1
+- Assignment due: QSS Exercise 3.9.1
 - Read & Work through QSS 4.1
 
 
 
 #### Wednesday, October 3rd: Introduction to Prediction
-- Homework finish SWIRL Exercise PREDICTION 1
 - Read & Work through QSS 4.2 
 
 #### Friday, October 5th: In class Exercise Prediction
-
+- Homework finish SWIRL Exercise PREDICTION 1
 
 ### Week 7
 
@@ -464,9 +453,9 @@ notification.
 
 
 #### Wednesday, October 10th: In class Exercise Prediction
- - Homework finish SWIRL Exercises PREDICTION 3
 
 #### Friday, October 12th: Catch-Up Day & Regression Review
+ - Homework finish SWIRL Exercises PREDICTION 3
 
 
 
@@ -480,7 +469,7 @@ notification.
 #### Wednesday, October 17th:
 
 #### Friday, October 19th: Review HW + Intro Discovery
-- Homework 5, QSS exercise 4.5.1
+-Assignment due: QSS exercise 4.5.1
 - Read & Work through QSS 5.1
 
 
@@ -540,7 +529,7 @@ notification.
 ### Week 12
 
 #### Monday, November 12th: Reviewing Homework 6
-Homework 6, QSS exercise 6.6.1 due
+Assignment due: QSS exercise 6.6.1
 
 #### Wednesday, November 14th:  Introduction to Uncertainty
 - Read & Work through QSS Chapter 7.1.1 - 7.1.4
@@ -580,7 +569,7 @@ Turkey Break!
 ### Week 15
 
 #### Monday, December 3rd: Review of Uncertainty
-- Homework 7, QSS exercise 7.5.3
+- Assignment due: QSS exercise 7.5.3
 
 #### Wednesday, December 5th
 - Review for exam
