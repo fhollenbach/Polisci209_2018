@@ -31,6 +31,10 @@ Monday, Wednesday, Friday:
 
 __Class Location:__ Bush Academic Building West 1015 (Unless otherwise noted or announced)
 
+### Class Website:
+All class materials, syllabus, notes, assignments will be posted on the class website: [https://fhollenbach.github.io/Polisci209_2018]( https://fhollenbach.github.io/Polisci209_2018) 
+
+__All assignments are to be submitted via eCampus__, which is where I will also post your grades. 
 
 ### COURSE DESCRIPTION: 
 
@@ -178,7 +182,7 @@ assignments, exams, and the overall class grade will be the following:
 
 
 Given that this course is an official writing course, you __must pass
-the writing__ part of the class, i.e., the written assignments, to pass the class. As noted on the website of the Texas A&M Writing Center: "What happens if I don't pass the W or C portion of a W or C course? If you complete a course with a passing grade but have not passed the W [..] portion of the course, you will not get the graduation credit for that W or C course." [Link](http://writingcenter.tamu.edu/Students/W-C-Courses) This is not negotiable.
+the writing__ part of the class, i.e., the written assignments, to pass the class. As noted on the website of the Texas A&M Writing Center: "What happens if I don't pass the W or C portion of a W or C course? If you complete a course with a passing grade but have not passed the W [..] portion of the course, you will not get the graduation credit for that W or C course." [(Link)](http://writingcenter.tamu.edu/Students/W-C-Courses) This is not negotiable.
 
 ### WRITING HELP:
 The University Writing Center (UWC), located in 1.214 Sterling C. Evans Library and
@@ -217,7 +221,7 @@ We will primarily use Kosuke Imai's "Quantitative Social Science", which is avai
 
 __Required book__: Imai, Kosuke. 2017. Quantitative Social Science: An Introduction. Princeton University Press. Princeton, NJ. ISBN: 978-0-691-16703-9.
 
-You should have the book prior to the first day of class.
+You should have the book within the first week of class.
 
 For part of this class we will be working on the computer with
 statistical software. We will use the statistical programming language
@@ -238,23 +242,20 @@ Friday September 1st.
 We will usually meet three times a week during the semester. You can
 expect me to be prepared, give lecture, and answer questions. As
 outlined above, when you come to class, I expect you to be prepared as
-well and have the reading done before class. Remeber, class is a
-resource to you. The exams will be based on all lectures, readings,
+well and have the reading done before class. Remember, class is a
+resource to you. The exam and quizzes will be based on all lectures, readings,
 homework, and the discussions in class. Thus, only doing the required
 readings or only attending class will not be sufficient.
 
 
-I have decided that laptops will not be allowed in
-class unless we are working in R together. Laptops have been shown to be a
+I strongly encourage you to not use a laptop in class, unless we are working together in R. Laptops have been shown to be a
 distraction not only to the students using them but also fellow
 class mates. [A recent study has found that not having laptops in class
 can have a similar effect as hiring a SAT tutor](https://www.washingtonpost.com/news/wonk/wp/2016/05/16/why-smart-kids-shouldnt-use-laptops-in-class/?utm_term=.5dd2e4949441) 
 
 ![Laptops as distraction](https://pbs.twimg.com/media/C9oYA4GUAAI0RKf.jpg:large)
 
-I may make exceptions to this rule, but only if you have good reasons
-for why you need to use a computer. If you believe you warrant an exception, please contact me within the
-first week of class.
+If you think you have good reasons for why you need to use a computer, you may do so but I ask those with laptops to sit in the back of the classroom.
 
 In addition, please make sure your cell phones are on silent mode and
 refrain from using them during class time. If you are repeatedly on
@@ -262,10 +263,10 @@ your phone, I may deduct points from your participation/attendance
 grade.
 
 ### EXAM ABSENCES & LATE POLICY:
-Make-up exams will be permitted only in the case of university-excused
-absences. To be eligible for a make-up exam, you will have to present
+Make-up exam/quizzes will be permitted only in the case of university-excused
+absences. To be eligible for a make-up exam/quizzes, you will have to present
 original written documentation of legitimate circumstances that
-prevented you from taking the exam on time. Except in the case of
+prevented you from taking the exam/quiz on time. Except in the case of
 observance of a religious holiday, to be excused, the student must
 notify his or her instructor in writing (acknowledged e-mail message
 is acceptable) prior to the date of absence. In cases where advance
@@ -283,12 +284,11 @@ information. Please note that I do not accept Xeroxed copies of
 medical excuses from students.
 
 Unexcused absences from either exam will result in a score of 0 for the exam.
-Unexcused late work will be penalized by a 7.5 percentage point deduction for each day your work is late. For example, if you hand in the a writing assignment on the same day it is due, but after class, your maximum score will be 92.5%. If you hand in your assignment the next day, your maximum score will be 85%, and so on. Late work will be excused only in the case of university-excused absences.
-__There will be no exceptions to these rules.__
+Unexcused late work will be penalized by a 7.5 percentage point deduction for each day your work is late. For example, if you hand in the a writing assignment on the same day it is due, but after the stated deadline, your maximum score will be 92.5%. If you hand in your assignment more than 24hrs late, your maximum score will be 85%, after 48hrs it would be 77.5%, and so on. Late work will be excused only in the case of university-excused absences. Only under extreme circumstance will I make exceptions to these rules. 
 
 
 ### RE-GRADING POLICY:
-Students that want to appeal a grade received on an exam or assignment must submit a regrading request in written form (no email). This request has to be turned in within five working days after the graded exams or assignments are returned to the class. The written statement must explain exactly why the student believes the current grade is incorrect. I will then regrade the entire assignment or exam extra carefully. NOTE, as a consequence your grade may go up or down.
+Students that want to appeal a grade received on an exam or assignment must submit a regrading request in written form (e.g., email). This request has to be turned in within five working days after the graded exams or assignments are returned to the class. The written statement must explain exactly why the student believes the current grade is incorrect. I will then regrade the entire assignment or exam extra carefully. NOTE, as a consequence your grade may go up or down.
 
 ### COMMUNICATION:
 The best place to ask questions is in the classroom. If your question
@@ -350,13 +350,13 @@ notification.
 
 
 #### Monday, August 27th:  What are we doing in this class?
-- Please fill out survey!
+- Please fill out survey prior to Sunday night!
 - Read Syllabus
-- Think of an introduction of yourself
-- Buy book
+- What is the most surprising thing about you?
+- Buy text book
 - Buy calculator
 
-#### Wednesday, August 29st: Introduction to R 
+#### Wednesday, August 29st: Installing and Introduction to R 
 - Read & Work through Chapter 1, pages 1-30
 
 
@@ -370,11 +370,11 @@ notification.
 - SWIRL Exercises INTRO1 & INTRO2
 
 #### Wednesday, September 5th:  Review HW + Introduction to causality
-- Assignment due: QSS Exercise 1.5
 - Read & Work through QSS Chapter 2.1-2.4 
 
 #### Friday, September 7th: In class exercise on causality
 - [Download data for exercise here](link)
+- Assignment due: QSS Exercise 1.5.1
 
 
 
@@ -404,13 +404,11 @@ notification.
 
 
 #### Wednesday, September 19th: Measurement Exercise
-- Assignment due: QSS Exercise 2.8.3
-
 
 
 
 #### Friday, September 21st: Univariate Data Summaries
-- Homework: SWIRL Exercise MEASUREMENT 1
+- Assignment due: QSS Exercise 2.8.3
 
 
 
@@ -424,31 +422,35 @@ notification.
 - Homework finish SWIRL Exercise MEASUREMENT 1
 
 
-#### Friday, September 28th: Start working on Writing Assignment 1
-
+#### Friday, September 28th: Getting started on Writing Assignment 1
+- How to write well
+- (Notes on writing)[link]
+- (Data Link)[link]
 
 ### Week 6
 
 #### Monday, October 1st: Review HW & Introduction to Prediction
-- Assignment due: QSS Exercise 3.9.1
 - Read & Work through QSS 4.1
 
 
 
 #### Wednesday, October 3rd: Introduction to Prediction
 - Read & Work through QSS 4.2 
+- Submit first draft of Writing Assignment 1 to eCampus
 
 #### Friday, October 5th: In class Exercise Prediction
 - Homework finish SWIRL Exercise PREDICTION 1
+
 
 ### Week 7
 
 #### Monday, October 8th: Regression
 - Read & Work through QSS 4.3
 - Homework finish SWIRL Exercises PREDICTION 2
+- Submit Peer-Review Comments for Writing Assignment 1 on eCampus
 
 
-#### Wednesday, October 10th: In class Exercise Prediction
+#### Wednesday, October 10th: In Class Exercise Prediction
 
 #### Friday, October 12th: Catch-Up Day & Regression Review
  - Homework finish SWIRL Exercises PREDICTION 3
@@ -459,30 +461,25 @@ notification.
 
 ### Week 8
 
-#### Monday, October 15th: __MIDTERM EXAM___
+#### Monday, October 15th: In Class Exercise on linear Regression
+- Submit Final Draft of Writing Assignment 1 on eCampus
 
-
-#### Wednesday, October 17th:
-
-#### Friday, October 19th: Review HW + Intro Discovery
--Assignment due: QSS exercise 4.5.1
+#### Wednesday, October 17th: Intro Discovery
 - Read & Work through QSS 5.1
+
+#### Friday, October 19th: Review HW + In class Exercise Text as Data
+-Assignment due: QSS exercise 4.5.1
 
 
 ### Week 9
 
-#### Monday, October 22nd: In class Exercise Text as Data
-- Homework finish SWIRL Exercise DISCOVERY 1
-
-
-#### Wednesday, October 24th: Introduction to Probability
+#### Monday, October 22nd:  Introduction to Probability
 - Read & Work through QSS 6.1
 
-#### Friday, October 26th: Playing Cards Exercises
 
+#### Wednesday, October 24th: Playing Cards
 
-
-
+#### Friday, October 26th:  Reviewing Probability 1
 
 
 
@@ -490,19 +487,20 @@ notification.
 
 ### Week 10
 
-#### Monday, October 29th:  Reviewing Probability 1
-
-
-#### Wednesday, October 31st: Conditional Probability
+#### Monday, October 29th: Conditional Probability
 - Read & Work through QSS 6.2
 
 
-
-
-#### Friday, November 2nd: In class Exercise on Probability
+#### Wednesday, October 31st: In class Exercise on Probability
 - Read & Work through QSS 6.3
-- Homework finish SWIRL Exercise PROBABILITY 1
 
+
+
+
+#### Friday, November 2nd: Getting Started on Writing Assigment 2
+- Homework finish SWIRL Exercise PROBABILITY 1
+- (Data)[Link]
+- (Assignment)[Link]
 
 
 ### Week 11
@@ -515,10 +513,7 @@ notification.
 #### Wednesday, November 7th: Reviewing Probability
 
 #### Friday, November 9th: Election Fraud in Russia Exercise
-
-
-
-
+- Submit first draft of Writing Assignment 2 to eCampus
 
 
 
@@ -529,7 +524,7 @@ Assignment due: QSS exercise 6.6.1
 
 #### Wednesday, November 14th:  Introduction to Uncertainty
 - Read & Work through QSS Chapter 7.1.1 - 7.1.4
-
+- Submit Peer-Review Comments for Writing Assignment 2 on eCampus
 
 #### Friday, November 16th:  Exercises about Uncertainty
 - Read & Work through QSS Chapter 7.1.5 - 7.1.6
@@ -551,6 +546,8 @@ Turkey Break!
 ### Week 14
 #### Monday, November 26th: In class Exercise about  Uncertainty 
 - Homework finish SWIRL Exercise UNCERTAINTY 2
+- Submit Final Draft of Writing Assignment 2 on eCampus
+
 
 #### Wednesday, November 28th: Linear Regression with Uncertainty
 - Read & Work through QSS Chapter 7.3.1-7.3.4
