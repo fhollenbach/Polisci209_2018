@@ -145,7 +145,7 @@ questions. Specifically, you will be graded on:
            attentive. If you repeatedly fail to pay attention
            (e.g. fall asleep or play on your cell phone), I may
            deduct points from your participation/attendance grade.
-    - If you do have health problems that do not allow you to perform well in class, please come talk to ma ASAP. I am willing to work with you, but this is only possible if you come talk to me early enough.
+    - If you do have health problems that do not allow you to perform well in class, please come talk to me ASAP. I am willing to work with you, but this is only possible if you come talk to me early enough.
 
 - Two writing assignment: 30% of class grade (15% each)
 	- The writing assignments in this class will be memos
@@ -161,10 +161,10 @@ questions. Specifically, you will be graded on:
           submitted via eCampus prior to class on the day
           they are due. Peer-review feedback will also be submitted on eCampus.__
 
-- Two in-class quizzes: 5% of class grade (2.5% each) 
-  - We will have two short quizzes during the semester to make sure that everyone is keeping up and give you some insight in how the final exam will look. Each quiz swill be announced at least one week prior and will take about 10-15 minutes of class time. 
+- Two in-class quizzes: 10% of class grade (5% each) 
+  - We will have two short quizzes during the semester to make sure that everyone is keeping up and give you some insight in how the final exam will look. Each quiz will be announced at least one week prior and will take about 10-15 minutes of class time. 
 		  
-- Final Exam (cumulative): 25% of class grade
+- Final Exam (cumulative): 20% of class grade
 	- The final exam will cover the material from the whole
           class and will be worth 25% of your class grade. The exams focus on
           all of the material covered up to the exam, including the
