@@ -365,49 +365,44 @@ notification.
 
 
 ## Week 2
-#### Monday, September 3rd: More introduction to R
-- Getting everyone up to speed with R
+#### Monday, September 3rd: More introduction to R & Getting Everyone up to Speed
 - SWIRL Exercises INTRO1 & INTRO2
 
 #### Wednesday, September 5th:  Review HW + Introduction to causality
 - Read & Work through QSS Chapter 2.1-2.4 
 
-#### Friday, September 7th: In class exercise on causality
+#### Friday, September 7th: Review HW & In Class Exercise on Causality
 - [Download data for exercise here](link)
 - Assignment due: QSS Exercise 1.5.1
 
 
 
 
-
-
-
 ## Week 3
 
-#### Monday, September 10th: continue exercise on RCTs
+#### Monday, September 10th: Continue Exercise on RCTs
 - Homework: SWIRL Exercise CAUSALITY 1
 
-#### Wednesday, September 12th:  Review HW, Observational Studies
+#### Wednesday, September 12th:  Observational Studies
 - Read & Work through QSS Chapter 2.5- 2.6
 
 
 
-#### Friday, September 14th: Observational Studies Continued
-- In class exercise on observational studies
+#### Friday, September 14th: In Class Exercise on Observational Studies
 - Homework: SWIRL Exercise CAUSALITY 2
 
 
 ## Week 4
 
-#### Monday, September 17th: Review Homework & Introduction to Measurement
+#### Monday, September 17th: Introduction to Measurement
 - Read & Work through QSS 3.1 - 3.4
 
 
-#### Wednesday, September 19th: Measurement Exercise
+#### Wednesday, September 19th: In Class Exercise on Measurement 
 
 
 
-#### Friday, September 21st: Univariate Data Summaries
+#### Friday, September 21st: Review HW &  Univariate Data Summaries
 - Assignment due: QSS Exercise 2.8.3
 
 
@@ -418,33 +413,33 @@ notification.
 - Read & Work through QSS 3.5 - 3.7
 
 
-#### Wednesday, September 26th: In class exercise Measurement & Bivariate Relationships
+#### Wednesday, September 26th: In Class Exercise Measurement & Bivariate Relationships
 - Homework finish SWIRL Exercise MEASUREMENT 1
 
 
-#### Friday, September 28th: Getting started on Writing Assignment 1
+#### Friday, September 28th: Getting Started with Writing Assignment 1
 - How to write well
 - (Notes on writing)[link]
 - (Data Link)[link]
 
 ## Week 6
 
-#### Monday, October 1st: Review HW & Introduction to Prediction
+#### Monday, October 1st: Introduction to Prediction
 - Read & Work through QSS 4.1
 
 
 
-#### Wednesday, October 3rd: Introduction to Prediction
+#### Wednesday, October 3rd: Introduction to Prediction 2
 - Read & Work through QSS 4.2 
 - Submit first draft of Writing Assignment 1 to eCampus
 
-#### Friday, October 5th: In class Exercise Prediction
+#### Friday, October 5th: In Class Exercise Prediction
 - Homework finish SWIRL Exercise PREDICTION 1
 
 
 ## Week 7
 
-#### Monday, October 8th: Regression
+#### Monday, October 8th: Introduction to Regression
 - Read & Work through QSS 4.3
 - Homework finish SWIRL Exercises PREDICTION 2
 - Submit Peer-Review Comments for Writing Assignment 1 on eCampus
@@ -461,10 +456,10 @@ notification.
 
 ## Week 8
 
-#### Monday, October 15th: In Class Exercise on linear Regression
+#### Monday, October 15th: In Class Exercise on Linear Regression
 - Submit Final Draft of Writing Assignment 1 on eCampus
 
-#### Wednesday, October 17th: Intro Discovery
+#### Wednesday, October 17th: Introduction to Discovery
 - Read & Work through QSS 5.1
 
 #### Friday, October 19th: Review HW + In class Exercise Text as Data
@@ -497,7 +492,7 @@ notification.
 
 
 
-#### Friday, November 2nd: Getting Started on Writing Assigment 2
+#### Friday, November 2nd: Getting Started with Writing Assigment 2
 - Homework finish SWIRL Exercise PROBABILITY 1
 - (Data)[Link]
 - (Assignment)[Link]
@@ -512,21 +507,21 @@ notification.
 
 #### Wednesday, November 7th: Reviewing Probability
 
-#### Friday, November 9th: Election Fraud in Russia Exercise
+#### Friday, November 9th: In Class Exercise on Election Fraud in Russia 
 - Submit first draft of Writing Assignment 2 to eCampus
 
 
 
 ## Week 12
 
-#### Monday, November 12th: Reviewing Homework 6
-Assignment due: QSS exercise 6.6.1
-
-#### Wednesday, November 14th:  Introduction to Uncertainty
+#### Monday, November 12th: Reviewing Homework + Introduction to Uncertainty
 - Read & Work through QSS Chapter 7.1.1 - 7.1.4
+- Assignment due: QSS exercise 6.6.1
+
+#### Wednesday, November 14th:  Introduction to Uncertainty Continued
 - Submit Peer-Review Comments for Writing Assignment 2 on eCampus
 
-#### Friday, November 16th:  Exercises about Uncertainty
+#### Friday, November 16th:  In Class Exercises about Uncertainty
 - Read & Work through QSS Chapter 7.1.5 - 7.1.6
 - Homework finish SWIRL Exercise UNCERTAINTY 1
 
@@ -534,7 +529,7 @@ Assignment due: QSS exercise 6.6.1
 
 ## Week 13
 
-#### Monday, November 19th: In class Exercises about Uncertainty
+#### Monday, November 19th: In Class Exercises on Uncertainty
 - Read & Work through QSS Chapter 7.1.5 - 7.1.6
 
 
@@ -544,7 +539,7 @@ Turkey Break!
 
 
 ## Week 14
-#### Monday, November 26th: In class Exercise about  Uncertainty 
+#### Monday, November 26th: In Class Exercise on Uncertainty 
 - Homework finish SWIRL Exercise UNCERTAINTY 2
 - Submit Final Draft of Writing Assignment 2 on eCampus
 
@@ -553,7 +548,7 @@ Turkey Break!
 - Read & Work through QSS Chapter 7.3.1-7.3.4
 
 
-#### Friday, November 30th: In class Exercise about Regression with Uncertainty
+#### Friday, November 30th: In class Exercise on Regression with Uncertainty
 - Read & Work through QSS Chapter 7.3.5-7.4
 - Homework finish SWIRL Exercise UNCERTAINTY 3
 
