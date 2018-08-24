@@ -563,3 +563,7 @@ Turkey Break!
 #### Wednesday, December 5th
 - Review for exam
 
+
+## Friday, December 7th: Exam for 209-905 from 10:00 – 12:00 p.m. (noon)
+
+## Monday, December 10th: Exam for 209-906 from 8:00 – 10:00 a.m.
