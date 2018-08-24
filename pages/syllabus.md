@@ -17,7 +17,7 @@ __Hwalmin Jin__
 
 __Email:__ jymh33@tamu.edu
 
-__Office:__   Allen Building
+__Office:__  2050 Allen Building
 
 __Office Hours:__  TBA.
 
@@ -82,12 +82,12 @@ statistical concepts, such as:
 ### COURSE STRUCTURE & REQUIREMENTS:
 
 The class will meet three times a week on Monday, Wednesday, and
-Friday. Classes will not simply be lecture based. We will cover programming, examples, or go
+Friday. Classes will not simply be lecture based. We will cover programming, examples, and go
 over problem sets. This class will cover a variety of
 (complicated) concepts. Generally concepts will first be covered in
 the readings and we will go over specific applications and your
-questions on these concepts in class. It is therefore important __for you to do
-you do the required reading and exercises before each class period__. Required readings and exercises for each day are listed under that date's header. For most weeks,
+questions on these concepts in class. __It is therefore important for you to do
+you do the required reading and exercises listed under each date's header before the respective class period__. For most weeks,
 the readings & topics covered can be quite technical and challenging,
 which means it is even more important that you try to understand the
 material before coming to class. If you do not understand part of the
@@ -100,29 +100,26 @@ understanding of the material and study for the exam. Some of the
 assignments will be quite hard. It is, however, important for your own
 progress that you at least attempt to solve each problem on your own
 first, before seeking help. If you are stuck, I encourage you to seek
-help from your classmates, the TA, or myself.
+help from your classmates first, then the TA, or myself.
 
 You are expected to do all readings prior to class, participate in
-class discussions, submit all assignments on time, and take exams as
+class discussions, submit all assignments on time, and take the final exam as
 scheduled.
 
 
 
 ###  GRADING & RESPONSIBILITIES:
 
-Your grade will be based on two exams (40 % combined) at the middle
-and end of the semester, class attendance, participation, and exercises (30% combined), and
-three written assignments (30% combined). All assignments are due before
-class on the day they are listed on the syllabus.
+Your grade will be based on one final exam (25%) at the end of the semester, two mid-semester quizzes (5% combined), class attendance (10%), participation, homework exercises (30% combined), and two longer writing assignments (30% combined). All assignments are to be __submitted via eCampus before
+class on the day under which they are listed on the syllabus.__
 
 I expect you to do the assigned readings for each class before the
 lecture, participate in class discussions, and come prepared with
 questions. Specifically, you will be graded on:
 
-- homework assignments/review exercises: 30% of class
-grade
-	- SWIRL assignments will be graded on pass/fail and worth one point each, i.e. your grade will be the percentage of
-          the exercises you did. Other homework exercises will be graded and a full grade will count four points.
+- homework assignments/review exercises: 30% of class grade
+	- SWIRL assignments will be graded on pass/fail and worth one point each. You will pass as long as you attempt all questions in a specific exercise. As proof, you will save a screenshot of the log at the end and submit that to eCampus. Your Swirl grade will be the percentage of
+          Swirl exercise for which you received a pass. Other homework assignment will be graded on the normal scale and 100% will be worth four points.
 
 - class attendance/participation: 10% of class grade
 	-  Attendance will be marked at the beginning of each
@@ -135,9 +132,9 @@ grade
            __before__ missing class.
 		   __If you have more than 15 unexcused absences, you will
            receive an F in the course.__ Similarly, while unexpected
-           events can cause tardiness, if you repeatedly arrive
+           events can cause tardiness, __if you repeatedly arrive
            late to class, I reserve the right to mark late arrivals as
-           absences. Should you arrive to class late, be sure to let
+           absences.__ Should you arrive to class late, be sure to let
            me know after class so that I can mark you as present.
 	- I expect all students to participate in class discussion, ask
            questions, listen to their fellow students, and be
@@ -146,22 +143,24 @@ grade
            deduct points from your participation/attendance grade.
     - If you do have health problems that do not allow you to perform well in class, please come talk to ma ASAP. I am willing to work with you, but this is only possible if you come talk to me early enough.
 
-- Three writing assignment: 30% of class grade (10% each)
-	- The writing assignments in this class will be short memos
-          (each 700 words) and are supposed to prepare you for real
+- Two writing assignment: 30% of class grade (15% each)
+	- The writing assignments in this class will be memos
+          (1000 - 1500 words) and are supposed to prepare you for real
           world work assignments. They will involve work with data in
           R. The writing assigments will be structured
-          with the requirements of the modern work place in mind. For
-          each of the three assignment you will provide a first draft to a fellow
-          student, who will provide comments. You will incorporate the
-          comments and will then be graded on the final version.
-		  Your comments to your fellow students will be graded like a homework exercise.
+          with the requirements of the modern work place in mind and you will receive detailed instructions. For
+          both assignment you will provide a first draft to a fellow
+          student, who will provide comments (via eCampus). You will incorporate the
+          comments and will then be graded and receive additional comments by us on the final version. __To pass this course, you must pass the writing components.__
+		  Your comments to your fellow students will be graded as a homework exercise.
 		  __All versions of the written assignments (first & final draft) are to be
           submitted via eCampus prior to class on the day
-          they are due. Peer-review feedback is also submitted on eCampus__
-		   
+          they are due. Peer-review feedback will also be submitted on eCampus.__
+
+- Two in-class quizzes: 5% of class grade (2.5% each) 
+  - We will have two short quizzes during the semester to make sure that everyone is keeping up and give you some insight in how the final exam will look. Each quiz swill be announced at least one week prior and will take about 10-15 minutes of class time. 
 		  
-- Final Exam (cumulative): 30% of class grade
+- Final Exam (cumulative): 25% of class grade
 	- The final exam will cover the material from the whole
           class and will be worth 25% of your class grade. The exams focus on
           all of the material covered up to the exam, including the
@@ -179,10 +178,7 @@ assignments, exams, and the overall class grade will be the following:
 
 
 Given that this course is an official writing course, you __must pass
-the writing__ part of the class, i.e., the written assignments, to receive graduation credit. As noted on the website of the Texas A&M Writing Center: "If you complete a
-course with a passing grade but have not passed the W or C portion of
-the course, you will not get the graduation credit for that W or C
-course." This is not negotiable.
+the writing__ part of the class, i.e., the written assignments, to pass the class. As noted on the website of the Texas A&M Writing Center: "What happens if I don't pass the W or C portion of a W or C course? If you complete a course with a passing grade but have not passed the W [..] portion of the course, you will not get the graduation credit for that W or C course." [Link](http://writingcenter.tamu.edu/Students/W-C-Courses) This is not negotiable.
 
 ### WRITING HELP:
 The University Writing Center (UWC), located in 1.214 Sterling C. Evans Library and
