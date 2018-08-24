@@ -343,10 +343,10 @@ I reserve the right to update/modify/clarify the syllabus with advance
 notification.
 
 
-### Class Schedule
+## Class Schedule
 
 
-### Week 1
+## Week 1
 
 
 #### Monday, August 27th:  What are we doing in this class?
@@ -364,7 +364,7 @@ notification.
 - Panel with Polisci Alumni
 
 
-### Week 2
+## Week 2
 #### Monday, September 3rd: More introduction to R
 - Getting everyone up to speed with R
 - SWIRL Exercises INTRO1 & INTRO2
@@ -382,7 +382,7 @@ notification.
 
 
 
-### Week 3
+## Week 3
 
 #### Monday, September 10th: continue exercise on RCTs
 - Homework: SWIRL Exercise CAUSALITY 1
@@ -397,7 +397,7 @@ notification.
 - Homework: SWIRL Exercise CAUSALITY 2
 
 
-### Week 4
+## Week 4
 
 #### Monday, September 17th: Review Homework & Introduction to Measurement
 - Read & Work through QSS 3.1 - 3.4
@@ -412,7 +412,7 @@ notification.
 
 
 
-### Week 5
+## Week 5
 
 #### Monday, September 24th: Bivariate Relationships
 - Read & Work through QSS 3.5 - 3.7
@@ -427,7 +427,7 @@ notification.
 - (Notes on writing)[link]
 - (Data Link)[link]
 
-### Week 6
+## Week 6
 
 #### Monday, October 1st: Review HW & Introduction to Prediction
 - Read & Work through QSS 4.1
@@ -442,7 +442,7 @@ notification.
 - Homework finish SWIRL Exercise PREDICTION 1
 
 
-### Week 7
+## Week 7
 
 #### Monday, October 8th: Regression
 - Read & Work through QSS 4.3
@@ -459,7 +459,7 @@ notification.
 
 
 
-### Week 8
+## Week 8
 
 #### Monday, October 15th: In Class Exercise on linear Regression
 - Submit Final Draft of Writing Assignment 1 on eCampus
@@ -471,7 +471,7 @@ notification.
 -Assignment due: QSS exercise 4.5.1
 
 
-### Week 9
+## Week 9
 
 #### Monday, October 22nd:  Introduction to Probability
 - Read & Work through QSS 6.1
@@ -485,7 +485,7 @@ notification.
 
 
 
-### Week 10
+## Week 10
 
 #### Monday, October 29th: Conditional Probability
 - Read & Work through QSS 6.2
@@ -503,7 +503,7 @@ notification.
 - (Assignment)[Link]
 
 
-### Week 11
+## Week 11
 
 #### Monday, November 5th: More Probability
 - Read & Work through QSS 6.4 - 6.5
@@ -517,7 +517,7 @@ notification.
 
 
 
-### Week 12
+## Week 12
 
 #### Monday, November 12th: Reviewing Homework 6
 Assignment due: QSS exercise 6.6.1
@@ -532,7 +532,7 @@ Assignment due: QSS exercise 6.6.1
 
 
 
-### Week 13
+## Week 13
 
 #### Monday, November 19th: In class Exercises about Uncertainty
 - Read & Work through QSS Chapter 7.1.5 - 7.1.6
@@ -543,7 +543,7 @@ Assignment due: QSS exercise 6.6.1
 Turkey Break!
 
 
-### Week 14
+## Week 14
 #### Monday, November 26th: In class Exercise about  Uncertainty 
 - Homework finish SWIRL Exercise UNCERTAINTY 2
 - Submit Final Draft of Writing Assignment 2 on eCampus
@@ -559,7 +559,8 @@ Turkey Break!
 
 
 
-### Week 15
+
+## Week 15
 
 #### Monday, December 3rd: Review of Uncertainty
 - Assignment due: QSS exercise 7.5.3
