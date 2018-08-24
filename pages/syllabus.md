@@ -19,7 +19,7 @@ __Email:__ jymh33@tamu.edu
 
 __Office:__  2050 Allen Building
 
-__Office Hours:__  TBA.
+__Office Hours:__  Tuesday 1:30pm - 2:30 pm & Thursday 11:00am & 12:00pm (noon)
 
 
 
