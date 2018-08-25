@@ -74,7 +74,6 @@ At the end of the semester, after completing this course, students are expected 
   
 - Explain and understand simple descriptive, univariate, and bivariate
 statistical concepts, such as:
-    - concepts of causality
     - randomization
     – mean
 	– (co)variance, correlation
@@ -86,8 +85,7 @@ statistical concepts, such as:
 ### COURSE STRUCTURE & REQUIREMENTS:
 
 The class will meet three times a week on Monday, Wednesday, and
-Friday. Classes will not simply be lecture based. We will cover programming, examples, and go
-over problem sets. This class will cover a variety of
+Friday. Classes will not simply be lecture based. We will cover programming, examples, and do in class exercises. This class will cover a variety of
 (complicated) concepts. Generally concepts will first be covered in
 the readings and we will go over specific applications and your
 questions on these concepts in class. __It is therefore important for you to do
@@ -104,30 +102,29 @@ understanding of the material and study for the exam. Some of the
 assignments will be quite hard. It is, however, important for your own
 progress that you at least attempt to solve each problem on your own
 first, before seeking help. If you are stuck, I encourage you to seek
-help from your classmates first, then the TA, or myself.
+help from your classmates first, then the TA or myself.
 
 You are expected to do all readings prior to class, participate in
-class discussions, submit all assignments on time, and take the final exam as
+class discussions, submit all assignments on time, and take quizzes and the final exam as
 scheduled.
-
 
 
 ###  GRADING & RESPONSIBILITIES:
 
-Your grade will be based on one final exam (25%) at the end of the semester, two mid-semester quizzes (5% combined), class attendance (10%), participation, homework exercises (30% combined), and two longer writing assignments (30% combined). All assignments are to be __submitted via eCampus before
+Your grade will be based on one final exam (20%) at the end of the semester, two mid-semester quizzes (10% combined), class attendance (10%), participation, homework exercises (30% combined), and two longer writing assignments (30% combined). All assignments are to be __submitted via eCampus before
 class on the day under which they are listed on the syllabus.__
 
 I expect you to do the assigned readings for each class before the
 lecture, participate in class discussions, and come prepared with
 questions. Specifically, you will be graded on:
 
-- homework assignments/review exercises: 30% of class grade
-	- SWIRL assignments will be graded on pass/fail and worth one point each. You will pass as long as you attempt all questions in a specific exercise. As proof, you will save a screenshot of the log at the end and submit that to eCampus. Your Swirl grade will be the percentage of
-          Swirl exercise for which you received a pass. Other homework assignment will be graded on the normal scale and 100% will be worth four points.
+- homework assignments/SWIRL review exercises: 30% of class grade
+	- SWIRL assignments will be graded on pass/fail. Each SWIRL exercise is worth one point. You will receive a pass for the respective exercise as long as you attempt all questions. As proof, you will save a screenshot of the log at the end and submit it to eCampus. Your Swirl grade will be the percentage of
+          Swirl exercise for which you received a pass. Other homework assignment will be graded on the normal scale and receiving 100% will be worth four points.
 
 - class attendance/participation: 10% of class grade
 	-  Attendance will be marked at the beginning of each
-           class. You are allowed to have two free absences. After two
+           class. You are allowed to have two free unexcused absences. After two
            absences, I will deduct one point from the 10 possible
            attendance points for each unexcused absence. Excused absences are not
            deducted from your grade. I will decide what counts
@@ -148,7 +145,7 @@ questions. Specifically, you will be graded on:
     - If you do have health problems that do not allow you to perform well in class, please come talk to me ASAP. I am willing to work with you, but this is only possible if you come talk to me early enough.
 
 - Two writing assignment: 30% of class grade (15% each)
-	- The writing assignments in this class will be memos
+	- The writing assignments in this class will be memoranda
           (1000 - 1500 words) and are supposed to prepare you for real
           world work assignments. They will involve work with data in
           R. The writing assigments will be structured
@@ -158,16 +155,16 @@ questions. Specifically, you will be graded on:
           comments and will then be graded and receive additional comments by us on the final version. __To pass this course, you must pass the writing components.__
 		  Your comments to your fellow students will be graded as a homework exercise.
 		  __All versions of the written assignments (first & final draft) are to be
-          submitted via eCampus prior to class on the day
+          submitted via Turnitin on eCampus prior to class on the day
           they are due. Peer-review feedback will also be submitted on eCampus.__
 
 - Two in-class quizzes: 10% of class grade (5% each) 
-  - We will have two short quizzes during the semester to make sure that everyone is keeping up and give you some insight in how the final exam will look. Each quiz will be announced at least one week prior and will take about 10-15 minutes of class time. 
+  - We will have two short quizzes during the semester to make sure that everyone is keeping up and to give you some insight in how the final exam might look. Each quiz will be announced at least one week prior and will take about 10-15 minutes of class time. 
 		  
 - Final Exam (cumulative): 20% of class grade
 	- The final exam will cover the material from the whole
-          class and will be worth 25% of your class grade. The exams focus on
-          all of the material covered up to the exam, including the
+          class and will be worth 20% of your class grade. The exam focusses on
+          all of the material covered in class, including the
           readings, lectures, and exercises. __The assigned exercises
           should serve as excellent preparation for the exams.__
 
@@ -255,7 +252,7 @@ can have a similar effect as hiring a SAT tutor](https://www.washingtonpost.com/
 
 ![Laptops as distraction](https://pbs.twimg.com/media/C9oYA4GUAAI0RKf.jpg:large)
 
-If you think you have good reasons for why you need to use a computer, you may do so but I ask those with laptops to sit in the back of the classroom.
+If you think you have good reasons for why you need to use a computer, you may do so, but I ask those with laptops to sit in the back of the classroom.
 
 In addition, please make sure your cell phones are on silent mode and
 refrain from using them during class time. If you are repeatedly on
@@ -273,7 +270,7 @@ is acceptable) prior to the date of absence. In cases where advance
 notification is not feasible (e.g. accident or emergency) the student
 must provide notification by the end of the second working day after
 the absence. This notification should include an explanation of why
-notice could not be sent prior to the class. Accommodations sought for
+the notice could not be sent prior to the class. Accommodations sought for
 absences due to the observance of a religious holiday can be sought
 either prior or after the absence, but not later than two working days
 after the absence. Legitimate circumstances include religious
@@ -339,8 +336,8 @@ about other people, cultures, groups, or viewpoints.
 
 
 ### Changes to Syllabus
-I reserve the right to update/modify/clarify the syllabus with advance
-notification.
+__I reserve the right to update/modify/clarify the syllabus with advance
+notification.__
 
 
 ## Class Schedule
@@ -356,7 +353,7 @@ notification.
 - Buy text book
 - Buy calculator
 
-#### Wednesday, August 29st: Installing and Introduction to R 
+#### Wednesday, August 29th: Installing and Introduction to R 
 - Read & Work through Chapter 1, pages 1-30
 
 
@@ -366,24 +363,25 @@ notification.
 
 ## Week 2
 #### Monday, September 3rd: More introduction to R & Getting Everyone up to Speed
+
+#### Wednesday, September 5th: Introduction to causality
+- Read & Work through QSS Chapter 2.1-2.4 
 - SWIRL Exercises INTRO1 & INTRO2
 
-#### Wednesday, September 5th:  Review HW + Introduction to causality
-- Read & Work through QSS Chapter 2.1-2.4 
-
-#### Friday, September 7th: Review HW & In Class Exercise on Causality
+#### Friday, September 7th: In Class Exercise on Causality
 - [Download data for exercise here](link)
-- Assignment due: QSS Exercise 1.5.1
+- Homework: SWIRL Exercise CAUSALITY 1
+
 
 
 
 
 ## Week 3
 
-#### Monday, September 10th: Continue Exercise on RCTs
-- Homework: SWIRL Exercise CAUSALITY 1
+#### Monday, September 10th: Review HW & Continue Exercise on RCTs
+- Assignment due: QSS Exercise 1.5.1
 
-#### Wednesday, September 12th:  Observational Studies
+#### Wednesday, September 12th: Observational Studies
 - Read & Work through QSS Chapter 2.5- 2.6
 
 
@@ -417,10 +415,9 @@ notification.
 - Homework finish SWIRL Exercise MEASUREMENT 1
 
 
-#### Friday, September 28th: Getting Started with Writing Assignment 1
+#### Friday, September 28th: Starting with Writing Assignment 1
 - How to write well
-- (Notes on writing)[link]
-- (Data Link)[link]
+
 
 ## Week 6
 
@@ -492,10 +489,9 @@ notification.
 
 
 
-#### Friday, November 2nd: Getting Started with Writing Assigment 2
+#### Friday, November 2nd: Starting with Writing Assigment 2
 - Homework finish SWIRL Exercise PROBABILITY 1
-- (Data)[Link]
-- (Assignment)[Link]
+
 
 
 ## Week 11
