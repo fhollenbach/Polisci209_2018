@@ -58,7 +58,7 @@
 
 - How many people live where you are from? 3.5 million
 
-- What is something weird and interesting about you? I once played basketball with Scottie Pippen, Charles Barkley, and Gary Payton
+- What is something weird and interesting about you? I randomly sing or whistle one line of a song over and over again
 
 - How can I help you learn better?  --
 
@@ -172,3 +172,10 @@ C:\Users\florianhollenbach\Desktop\Polisci209\
 - On Mac you can find the path to any folder by right clicking on the folder, clicking "Get Info", and then marking and copying the address behin "Where"
 
 - In Windows you can right click to the right of the address in the address bar and select "Copy Address"
+
+
+* Homework
+
+- Take survey if you haven't done so
+- Read Chapter 1
+- Try to install R-studio

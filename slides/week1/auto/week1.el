@@ -35,7 +35,7 @@
     "amsthm"
     "amsfonts")
    (LaTeX-add-labels
-    "fig:org7013a26"
-    "fig:org90865f1"))
+    "fig:org4e68d9c"
+    "fig:org2d3e519"))
  :latex)
 
