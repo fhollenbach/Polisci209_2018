@@ -353,11 +353,11 @@ notification.__
 - Buy text book
 - Buy calculator
 - [Slides](../slides/week1/week1.pdf)
-)
+
 
 #### Wednesday, August 29th: Installing and Introduction to R 
 - Read & Work through Chapter 1, pages 1-30
-
+- [Data files used in Chapter 1](../slides/week1/week1_data.zip)
 
 #### Friday, August 31st: FASB PANEL
 - Panel with Polisci Alumni
