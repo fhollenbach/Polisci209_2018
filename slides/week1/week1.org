@@ -1,0 +1,174 @@
+#+OPTIONS: H:1
+#+LATEX_CLASS: beamer
+#+COLUMNS: %45ITEM %10BEAMER_env(Env) %10BEAMER_act(Act) %4BEAMER_col(Col) %8BEAMER_opt(Opt)
+#+BEAMER_THEME: metropolis
+#+BEAMER_COLOR_THEME:
+#+BEAMER_FONT_THEME:
+#+BEAMER_INNER_THEME:
+#+BEAMER_OUTER_THEME:
+#+BEAMER_HEADER:
+
+
+#+LATEX_HEADER: \setbeamertemplate{frame footer}{\insertshortauthor}
+
+#+LATEX_HEADER: \setbeamerfont{page number in head/foot}{size=\tiny}
+#+LATEX_HEADER: \setbeamercolor{footline}{fg=gray}
+
+#+LATEX_HEADER: \author{Florian Hollenbach}
+
+
+#+TITLE: Political Science 209 - Fall 2018
+#+SUBTITLE: Introduction
+#+AUTHOR: Florian Hollenbach
+#+DATE: \today
+#+EMAIL: fhollenbach@tamu.edu
+#+OPTIONS: toc:nil
+#+LATEX_HEADER: \usepackage[english]{isodate}
+#+LATEX_HEADER: \usepackage{amsmath,amsthm,amssymb,amsfonts}
+
+
+* Introduction
+
+** Professor Florian Hollenbach
+   - Ich bin ein Berliner
+   - Masters from University of Potsdam
+   - PhD in Political Science from Duke University
+   - 2014/2015 Post-Doc at Princeton University
+   - Assistant Professor in Political Science @ TAMU since Fall 2015
+   - fhollenbach.org
+
+
+* Note Cards
+
+- Name
+
+- Where are you from? City, State, (Country)
+
+- How many people live where you are from?
+
+- What is something weird/interesting about you?
+
+- How can I help you learn better?
+
+* Note Cards
+
+- Name: Florian Hollenbach
+
+- Where are you from? City, State, (Country): Berlin, Germany
+
+- How many people live where you are from? 3.5 million
+
+- What is something weird and interesting about you? I once played basketball with Scottie Pippen, Charles Barkley, and Gary Payton
+
+- How can I help you learn better?  --
+
+* Introduction
+
+What do you think this class is (or should be) about?
+
+
+* What is this class about?
+
+- How to do (political) science
+- How to read and understand (political) science
+- Programming in R
+- How does science work
+- Understand the world around you!
+
+* What is political science?
+
+- The study of politics
+- “scientific study of political phenomena”
+- Answer general phenomenon, not particular situations
+- More similar to economics than philosophy
+
+* What is this class about?
+#+CAPTION:
+#+NAME:   Surveys
+[[~/Documents/GitHub/Polisci209_2018/slides/week1/surveys.png]]
+
+* What is this class about?
+
+#+CAPTION:
+#+NAME:   Data Opinion
+[[~/Documents/GitHub/Polisci209_2018/slides/week1/data_opinion.png]]
+
+
+* What is this class about?
+
+"Two transformative technological changes have driven this rapid growth of quantitative social science. First, the Internet has greatly facilitated data revolution, a spike in the amount and diversity of available data, through information sharing, making it possible for researchers and organizations to disseminate numerous data sets in digital form. Second, the computational revolution, in terms of both software and hardware, means that essentially anyone can conduct data analysis using their personal computer and favorite data analysis software without needing to access expensive computational facilities." -- Kosuke Imai
+
+* Class Resources
+
+Website: https://fhollenbach.github.io/Polisci209_2018/
+Syllabus: https://fhollenbach.github.io/Polisci209_2018/pages/syllabus.html
+
+eCampus __only for submitting homework and posting grades__
+
+* Syllabus
+
+https://fhollenbach.github.io/Polisci209_2018/pages/syllabus.html
+
+
+* R and R-studio
+
+Please download and install r-studio on your computer:
+https://www.rstudio.com/products/rstudio/download/
+
+* Class Sessions
+
+- We will use R-Studio (or R) a lot in this class
+- This class will be very hard, but also rewarding
+
+\begin{alertblock}{It is important that you do not get behind!}
+Ask questions! Come to office hours (TA or myself) if you have trouble
+\end{alertblock}
+
+* Class Sessions
+
+- Lot's of exercises, few lectures
+- This requires that you do the readings and work through examples
+
+\begin{alertblock}{Together we can make this class a lot of fun}
+\end{alertblock}
+
+
+* R-Studio
+
+Hadley Wickham:
+#+ATTR_LATEX: :width 9cm
+[[~/Documents/GitHub/Polisci209_2018/slides/week1/wickham.jpeg]]
+
+* Create a folder for your class work
+#+ATTR_LATEX: :width 5cm
+[[~/Documents/GitHub/Polisci209_2018/slides/week1/windowsfolder.jpeg]]
+
+#+ATTR_LATEX: :width 5cm
+[[~/Documents/GitHub/Polisci209_2018/slides/week1/macfolder.jpeg]]
+
+* Create a folder for your class work
+
+- Go to the directory in which you want to create the folder in Finder/My Computer
+- Right click and select "New Folder" or press Shift-Command-N (Mac) / Ctrl+Shift+N (Win)
+- Name folder: "Polisci209"
+
+* Path
+
+A path points to a file system location by following the directory tree hierarchy expressed in a string of characters in which path components, separated by a delimiting character, represent each directory
+
+example
+1. Mac:
+#+begin_src R
+ /Users/florianhollenbach/Documents/Polisci209/
+#+end_src
+2. Win:
+#+begin_src R
+C:\Users\florianhollenbach\Desktop\Polisci209\
+#+end_src
+
+
+* Path
+
+- On Mac you can find the path to any folder by right clicking on the folder, clicking "Get Info", and then marking and copying the address behin "Where"
+
+- In Windows you can right click to the right of the address in the address bar and select "Copy Address"

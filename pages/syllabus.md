@@ -352,6 +352,8 @@ notification.__
 - What is the most surprising thing about you?
 - Buy text book
 - Buy calculator
+- [Slides](../slides/week1/week1.pdf)
+)
 
 #### Wednesday, August 29th: Installing and Introduction to R 
 - Read & Work through Chapter 1, pages 1-30
