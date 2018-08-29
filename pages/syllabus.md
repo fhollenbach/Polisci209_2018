@@ -29,7 +29,8 @@ Monday, Wednesday, Friday:
 - Section 905:  8:35 am – 9:25 am
 - Section 906: 9:45 - 10:35am
 
-__Class Location:__ Bush Academic Building West 1015 (Unless otherwise noted or announced)
+__Class Location:__ Bush Academic Building West (ALLN) __ 2003__ Unless otherwise noted or announced)
+__Note this is a change from the original class location__
 
 ### Class Website:
 All class materials, syllabus, notes, assignments will be posted on the class website: [https://fhollenbach.github.io/Polisci209_2018]( https://fhollenbach.github.io/Polisci209_2018) 
@@ -357,7 +358,7 @@ notification.__
 - Read & Work through Chapter 1, pages 1-30
 - [Data files used in Chapter 1](../slides/week1/week1_data.zip)
 
-#### Friday, August 31st: FASB PANEL
+#### Friday, August 31st: FASB PANEL -- __Meeting in 1015__
 - Panel with Polisci Alumni
 
 
@@ -396,7 +397,7 @@ notification.__
 - Read & Work through QSS 3.1 - 3.4
 
 
-#### Wednesday, September 19th: In Class Exercise on Measurement 
+#### Wednesday, September 19th: In Class Exercise on Measurement -- __Meeting in 1015__
 
 
 
@@ -411,7 +412,7 @@ notification.__
 - Read & Work through QSS 3.5 - 3.7
 
 
-#### Wednesday, September 26th: In Class Exercise Measurement & Bivariate Relationships
+#### Wednesday, September 26th: In Class Exercise Measurement & Bivariate Relationships -- __Meeting in 1015__
 - Homework finish SWIRL Exercise MEASUREMENT 1
 
 
