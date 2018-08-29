@@ -111,7 +111,7 @@ scheduled.
 
 ###  GRADING & RESPONSIBILITIES:
 
-Your grade will be based on one final exam (20%) at the end of the semester, two mid-semester quizzes (10% combined), class attendance (10%), participation, homework exercises (30% combined), and two longer writing assignments (30% combined). All assignments are to be __submitted via eCampus before
+Your grade will be based on one final exam (18%) at the end of the semester, two mid-semester quizzes (8% combined), class attendance (10%), participation, homework exercises (30% combined), and two longer writing assignments (34% combined). All assignments are to be __submitted via eCampus before
 class on the day under which they are listed on the syllabus.__
 
 I expect you to do the assigned readings for each class before the
@@ -144,11 +144,9 @@ questions. Specifically, you will be graded on:
            deduct points from your participation/attendance grade.
     - If you do have health problems that do not allow you to perform well in class, please come talk to me ASAP. I am willing to work with you, but this is only possible if you come talk to me early enough.
 
-- Two writing assignment: 30% of class grade (15% each)
-	- The writing assignments in this class will be memoranda
-          (1000 - 1500 words) and are supposed to prepare you for real
-          world work assignments. They will involve work with data in
-          R. The writing assigments will be structured
+- Two writing assignment: 34% of class grade (17% each)
+	- The writing assignments in this class will be memoranda and are supposed to prepare you for real
+          world work assignments. Each paper will be required to be 1000 - 1500 words. They will involve work with data in R. The writing assigments will be structured
           with the requirements of the modern work place in mind and you will receive detailed instructions. For
           both assignment you will provide a first draft to a fellow
           student, who will provide comments (via eCampus). You will incorporate the
@@ -158,12 +156,12 @@ questions. Specifically, you will be graded on:
           submitted via Turnitin on eCampus prior to class on the day
           they are due. Peer-review feedback will also be submitted on eCampus.__
 
-- Two in-class quizzes: 10% of class grade (5% each) 
+- Two in-class quizzes: 8% of class grade (4% each) 
   - We will have two short quizzes during the semester to make sure that everyone is keeping up and to give you some insight in how the final exam might look. Each quiz will be announced at least one week prior and will take about 10-15 minutes of class time. 
 		  
-- Final Exam (cumulative): 20% of class grade
+- Final Exam (cumulative): 18% of class grade
 	- The final exam will cover the material from the whole
-          class and will be worth 20% of your class grade. The exam focusses on
+          class and will be worth 18% of your class grade. The exam focusses on
           all of the material covered in class, including the
           readings, lectures, and exercises. __The assigned exercises
           should serve as excellent preparation for the exams.__
