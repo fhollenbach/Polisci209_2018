@@ -372,7 +372,7 @@ notification.__
 
 
 #### Friday, September 7th: In Class Exercise on Causality
-- [Download data for exercise here](link)
+- [Download data for exercise here](../data/boston.csv)
 - Homework: SWIRL Exercise CAUSALITY 1
 
 
