@@ -1,0 +1,288 @@
+% Created 2018-09-05 Wed 06:57
+% Intended LaTeX compiler: pdflatex
+\documentclass[presentation]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{natbib}
+\usepackage[linktocpage,pdfstartview=FitH,colorlinks,
+linkcolor=blue,anchorcolor=blue,
+citecolor=blue,filecolor=blue,menucolor=blue,urlcolor=blue]{hyperref}
+\setbeamertemplate{frame footer}{\insertshortauthor}
+\setbeamerfont{page number in head/foot}{size=\tiny}
+\setbeamercolor{footline}{fg=gray}
+\author{Florian Hollenbach}
+\usepackage[english]{isodate}
+\usepackage{amsmath,amsthm,amssymb,amsfonts}
+\usetheme{metropolis}
+\usecolortheme{}
+\usefonttheme{}
+\useinnertheme{}
+\useoutertheme{}
+\author{Florian Hollenbach}
+\date{\today}
+\title{Political Science 209 - Fall 2018}
+\subtitle{Introduction}
+
+\hypersetup{
+ pdfauthor={Florian Hollenbach},
+ pdftitle={Political Science 209 - Fall 2018},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 25.3.1 (Org mode 9.1.9)}, 
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+
+
+\begin{frame}[label={sec:org26aa895}]{Causal Inference}
+\begin{block}{What do you think is causal inference?}
+\end{block}
+\end{frame}
+
+\begin{frame}[label={sec:orge2a8455}]{Causal Inference}
+\begin{itemize}
+\item causal: relationship between things where one causes the other
+\item inference: to derive as a conclusion from facts or premises
+\end{itemize}
+
+Causal inference is the \uline{\uline{attempt}} to derive causal connection based on the conditions of the occurrence of an effect
+\end{frame}
+
+\begin{frame}[label={sec:orgb3a20b1}]{Causal Inference}
+\begin{itemize}
+\item Most questions that empirical (political) scientist are interested in are causal questions
+\end{itemize}
+\end{frame}
+
+\begin{frame}[label={sec:org200e423}]{Causal Inference}
+\begin{block}{Examples from Political Science}
+\begin{center}
+\includegraphics[width=8cm]{/Users/florianhollenbach/Documents/GitHub/Polisci209_2018/slides/week2/experiment1.png}
+\end{center}
+\end{block}
+\end{frame}
+
+\begin{frame}[label={sec:org6673ba5}]{Causal Inference}
+\begin{block}{Examples from Political Science}
+\begin{center}
+\includegraphics[width=8cm]{/Users/florianhollenbach/Documents/GitHub/Polisci209_2018/slides/week2/experiment2.png}
+\end{center}
+\end{block}
+\end{frame}
+
+\begin{frame}[label={sec:org19d158c}]{Causal Inference}
+\begin{block}{Examples from Political Science}
+\begin{center}
+\includegraphics[width=8cm]{/Users/florianhollenbach/Documents/GitHub/Polisci209_2018/slides/week2/democracy.png}
+\end{center}
+\end{block}
+\end{frame}
+
+\begin{frame}[label={sec:org6fd2cb8}]{Causal Inference}
+Do you think one of these questions is harder to answer than the others?
+\end{frame}
+
+\begin{frame}[label={sec:org2395346}]{Causal Inference}
+Think of the causal effect as the difference between what happened and what could have happened with/without a “treatment” (or change in X)
+
+\emph{How do we measure the causal effect?}
+\end{frame}
+
+\begin{frame}[label={sec:org3ecdd11}]{Is there a causal effect of democracy on child mortality?}
+\begin{center}
+\includegraphics[width=8cm]{/Users/florianhollenbach/Documents/GitHub/Polisci209_2018/slides/week2/mortalitydemocracy.pdf}
+\end{center}
+\end{frame}
+
+\begin{frame}[label={sec:org4b97a6d}]{Is there a causal effect of democracy on child mortality?}
+\begin{center}
+\includegraphics[width=8cm]{/Users/florianhollenbach/Documents/GitHub/Polisci209_2018/slides/week2/mortalitydemocracy2.png}
+\end{center}
+\begin{block}{What if Kuwait was more democratic?}
+\end{block}
+\end{frame}
+
+\begin{frame}[label={sec:org2f4f3f6}]{How would you know if two variables are causally related?}
+\LARGE{X $\rightarrow$ Y ?}
+\end{frame}
+
+
+
+\begin{frame}[label={sec:org5c27828}]{How would you know if two variables are causally related?}
+\pause
+\begin{itemize}
+\item they occurr together?
+\item if x goes up, y goes up
+\item if x happens, y happens
+\end{itemize}
+
+\pause
+If two things happen together a lot, we say they are correlated
+\end{frame}
+
+\begin{frame}[label={sec:orgc600b38}]{Is correlation sufficient for causation?}
+\pause
+\LARGE{NO}
+\end{frame}
+
+\begin{frame}[label={sec:orgd8c83f5}]{Is correlation sufficient for causation?}
+\LARGE{NO}
+
+\begin{center}
+\includegraphics[width=8cm]{/Users/florianhollenbach/Documents/GitHub/Polisci209_2018/slides/week2/icecream.png}
+\end{center}
+\end{frame}
+
+
+\begin{frame}[label={sec:org3e7a1b2}]{Is correlation sufficient for causation?}
+\LARGE{NO}
+
+\begin{center}
+\includegraphics[width=8cm]{/Users/florianhollenbach/Documents/GitHub/Polisci209_2018/slides/week2/chart.png}
+\end{center}
+\end{frame}
+
+
+
+\begin{frame}[label={sec:orga007578}]{Causal Inference - Concepts}
+\begin{itemize}
+\item Key causal variable: \emph{Treatment (T)}
+\item Two \emph{potential outcomes}: Y with T = 0 and Y with T = 1
+\end{itemize}
+
+\pause
+Example:
+\begin{itemize}
+\item \emph{Treatment}: getting BS in political science instead of BA
+\item \emph{potential outcomes}: Salary after getting BS (Y (T = 1)) or after BA (Y (T = 0))
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}[label={sec:org0dcf749}]{Why is causal inference so hard?}
+\begin{itemize}
+\item The causal effect of a \emph{treatment} is the difference in the \emph{outcome} with and without the treatment:
+Y(T = 1) - Y(T = 0) \(\rightarrow\) Y(1) - Y(0)
+\end{itemize}
+
+\pause
+\begin{center}
+\includegraphics[width=10cm]{/Users/florianhollenbach/Documents/GitHub/Polisci209_2018/slides/week2/causaleffect.png}
+\end{center}
+
+\begin{itemize}
+\item Why might this be a problem?
+\end{itemize}
+\end{frame}
+
+\begin{frame}[label={sec:org645cf66}]{Fundamental Problem of Causal Inference}
+We never observe the \emph{counterfactual}, i.e. the outcome if the \emph{treatment condition} was different
+
+\pause
+Example:
+\begin{itemize}
+\item \emph{Treatment}: getting BS in political science instead of BA
+\item \emph{Potential outcomes}: Salary after getting BS (Y (T = 1)) or after BA (Y (T = 0))
+\item For each of you we only observe one outcome
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}[label={sec:orgf6967c5}]{Fundamental Problem of Causal Inference}
+Examples:
+
+\begin{itemize}
+\item We don't observe Kuwait as a democracy
+\item You don't know how you would feel if you didn't drink that coffee
+\item We don't know how the world/US would look if Clinton had won the election
+\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}[label={sec:orgf3e20a1}]{Fundamental Problem of Causal Inference}
+\begin{center}
+\includegraphics[width=10cm]{/Users/florianhollenbach/Documents/GitHub/Polisci209_2018/slides/week2/fpci.png}
+\end{center}
+\end{frame}
+
+
+\begin{frame}[label={sec:org3c1903d}]{How can we estimate the causal effect?}
+\begin{itemize}
+\item We try to estimate the \emph{average causal effect} in our sample (SATE) by comparing groups
+\item In our sample, does the \emph{Treatment} on average cause a change in \emph{Y}?
+\end{itemize}
+\pause
+\begin{center}
+\includegraphics[width=10cm]{/Users/florianhollenbach/Documents/GitHub/Polisci209_2018/slides/week2/sate.png}
+\end{center}
+But again we only observe one outcome per person!
+\end{frame}
+
+\begin{frame}[label={sec:orge5c307c}]{How can we find the causal effect?}
+Solution: We compare the average of those who received the treatment (\emph{treated group}) to the average of those who did not (\emph{control group})
+\pause
+
+
+Is this enough?
+
+\pause
+Are the two groups comparable?
+\end{frame}
+
+
+\begin{frame}[label={sec:org71ee8e3}]{Experiments/Randomized Control Trials}
+\begin{itemize}
+\item In \emph{Randomized Control Trials} the researcher assigns \emph{treatment} and \emph{control} group status
+\end{itemize}
+\pause
+\begin{itemize}
+\item By randomizing the assignment, we guarantee that the two groups are comparable in all other dimensions
+\item The random assignment \emph{balances} out treatment and control group
+\end{itemize}
+\end{frame}
+
+\begin{frame}[label={sec:org6eb1fe1}]{Experiments/Randomized Control Trials}
+\begin{center}
+\includegraphics[width=10cm]{/Users/florianhollenbach/Documents/GitHub/Polisci209_2018/slides/week2/experiment.png}
+\end{center}
+\end{frame}
+
+
+\begin{frame}[label={sec:org0e9204e}]{Experiments/Randomized Control Trials}
+\begin{center}
+\includegraphics[width=10cm]{/Users/florianhollenbach/Documents/GitHub/Polisci209_2018/slides/week2/experiment3.png}
+\end{center}
+\end{frame}
+
+
+\begin{frame}[label={sec:org8de82a6}]{Experiments/Randomized Control Trials}
+\begin{center}
+\includegraphics[width=10cm]{/Users/florianhollenbach/Documents/GitHub/Polisci209_2018/slides/week2/rct.png}
+\end{center}
+\end{frame}
+
+
+\begin{frame}[label={sec:orga354ebf}]{Experiments/Randomized Control Trials}
+\Large{Internal validity vs external validity}
+\end{frame}
+
+
+\begin{frame}[label={sec:orge993a55}]{Experiments/Randomized Control Trials}
+\begin{itemize}
+\item People may behave differently because they are observed (\emph{Hawthorne effect})
+\item People may behave differently because they expect the \emph{treatment} to work (\emph{placebo effect})
+\end{itemize}
+\end{frame}
+\end{document}

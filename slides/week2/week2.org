@@ -1,0 +1,218 @@
+#+OPTIONS: H:1
+#+LATEX_CLASS: beamer
+#+COLUMNS: %45ITEM %10BEAMER_env(Env) %10BEAMER_act(Act) %4BEAMER_col(Col) %8BEAMER_opt(Opt)
+#+BEAMER_THEME: metropolis
+#+BEAMER_COLOR_THEME:
+#+BEAMER_FONT_THEME:
+#+BEAMER_INNER_THEME:
+#+BEAMER_OUTER_THEME:
+#+BEAMER_HEADER:
+
+
+#+LATEX_HEADER: \setbeamertemplate{frame footer}{\insertshortauthor}
+
+#+LATEX_HEADER: \setbeamerfont{page number in head/foot}{size=\tiny}
+#+LATEX_HEADER: \setbeamercolor{footline}{fg=gray}
+
+#+LATEX_HEADER: \author{Florian Hollenbach}
+
+
+#+TITLE: Political Science 209 - Fall 2018
+#+SUBTITLE: Introduction
+#+AUTHOR: Florian Hollenbach
+#+DATE: \today
+#+EMAIL: fhollenbach@tamu.edu
+#+OPTIONS: toc:nil
+#+LATEX_HEADER: \usepackage[english]{isodate}
+#+LATEX_HEADER: \usepackage{amsmath,amsthm,amssymb,amsfonts}
+
+
+* Causal Inference
+
+** What do you think is causal inference?
+
+* Causal Inference
+
+- causal: relationship between things where one causes the other
+- inference: to derive as a conclusion from facts or premises
+
+Causal inference is the __attempt__ to derive causal connection based on the conditions of the occurrence of an effect
+
+* Causal Inference
+
+- Most questions that empirical (political) scientist are interested in are causal questions
+
+* Causal Inference
+** Examples from Political Science
+#+ATTR_LATEX: :width 8cm
+[[~/Documents/GitHub/Polisci209_2018/slides/week2/experiment1.png]]
+
+* Causal Inference
+** Examples from Political Science
+#+ATTR_LATEX: :width 8cm
+[[~/Documents/GitHub/Polisci209_2018/slides/week2/experiment2.png]]
+
+* Causal Inference
+** Examples from Political Science
+#+ATTR_LATEX: :width 8cm
+[[~/Documents/GitHub/Polisci209_2018/slides/week2/democracy.png]]
+
+* Causal Inference
+
+Do you think one of these questions is harder to answer than the others?
+
+* Causal Inference
+
+Think of the causal effect as the difference between what happened and what could have happened with/without a “treatment” (or change in X)
+
+/How do we measure the causal effect?/
+
+* Is there a causal effect of democracy on child mortality?
+#+ATTR_LATEX: :width 8cm
+[[~/Documents/GitHub/Polisci209_2018/slides/week2/mortalitydemocracy.pdf]]
+
+* Is there a causal effect of democracy on child mortality?
+#+ATTR_LATEX: :width 8cm
+[[~/Documents/GitHub/Polisci209_2018/slides/week2/mortalitydemocracy2.png]]
+** What if Kuwait was more democratic?
+
+* How would you know if two variables are causally related?
+
+\LARGE{X $\rightarrow$ Y ?}
+
+
+
+* How would you know if two variables are causally related?
+
+#+BEAMER: \pause
+- they occurr together?
+- if x goes up, y goes up
+- if x happens, y happens
+
+#+BEAMER: \pause
+If two things happen together a lot, we say they are correlated
+
+* Is correlation sufficient for causation?
+
+#+BEAMER: \pause
+\LARGE{NO}
+
+* Is correlation sufficient for causation?
+\LARGE{NO}
+
+#+ATTR_LATEX: :width 8cm
+[[~/Documents/GitHub/Polisci209_2018/slides/week2/icecream.png]]
+
+
+* Is correlation sufficient for causation?
+\LARGE{NO}
+
+#+ATTR_LATEX: :width 8cm
+[[~/Documents/GitHub/Polisci209_2018/slides/week2/chart.png]]
+
+
+
+* Causal Inference - Concepts
+
+- Key causal variable: /Treatment (T)/
+- Two /potential outcomes/: Y with T = 0 and Y with T = 1
+
+#+BEAMER: \pause
+Example:
+- /Treatment/: getting BS in political science instead of BA
+- /potential outcomes/: Salary after getting BS (Y (T = 1)) or after BA (Y (T = 0))
+
+
+* Why is causal inference so hard?
+
+- The causal effect of a /treatment/ is the difference in the /outcome/ with and without the treatment:
+  Y(T = 1) - Y(T = 0) \rightarrow Y(1) - Y(0)
+
+#+BEAMER: \pause
+#+ATTR_LATEX: :width 10cm
+[[~/Documents/GitHub/Polisci209_2018/slides/week2/causaleffect.png]]
+
+- Why might this be a problem?
+
+* Fundamental Problem of Causal Inference
+
+We never observe the /counterfactual/, i.e. the outcome if the /treatment condition/ was different
+
+#+BEAMER: \pause
+Example:
+- /Treatment/: getting BS in political science instead of BA
+- /Potential outcomes/: Salary after getting BS (Y (T = 1)) or after BA (Y (T = 0))
+- For each of you we only observe one outcome
+
+
+* Fundamental Problem of Causal Inference
+
+Examples:
+
+- We don't observe Kuwait as a democracy
+- You don't know how you would feel if you didn't drink that coffee
+- We don't know how the world/US would look if Clinton had won the election
+
+
+
+* Fundamental Problem of Causal Inference
+
+#+ATTR_LATEX: :width 10cm
+[[~/Documents/GitHub/Polisci209_2018/slides/week2/fpci.png]]
+
+
+* How can we estimate the causal effect?
+
+- We try to estimate the /average causal effect/ in our sample (SATE) by comparing groups
+- In our sample, does the /Treatment/ on average cause a change in /Y/?
+#+BEAMER: \pause
+#+ATTR_LATEX: :width 10cm
+[[~/Documents/GitHub/Polisci209_2018/slides/week2/sate.png]]
+But again we only observe one outcome per person!
+
+* How can we find the causal effect?
+
+Solution: We compare the average of those who received the treatment (/treated group/) to the average of those who did not (/control group/)
+#+BEAMER: \pause
+
+
+Is this enough?
+
+#+BEAMER: \pause
+Are the two groups comparable?
+
+
+* Experiments/Randomized Control Trials
+
+- In /Randomized Control Trials/ the researcher assigns /treatment/ and /control/ group status
+#+BEAMER: \pause
+- By randomizing the assignment, we guarantee that the two groups are comparable in all other dimensions
+- The random assignment /balances/ out treatment and control group
+
+* Experiments/Randomized Control Trials
+
+ #+ATTR_LATEX: :width 10cm
+[[~/Documents/GitHub/Polisci209_2018/slides/week2/experiment.png]]
+
+
+* Experiments/Randomized Control Trials
+
+ #+ATTR_LATEX: :width 10cm
+[[~/Documents/GitHub/Polisci209_2018/slides/week2/experiment3.png]]
+
+
+* Experiments/Randomized Control Trials
+
+ #+ATTR_LATEX: :width 10cm
+[[~/Documents/GitHub/Polisci209_2018/slides/week2/rct.png]]
+
+
+* Experiments/Randomized Control Trials
+
+\Large{Internal validity vs external validity}
+
+
+* Experiments/Randomized Control Trials
+
+- People may behave differently because they are observed (/Hawthorne effect/)
+- People may behave differently because they expect the /treatment/ to work (/placebo effect/)

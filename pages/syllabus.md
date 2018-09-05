@@ -351,7 +351,7 @@ notification.__
 - What is the most surprising thing about you?
 - Buy text book
 - Buy calculator
-- [Slides](../slides/week1/week1.pdf)
+- [Slides Week 1](../slides/week1/week1.pdf)
 
 
 #### Wednesday, August 29th: Installing and Introduction to R 
@@ -368,6 +368,8 @@ notification.__
 #### Wednesday, September 5th: Introduction to causality
 - Read & Work through QSS Chapter 2.1-2.4 
 - SWIRL Exercises INTRO1 & INTRO2
+- [Slides Week 2](../slides/week2/week2.pdf)
+
 
 #### Friday, September 7th: In Class Exercise on Causality
 - [Download data for exercise here](link)
