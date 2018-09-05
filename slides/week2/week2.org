@@ -63,7 +63,7 @@ Do you think one of these questions is harder to answer than the others?
 
 * Causal Inference
 
-Think of the causal effect as the difference between what happened and what could have happened with/without a “treatment” (or change in X)
+Think of the causal effect as the difference between what happened and what could have happened with/without a “/treatment/” (or change in X)
 
 /How do we measure the causal effect?/
 
@@ -80,14 +80,18 @@ Think of the causal effect as the difference between what happened and what coul
 
 \LARGE{X $\rightarrow$ Y ?}
 
+#+BEAMER: \pause
+\LARGE{T $\rightarrow$ Y ?}
 
 
 * How would you know if two variables are causally related?
 
 #+BEAMER: \pause
 - they occurr together?
-- if x goes up, y goes up
-- if x happens, y happens
+- if X goes up, Y goes up
+- if X happens, Y happens
+- if T, then change in Y
+
 
 #+BEAMER: \pause
 If two things happen together a lot, we say they are correlated
