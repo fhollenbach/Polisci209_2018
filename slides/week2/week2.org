@@ -86,7 +86,11 @@ Think of the causal effect as the difference between what happened and what coul
 
 * How would you know if two variables are causally related?
 
-#+BEAMER: \pause
+\Large{How would you know if two variables are causally related?}
+
+
+* How would you know if two variables are causally related?
+
 - they occurr together?
 - if X goes up, Y goes up
 - if X happens, Y happens
@@ -98,7 +102,10 @@ If two things happen together a lot, we say they are correlated
 
 * Is correlation sufficient for causation?
 
-#+BEAMER: \pause
+\Large{Is correlation sufficient for causation?}
+
+* Is correlation sufficient for causation?
+
 \LARGE{NO}
 
 * Is correlation sufficient for causation?
