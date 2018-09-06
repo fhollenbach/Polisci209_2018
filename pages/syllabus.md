@@ -381,11 +381,11 @@ notification.__
 
 ## Week 3
 
-#### Monday, September 10th: Review HW & Continue Exercise on RCTs
-- Assignment due: QSS Exercise 1.5.1
+#### Monday, September 10th: Continue Exercise on RCTs
 
-#### Wednesday, September 12th: Observational Studies
+#### Wednesday, September 12th:  Review HW & Observational Studies
 - Read & Work through QSS Chapter 2.5- 2.6
+- Assignment due: QSS Exercise 1.5.1
 
 
 
