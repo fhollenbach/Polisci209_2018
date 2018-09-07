@@ -372,7 +372,7 @@ notification.__
 
 
 #### Friday, September 7th: In Class Exercise on Causality
-- [Download data for exercise here](../data/boston.csv)
+- [Download data for in class exercise here](../data/boston.csv)
 - Homework: SWIRL Exercise CAUSALITY 1
 
 
@@ -386,6 +386,7 @@ notification.__
 #### Wednesday, September 12th:  Review HW & Observational Studies
 - Read & Work through QSS Chapter 2.5- 2.6
 - Assignment due: QSS Exercise 1.5.1
+- [Download data for Assignment here](../data/turnout.csv)
 
 
 
