@@ -18,7 +18,7 @@
 
 
 #+TITLE: Political Science 209 - Fall 2018
-#+SUBTITLE: Introduction
+#+SUBTITLE: Causal Inference
 #+AUTHOR: Florian Hollenbach
 #+DATE: \today
 #+EMAIL: fhollenbach@tamu.edu
@@ -63,7 +63,7 @@ Do you think one of these questions is harder to answer than the others?
 
 * Causal Inference
 
-Think of the causal effect as the difference between what happened and what could have happened with/without a “/treatment/” (or change in X)
+Think of the causal effect as the difference between what happened and what could have happened with/without a /treatment/ (or change in X)
 
 /How do we measure the causal effect?/
 
@@ -166,6 +166,18 @@ Examples:
 
 
 
+* Interlude
+
+\Large{What is College about?}
+
+#+BEAMER: \pause
+#+ATTR_LATEX: :width 10cm
+[[~/Documents/GitHub/Polisci209_2018/slides/week2/uni1.png]]
+
+#+ATTR_LATEX: :width 5cm
+[[~/Documents/GitHub/Polisci209_2018/slides/week2/uni2.png]]
+
+
 * Fundamental Problem of Causal Inference
 
 #+ATTR_LATEX: :width 10cm
@@ -197,7 +209,7 @@ Are the two groups comparable?
 
 - In /Randomized Control Trials/ the researcher assigns /treatment/ and /control/ group status
 #+BEAMER: \pause
-- By randomizing the assignment, we guarantee that the two groups are comparable in all other dimensions
+- By randomizing the assignment, we guarantee that the two groups are comparable (on average the same) in all other dimensions
 - The random assignment /balances/ out treatment and control group
 
 * Experiments/Randomized Control Trials
@@ -210,6 +222,11 @@ Are the two groups comparable?
 
  #+ATTR_LATEX: :width 10cm
 [[~/Documents/GitHub/Polisci209_2018/slides/week2/experiment3.png]]
+
+* Experiments/Randomized Control Trials
+
+- On average the two groups are going to be the same on all (pre-treatment) dimensions
+- The difference in the outcome is therefore /caused/ by the treatment
 
 
 * Experiments/Randomized Control Trials
@@ -227,3 +244,23 @@ Are the two groups comparable?
 
 - People may behave differently because they are observed (/Hawthorne effect/)
 - People may behave differently because they expect the /treatment/ to work (/placebo effect/)
+
+* Experiment on Exclusionary Attitudes
+
+Causal Effect of Intergroup Contact on Exclusionary Attitudes -- by Ryan D. Enos
+ #+ATTR_LATEX: :width 7cm
+[[~/Documents/GitHub/Polisci209_2018/slides/week2/exclusion_experiment1.pdf]]
+
+* Experiment on Exclusionary Attitudes
+ #+ATTR_LATEX: :width 8cm
+[[~/Documents/GitHub/Polisci209_2018/slides/week2/exclusion_experiment2.pdf]]
+
+
+* Experiment on Exclusionary Attitudes
+ #+ATTR_LATEX: :width 8cm
+[[~/Documents/GitHub/Polisci209_2018/slides/week2/exclusion_experiment3.pdf]]
+
+
+*  Experiment on Exclusionary Attitudes
+
+\LARGE{Let's look at the data!}
