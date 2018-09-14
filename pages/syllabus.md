@@ -399,27 +399,28 @@ notification.__
 
 ## Week 4
 
-#### Monday, September 17th: Introduction to Measurement
-- Read & Work through QSS 3.1 - 3.4
+#### Monday, September 17th: In Class Exercise on Observational Studies
+- Read & Work through QSS Chapter 2.5- 2.6
 
 
-#### Wednesday, September 19th: In Class Exercise on Measurement -- __Meeting in 1015__
+#### Wednesday, September 19th: Introduction to Measurement -- __Meeting in 1015__
+- Read & Work through QSS 3.1 - 3.4 
 
 
 
-#### Friday, September 21st: Review HW &  Univariate Data Summaries
-- Assignment due: QSS Exercise 2.8.3
-
+#### Friday, September 21st:  In Class Exercise on Measurement
+- Homework finish SWIRL Exercise MEASUREMENT 1
 
 
 ## Week 5
 
-#### Monday, September 24th: Bivariate Relationships
+
+#### Monday, September 24th: Review HW &  Univariate Data Summaries
+- Assignment due: QSS Exercise 2.8.3
+
+
+#### Wednesday, September 26th: Bivariate Relationships  -- __Meeting in 1015__
 - Read & Work through QSS 3.5 - 3.7
-
-
-#### Wednesday, September 26th: In Class Exercise Measurement & Bivariate Relationships -- __Meeting in 1015__
-- Homework finish SWIRL Exercise MEASUREMENT 1
 
 
 #### Friday, September 28th: Starting with Writing Assignment 1
