@@ -390,8 +390,11 @@ notification.__
 
 
 
-#### Friday, September 14th: In Class Exercise on Observational Studies
+
+#### Friday, September 14th: 
 - Homework: SWIRL Exercise CAUSALITY 2
+- [Code from in class exercise](../slides/week2/exercise.R)
+
 
 
 ## Week 4
