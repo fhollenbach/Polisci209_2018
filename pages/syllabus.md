@@ -429,46 +429,45 @@ notification.__
 
 ## Week 6
 
-#### Monday, October 1st: Introduction to Prediction
-- Read & Work through QSS 4.1
 
+#### Monday, October 1st:  In Class Exercise Measurement & Bivariate Relationships
+- Homework finish SWIRL Exercise MEASUREMENT 2
 
-
-#### Wednesday, October 3rd: Introduction to Prediction 2
-- Read & Work through QSS 4.2 
+#### Wednesday, October 3rd:  In Class Exercise Measurement & Bivariate Relationships
 - Submit first draft of Writing Assignment 1 to eCampus
 
-#### Friday, October 5th: In Class Exercise Prediction
+#### Friday, October 5th:  Introduction to Prediction
+- Read & Work through QSS 4.1
 - Homework finish SWIRL Exercise PREDICTION 1
 
 
 ## Week 7
 
-#### Monday, October 8th: Introduction to Regression
-- Read & Work through QSS 4.3
-- Homework finish SWIRL Exercises PREDICTION 2
+#### Monday, October 8th: Introduction to Prediction 2
 - Submit Peer-Review Comments for Writing Assignment 1 on eCampus
+- Read & Work through QSS 4.2 
 
 
 #### Wednesday, October 10th: In Class Exercise Prediction
+- Homework finish SWIRL Exercises PREDICTION 2
 
-#### Friday, October 12th: Catch-Up Day & Regression Review
- - Homework finish SWIRL Exercises PREDICTION 3
-
+#### Friday, October 12th: Introduction to Regression
+- Read & Work through QSS 4.3
 
 
 
 
 ## Week 8
 
-#### Monday, October 15th: In Class Exercise on Linear Regression
+#### Monday, October 15th:  In Class Exercise Regression (or Catch up)
 - Submit Final Draft of Writing Assignment 1 on eCampus
 
-#### Wednesday, October 17th: Introduction to Discovery
-- Read & Work through QSS 5.1
+#### Wednesday, October 17th: Catch-Up Day & Regression Review
+- Homework finish SWIRL Exercises PREDICTION 3
 
-#### Friday, October 19th: Review HW + In class Exercise Text as Data
--Assignment due: QSS exercise 4.5.1
+
+#### Friday, October 19th:  In Class Exercise on Linear Regression
+- Assignment due: QSS exercise 4.5.1
 
 
 ## Week 9
