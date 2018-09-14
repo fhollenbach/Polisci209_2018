@@ -399,6 +399,7 @@ notification.__
 
 ## Week 4
 
+
 #### Monday, September 17th: In Class Exercise on Observational Studies
 - Read & Work through QSS Chapter 2.5- 2.6
 
@@ -410,7 +411,6 @@ notification.__
 
 #### Friday, September 21st:  In Class Exercise on Measurement
 - Homework finish SWIRL Exercise MEASUREMENT 1
-
 
 ## Week 5
 
