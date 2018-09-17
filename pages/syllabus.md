@@ -401,6 +401,7 @@ notification.__
 
 #### Monday, September 17th: In Class Exercise on Observational Studies
 - Read & Work through QSS Chapter 2.5- 2.6
+- [Slides Week 4](../slides/week3/week4.pdf)
 
 #### Wednesday, September 19th: Introduction to Measurement -- __Meeting in 1015__
 - Read & Work through QSS 3.1 - 3.4 
