@@ -1,0 +1,175 @@
+#+OPTIONS: H:1
+#+LATEX_CLASS: beamer
+#+COLUMNS: %45ITEM %10BEAMER_env(Env) %10BEAMER_act(Act) %4BEAMER_col(Col) %8BEAMER_opt(Opt)
+#+BEAMER_THEME: metropolis
+#+BEAMER_COLOR_THEME:
+#+BEAMER_FONT_THEME:
+#+BEAMER_INNER_THEME:
+#+BEAMER_OUTER_THEME:
+#+BEAMER_HEADER:
+
+
+#+LATEX_HEADER: \setbeamertemplate{frame footer}{\insertshortauthor}
+
+#+LATEX_HEADER: \setbeamerfont{page number in head/foot}{size=\tiny}
+#+LATEX_HEADER: \setbeamercolor{footline}{fg=gray}
+
+#+LATEX_HEADER: \author{Florian Hollenbach}
+
+
+#+TITLE: Political Science 209 - Fall 2018
+#+SUBTITLE: Observational Studies
+#+AUTHOR: Florian Hollenbach
+#+DATE: \today
+#+EMAIL: fhollenbach@tamu.edu
+#+OPTIONS: toc:nil
+#+LATEX_HEADER: \usepackage[english]{isodate}
+#+LATEX_HEADER: \usepackage{amsmath,amsthm,amssymb,amsfonts}
+
+
+* Review
+
+** What is the fundamental problem of causal inference?
+
+* Review
+
+** What about randomized control trials allows us to credibly estimate a causal effect?
+
+* Get out the Vote Study
+
+** What can induce citizens to vote?
+
+* What was the experiment?
+
+#+BEAMER: \pause
+Letters to randomized households with treatment:
+1. Naming and Shaming: your neighbors will know
+2. Civic Duty
+3. Hawthorne Effect Message
+4. Control (no letter)
+
+* Let's go to R-studio quick
+
+
+* Observational Studies and Causal Inference
+
+** What is the main problem for observational studies?
+
+#+BEAMER: \pause
+   - Confounders: variables that are associated with both treatment and outcome
+
+* What is the Problem with Confounders?
+
+#+BEAMER: \pause
+
+- If pre-treatment characteristics are associated with treatment and outcome, we can't disentangle causal effect from confounding bias
+
+#+BEAMER: \pause
+
+- Selection into treament example: Maybe minimum wage was increased because unemployment was particularly low in NJ, but not PA
+
+* Examples of Confounding
+
+- Are incumbents more likely to win elections? Yes, but...
+
+#+BEAMER: \pause
+
+   - Incumbents receive more campaign contributions
+   - Incumbents have more staff
+
+*  Examples of Confounding
+
+- Does higher income lead countries to democratize?
+
+#+BEAMER: \pause
+
+   - Higher income countries have more educated populations
+
+
+
+* What can we do about confounding in observational studies?
+
+#+BEAMER: \pause
+
+- Make /Treatment/ and /Control/ groups as similar to each other as possible
+- Especially on variables that might matter for treatment status and outcome
+- Analyze subsets or /statistical control/, such that we compare treated and control units that have same value on confounder
+
+* Another problem with observational studies:
+  - Reverse causality
+
+#+BEAMER: \pause
+
+  - Example: Does economic growth cause democratization or democratization cause growth?
+
+Why do experiments not suffer from the threat of reverse causality?
+
+* Observational studies
+
+Difference-in-Differences Design
+
+* Difference-in-Differences Design
+
+- Compare trends before and after the treatment across the same units
+- Takes initial conditions into account
+
+* Difference-in-Differences Design
+
+- Need data measured for both treatment and control at two different time periods: before and after treatment
+#+ATTR_LATEX: :width 4cm
+[[~/Documents/GitHub/Polisci209_2018/slides/week3/Illustration_of_Difference_in_Differences.png]]
+
+- Total difference between P2 and S2 can not be attributed to treatment. Why?
+
+* Difference-in-Differences Design
+
+#+ATTR_LATEX: :width 4cm
+[[~/Documents/GitHub/Polisci209_2018/slides/week3/Illustration_of_Difference_in_Differences.png]]
+
+What might be a necessary condition for Diff-in-Diff to work?
+
+#+BEAMER: \pause
+
+Parralel Trends Assumptions
+
+* Difference-in-Differences Design
+
+#+ATTR_LATEX: :width 8cm
+[[~/Documents/GitHub/Polisci209_2018/slides/week3/did.png]]
+
+
+* Describing numeric variables:
+
+- Mean
+- Median
+- Quantiles
+
+
+* Quantiles
+
+  - splitting observations into equaly size groups, e.g., quartiles, quantiles
+  - 75th percentile is the threshold under which 75% of observations lie
+  - What percentile is the median?
+
+
+* Describing the spread of numeric variables:
+
+- IQR:
+
+#+BEAMER: \pause
+
+     Difference between 75th percentile and 25th percentile
+
+* Describing the spread of numeric variables:
+
+Standard Deviation
+
+#+BEAMER: \pause
+
+
+SD = $\sqrt{\frac{1}{n} \sum^{N}_{i = 1} (x_{i} - \bar{x})^{2}}$
+
+* Standard Deviation
+
+#+ATTR_LATEX: :width 8cm
+[[~/Documents/GitHub/Polisci209_2018/slides/week3/sd.png]]
