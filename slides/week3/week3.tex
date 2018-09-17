@@ -1,4 +1,4 @@
-% Created 2018-09-17 Mon 00:01
+% Created 2018-09-17 Mon 00:05
 % Intended LaTeX compiler: pdflatex
 \documentclass[presentation]{beamer}
 \usepackage[utf8]{inputenc}
@@ -45,22 +45,22 @@ citecolor=blue,filecolor=blue,menucolor=blue,urlcolor=blue]{hyperref}
 \maketitle
 
 
-\begin{frame}[label={sec:org6a89c07}]{Review}
+\begin{frame}[label={sec:orge03d7a9}]{Review}
 \begin{block}{What is the fundamental problem of causal inference?}
 \end{block}
 \end{frame}
 
-\begin{frame}[label={sec:org258466d}]{Review}
+\begin{frame}[label={sec:org006465b}]{Review}
 \begin{block}{What about randomized control trials allows us to credibly estimate a causal effect?}
 \end{block}
 \end{frame}
 
-\begin{frame}[label={sec:org4dbd159}]{Get out the Vote Study}
+\begin{frame}[label={sec:org83010ad}]{Get out the Vote Study}
 \begin{block}{What can induce citizens to vote?}
 \end{block}
 \end{frame}
 
-\begin{frame}[label={sec:orgf19daca}]{What was the experiment?}
+\begin{frame}[label={sec:org99cff2b}]{What was the experiment?}
 \pause
 Letters to randomized households with treatment:
 \begin{enumerate}
@@ -71,11 +71,11 @@ Letters to randomized households with treatment:
 \end{enumerate}
 \end{frame}
 
-\begin{frame}[label={sec:orga0ff1c2}]{Let's go to R-studio quick}
+\begin{frame}[label={sec:orge902037}]{Let's go to R-studio quick}
 \end{frame}
 
 
-\begin{frame}[label={sec:org8fabebf}]{Observational Studies and Causal Inference}
+\begin{frame}[label={sec:orgb17d2a5}]{Observational Studies and Causal Inference}
 \begin{block}{What is the main problem for observational studies?}
 \pause
 \begin{itemize}
@@ -84,7 +84,7 @@ Letters to randomized households with treatment:
 \end{block}
 \end{frame}
 
-\begin{frame}[label={sec:org3e9d156}]{What is the Problem with Confounders?}
+\begin{frame}[label={sec:orgd8ac83c}]{What is the Problem with Confounders?}
 \pause
 
 \begin{itemize}
@@ -98,7 +98,7 @@ Letters to randomized households with treatment:
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orgd6f8a1d}]{Examples of Confounding}
+\begin{frame}[label={sec:org26ba627}]{Examples of Confounding}
 \begin{itemize}
 \item Are incumbents more likely to win elections? Yes, but\ldots{}
 \end{itemize}
@@ -111,7 +111,7 @@ Letters to randomized households with treatment:
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org6a56cc6}]{Examples of Confounding}
+\begin{frame}[label={sec:org0738962}]{Examples of Confounding}
 \begin{itemize}
 \item Does higher income lead countries to democratize?
 \end{itemize}
@@ -125,7 +125,7 @@ Letters to randomized households with treatment:
 
 
 
-\begin{frame}[label={sec:orgca35130}]{What can we do about confounding in observational studies?}
+\begin{frame}[label={sec:org95e2345}]{What can we do about confounding in observational studies?}
 \pause
 
 \begin{itemize}
@@ -135,7 +135,7 @@ Letters to randomized households with treatment:
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org3af8b70}]{Another problem with observational studies:}
+\begin{frame}[label={sec:org42f5cf8}]{Another problem with observational studies:}
 \begin{itemize}
 \item Reverse causality
 \end{itemize}
@@ -149,18 +149,18 @@ Letters to randomized households with treatment:
 Why do experiments not suffer from the threat of reverse causality?
 \end{frame}
 
-\begin{frame}[label={sec:org7bb327e}]{Observational studies}
+\begin{frame}[label={sec:orgb545b9b}]{Observational studies}
 Difference-in-Differences Design
 \end{frame}
 
-\begin{frame}[label={sec:org44bb42c}]{Difference-in-Differences Design}
+\begin{frame}[label={sec:org9a97360}]{Difference-in-Differences Design}
 \begin{itemize}
 \item Compare trends before and after the treatment across the same units
 \item Takes initial conditions into account
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orge1f39a1}]{Difference-in-Differences Design}
+\begin{frame}[label={sec:org3dd7209}]{Difference-in-Differences Design}
 \begin{itemize}
 \item Need data measured for both treatment and control at two different time periods: before and after treatment
 \end{itemize}
@@ -173,7 +173,7 @@ Difference-in-Differences Design
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org2992c7a}]{Difference-in-Differences Design}
+\begin{frame}[label={sec:org3bcff8e}]{Difference-in-Differences Design}
 \begin{center}
 \includegraphics[width=4cm]{/Users/florianhollenbach/Documents/GitHub/Polisci209_2018/slides/week3/Illustration_of_Difference_in_Differences.png}
 \end{center}
@@ -185,14 +185,14 @@ What might be a necessary condition for Diff-in-Diff to work?
 Parralel Trends Assumptions
 \end{frame}
 
-\begin{frame}[label={sec:org82fba56}]{Difference-in-Differences Design}
+\begin{frame}[label={sec:orga870f24}]{Difference-in-Differences Design}
 \begin{center}
 \includegraphics[width=8cm]{/Users/florianhollenbach/Documents/GitHub/Polisci209_2018/slides/week3/did.png}
 \end{center}
 \end{frame}
 
 
-\begin{frame}[label={sec:org8776b3d}]{Describing numeric variables:}
+\begin{frame}[label={sec:org19da1f1}]{Describing numeric variables:}
 \begin{itemize}
 \item Mean
 \item Median
@@ -201,7 +201,7 @@ Parralel Trends Assumptions
 \end{frame}
 
 
-\begin{frame}[label={sec:orge62e587}]{Quantiles}
+\begin{frame}[label={sec:org6fbde41}]{Quantiles}
 \begin{itemize}
 \item splitting observations into equaly size groups, e.g., quartiles, quantiles
 \item 75th percentile is the threshold under which 75\% of observations lie
@@ -210,7 +210,7 @@ Parralel Trends Assumptions
 \end{frame}
 
 
-\begin{frame}[label={sec:org783f3bf}]{Describing the spread of numeric variables:}
+\begin{frame}[label={sec:org9a48746}]{Describing the spread of numeric variables:}
 \begin{itemize}
 \item IQR:
 \end{itemize}
@@ -220,7 +220,7 @@ Parralel Trends Assumptions
 Difference between 75th percentile and 25th percentile
 \end{frame}
 
-\begin{frame}[label={sec:org506d3ca}]{Describing the spread of numeric variables:}
+\begin{frame}[label={sec:orgea57f3e}]{Describing the spread of numeric variables:}
 Standard Deviation
 
 \pause
@@ -229,7 +229,7 @@ Standard Deviation
 SD = \(\sqrt{\frac{1}{n} \sum^{N}_{i = 1} (x_{i} - \bar{x})^{2}}\)
 \end{frame}
 
-\begin{frame}[label={sec:orgc43fe32}]{Standard Deviation}
+\begin{frame}[label={sec:orgecf10e9}]{Standard Deviation}
 \begin{center}
 \includegraphics[width=8cm]{/Users/florianhollenbach/Documents/GitHub/Polisci209_2018/slides/week3/sd.png}
 \end{center}
