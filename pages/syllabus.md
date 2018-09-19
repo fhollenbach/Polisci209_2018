@@ -435,6 +435,7 @@ notification.__
 - Submit first draft of Writing Assignment 1 to eCampus
 
 #### Friday, October 5th:  Introduction to Prediction
+- In-class Quiz no 1
 - Read & Work through QSS 4.1
 - Homework finish SWIRL Exercise PREDICTION 1
 

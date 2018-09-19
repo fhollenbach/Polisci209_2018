@@ -238,13 +238,12 @@ quantile(boston$income, prob = seq(0, 1, 0.1))
 
 ##### age by quantiles
 ## create age quartiles
-qrt <- quantile(boston$age, probs = seq(from = 0, to = 1, by = 0.25))
+qrt <- quantile(boston$age, probs = seq(from = 0, to = 1, by = (1 / 3)))
 
 
 boston$age.qrt <- ifelse(boston$age <= qrt[2], 1,
                  ifelse(boston$age > qrt[2] & boston$age <= qrt[3], 2,
-                 ifelse(boston$age > qrt[3] & boston$age <= qrt[4], 3,
-                 ifelse(boston$age > qrt[4], 4, NA))))
+                 ifelse(boston$age > qrt[3], 3, boston$age.qrt)))
 
 ## treatmemnt group change by age
 ### tapply splits first argument, but factor in second argument and applies function in third argument to it, i.e. take the change variable, split it in groups by age quartile, calculate the mean
@@ -266,3 +265,22 @@ dif.squared <- dif ^ 2
 dif.2.sum <- sum(dif.squared)
 dif.mean <- dif.2.sum / length(boston$income)
 sqrt(dif.mean)
+
+
+### bar plot
+### use age quartiles as factor variable
+age.ptable <- prop.table(table(AGEgroups = boston$age.qrt, exclude = NULL))
+barplot(age.ptable,
+        names.arg = c("Young", "Middle Aged", "Old"),
+        main = "",
+        xlab = "age category",
+        ylab = "Proportion of Subjects", ylim = c(0, 0.5))
+
+#### histogram
+hist(boston$age, freq = FALSE, xlab = "Age",
+     main = "Distribution of Subjects's Age")
+
+
+### boxplot
+boxplot(income ~ treatment, data = boston,
+        main = "Income by Treatment Status", ylab = "Income")

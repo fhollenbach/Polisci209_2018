@@ -173,3 +173,61 @@ SD = $\sqrt{\frac{1}{n} \sum^{N}_{i = 1} (x_{i} - \bar{x})^{2}}$
 
 #+ATTR_LATEX: :width 8cm
 [[~/Documents/GitHub/Polisci209_2018/slides/week3/sd.png]]
+
+
+* Describing single Variables
+
+- Barplots can be used to summarize factor(?) variables
+- Proportion of observations in each category as the height of each bar
+
+* Barplots
+
+#+ATTR_LATEX: :width 8cm
+[[~/Documents/GitHub/Polisci209_2018/slides/week3/barplot.png]]
+
+
+* Histograms
+
+- Histograms look similar to barplots
+- Used for numeric variables
+- Numeric variables are /binned/ into groups
+
+* Histograms
+
+- Each bar is for one bin
+- Height of each bar is the /density/ of the bin
+
+#+BEAMER: \pause
+
+- Important: Height is share of observations in bin divided by bin size
+
+#+BEAMER: \pause
+
+- Unit of vertical axis (y-axis) is interpreted as percentage per horizontal (x-axis) unit
+
+* Histograms
+
+- Area of each bar is the share of observations that fall into that bin
+- Area of all bins sum to one
+
+* Histograms
+
+#+ATTR_LATEX: :width 8cm
+[[~/Documents/GitHub/Polisci209_2018/slides/week3/histogram.pdf]]
+
+
+* Boxplots
+
+- Boxplots also display the distribution of a numeric variable
+- Boxplots show the /median/, /quartiles/, and /IQR/
+
+* Boxplots
+
+#+ATTR_LATEX: :width 8cm
+[[~/Documents/GitHub/Polisci209_2018/slides/week3/boxplot.png]]
+
+
+* Boxplots can show how two variables covary
+
+#+ATTR_LATEX: :width 8cm
+[[~/Documents/GitHub/Polisci209_2018/slides/week3/boxplot2.pdf]]
