@@ -415,7 +415,7 @@ notification.__
 
 #### Monday, September 24th: Review HW &  Univariate Data Summaries
 - Assignment due: QSS Exercise 2.8.3
-
+- [Data for Assignment QSS 2.8.3](../slides/week3/leaders.csv)
 
 #### Wednesday, September 26th: Bivariate Relationships  -- __Meeting in 1015__
 - Read & Work through QSS 3.5 - 3.7
