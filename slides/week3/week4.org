@@ -231,3 +231,111 @@ SD = $\sqrt{\frac{1}{n} \sum^{N}_{i = 1} (x_{i} - \bar{x})^{2}}$
 
 #+ATTR_LATEX: :width 8cm
 [[~/Documents/GitHub/Polisci209_2018/slides/week3/boxplot2.pdf]]
+
+* Survey Sampling
+
+- A sample is a small share of the population in that we are interested in
+
+#+BEAMER: \pause
+
+- How do we draw samples in such a way that polls accurately reflect what is going to happen?
+
+- How to construct samples that will represent the population?
+
+* Survey Sampling
+
+- Example: We want to know the voting intentions of Texans (or Americans)
+- We can hardly ask all eligible voters about their intention
+
+#+BEAMER: \pause
+- We take a /sample/
+
+* Survey Sampling
+
+- The size of the sample is less important than its composition
+
+#+ATTR_LATEX: :width 8cm
+[[~/Documents/GitHub/Polisci209_2018/slides/week3/drudge.jpeg]]
+
+- Never trust an internet poll
+
+* Literary Digest Sample
+
+- Mail questionnaire to 10 million people
+
+- Addresses came from phone books and club memberships
+
+- Problems?
+
+#+BEAMER: \pause
+
+- Biased /sample/
+
+
+* Quota Samping
+
+- Sample certain groups until quota is filled
+
+- Does not mean unobservables are representative
+
+* Simple Random Sampling
+
+- Think of all voters sitting in a box, survey firm randomly draws voters
+
+- Random draws without replacement give us an unbiased estimate of the population
+
+- Everybody has the same chance of being in the sample
+
+
+* Simple Random Sampling
+
+- Pre-determined number of units are randomly selected from population
+
+- Sample will be representative of population on observed and unobserved characteristics
+
+
+
+* Simple Random Sampling
+
+- Not every single sample will be exactly representative
+
+- If we were to take a lot of random samples (say 1000 samples of 1000 respondents), on average the samples would be representative
+
+* Simple Random Sampling
+
+- Each single sample can be off and different
+
+- Polls are associated with uncertainty
+
+#+ATTR_LATEX: :width 8cm
+[[~/Documents/GitHub/Polisci209_2018/slides/week3/cruz.png]]
+
+#+BEAMER: \pause
+
+
+#+ATTR_LATEX: :width 8cm
+[[~/Documents/GitHub/Polisci209_2018/slides/week3/orourke.png]]
+
+
+* Random Sampling is hard
+
+- How to create sampling frame?
+
+- Random digit dialing? Walking to random houses?
+
+- Multi-stage cluster sampling
+
+* Non-reponse bias
+
+- Unit non-response bias:
+
+#+ATTR_LATEX: :width 8cm
+[[~/Documents/GitHub/Polisci209_2018/slides/week3/cohn.png]]
+
+
+
+
+* Non-reponse bias
+
+- Item non-response bias:
+   /What was the last crime you committed?/
