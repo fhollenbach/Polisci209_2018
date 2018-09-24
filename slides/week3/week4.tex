@@ -1,4 +1,4 @@
-% Created 2018-09-24 Mon 08:30
+% Created 2018-09-24 Mon 09:40
 % Intended LaTeX compiler: pdflatex
 \documentclass[presentation]{beamer}
 \usepackage[utf8]{inputenc}
@@ -45,22 +45,22 @@ citecolor=blue,filecolor=blue,menucolor=blue,urlcolor=blue]{hyperref}
 \maketitle
 
 
-\begin{frame}[label={sec:org05b4cd5}]{Review}
+\begin{frame}[label={sec:org7cd2a6c}]{Review}
 \begin{block}{What is the fundamental problem of causal inference?}
 \end{block}
 \end{frame}
 
-\begin{frame}[label={sec:org44116bf}]{Review}
+\begin{frame}[label={sec:org33487da}]{Review}
 \begin{block}{What about randomized control trials allows us to credibly estimate a causal effect?}
 \end{block}
 \end{frame}
 
-\begin{frame}[label={sec:orgbcc2da1}]{Get out the Vote Study}
+\begin{frame}[label={sec:orgbb83ded}]{Get out the Vote Study}
 \begin{block}{What can induce citizens to vote?}
 \end{block}
 \end{frame}
 
-\begin{frame}[label={sec:org9897a0c}]{What was the experiment?}
+\begin{frame}[label={sec:orgb898ba8}]{What was the experiment?}
 \pause
 Letters to randomized households with treatment:
 \begin{enumerate}
@@ -71,11 +71,11 @@ Letters to randomized households with treatment:
 \end{enumerate}
 \end{frame}
 
-\begin{frame}[label={sec:org842d313}]{Let's go to R-studio quick}
+\begin{frame}[label={sec:org0bfccb0}]{Let's go to R-studio quick}
 \end{frame}
 
 
-\begin{frame}[label={sec:org1429165}]{Observational Studies and Causal Inference}
+\begin{frame}[label={sec:org18051ea}]{Observational Studies and Causal Inference}
 \begin{block}{What is the main problem for observational studies?}
 \pause
 \begin{itemize}
@@ -84,7 +84,7 @@ Letters to randomized households with treatment:
 \end{block}
 \end{frame}
 
-\begin{frame}[label={sec:org824234e}]{What is the Problem with Confounders?}
+\begin{frame}[label={sec:orgf897660}]{What is the Problem with Confounders?}
 \pause
 
 \begin{itemize}
@@ -98,7 +98,7 @@ Letters to randomized households with treatment:
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org0bdd866}]{Examples of Confounding}
+\begin{frame}[label={sec:org2257a31}]{Examples of Confounding}
 \begin{itemize}
 \item Are incumbents more likely to win elections? Yes, but\ldots{}
 \end{itemize}
@@ -111,7 +111,7 @@ Letters to randomized households with treatment:
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orga5a8ffb}]{Examples of Confounding}
+\begin{frame}[label={sec:orgf1e816f}]{Examples of Confounding}
 \begin{itemize}
 \item Does higher income lead countries to democratize?
 \end{itemize}
@@ -125,7 +125,7 @@ Letters to randomized households with treatment:
 
 
 
-\begin{frame}[label={sec:org8f55328}]{What can we do about confounding in observational studies?}
+\begin{frame}[label={sec:org464eab8}]{What can we do about confounding in observational studies?}
 \pause
 
 \begin{itemize}
@@ -135,7 +135,7 @@ Letters to randomized households with treatment:
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orga75961c}]{Another problem with observational studies:}
+\begin{frame}[label={sec:orgcdb63bf}]{Another problem with observational studies:}
 \begin{itemize}
 \item Reverse causality
 \end{itemize}
@@ -149,18 +149,18 @@ Letters to randomized households with treatment:
 Why do experiments not suffer from the threat of reverse causality?
 \end{frame}
 
-\begin{frame}[label={sec:org58188ea}]{Observational studies}
+\begin{frame}[label={sec:orgf2081d1}]{Observational studies}
 Difference-in-Differences Design
 \end{frame}
 
-\begin{frame}[label={sec:org7b310af}]{Difference-in-Differences Design}
+\begin{frame}[label={sec:org551807e}]{Difference-in-Differences Design}
 \begin{itemize}
 \item Compare trends before and after the treatment across the same units
 \item Takes initial conditions into account
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org0529ff8}]{Difference-in-Differences Design}
+\begin{frame}[label={sec:orgbc78481}]{Difference-in-Differences Design}
 \begin{itemize}
 \item Need data measured for both treatment and control at two different time periods: before and after treatment
 \end{itemize}
@@ -173,7 +173,7 @@ Difference-in-Differences Design
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org8831d9b}]{Difference-in-Differences Design}
+\begin{frame}[label={sec:org25c6fe6}]{Difference-in-Differences Design}
 \begin{center}
 \includegraphics[width=4cm]{/Users/florianhollenbach/Documents/GitHub/Polisci209_2018/slides/week3/Illustration_of_Difference_in_Differences.png}
 \end{center}
@@ -185,14 +185,14 @@ What might be a necessary condition for Diff-in-Diff to work?
 Parralel Trends Assumptions
 \end{frame}
 
-\begin{frame}[label={sec:orgb577522}]{Difference-in-Differences Design}
+\begin{frame}[label={sec:org0ab2528}]{Difference-in-Differences Design}
 \begin{center}
 \includegraphics[width=8cm]{/Users/florianhollenbach/Documents/GitHub/Polisci209_2018/slides/week3/did.png}
 \end{center}
 \end{frame}
 
 
-\begin{frame}[label={sec:org2bfeff3}]{Describing numeric variables:}
+\begin{frame}[label={sec:org1744778}]{Describing numeric variables:}
 \begin{itemize}
 \item Mean
 \item Median
@@ -201,7 +201,7 @@ Parralel Trends Assumptions
 \end{frame}
 
 
-\begin{frame}[label={sec:org930485f}]{Quantiles}
+\begin{frame}[label={sec:orgc9203a9}]{Quantiles}
 \begin{itemize}
 \item splitting observations into equaly size groups, e.g., quartiles, quantiles
 \item 75th percentile is the threshold under which 75\% of observations lie
@@ -210,7 +210,7 @@ Parralel Trends Assumptions
 \end{frame}
 
 
-\begin{frame}[label={sec:org2c6e110}]{Describing the spread of numeric variables:}
+\begin{frame}[label={sec:org358b46d}]{Describing the spread of numeric variables:}
 \begin{itemize}
 \item IQR:
 \end{itemize}
@@ -220,7 +220,7 @@ Parralel Trends Assumptions
 Difference between 75th percentile and 25th percentile
 \end{frame}
 
-\begin{frame}[label={sec:org98486db}]{Describing the spread of numeric variables:}
+\begin{frame}[label={sec:org84c2985}]{Describing the spread of numeric variables:}
 Standard Deviation
 
 \pause
@@ -229,28 +229,28 @@ Standard Deviation
 SD = \(\sqrt{\frac{1}{n} \sum^{N}_{i = 1} (x_{i} - \bar{x})^{2}}\)
 \end{frame}
 
-\begin{frame}[label={sec:org882fcaa}]{Standard Deviation}
+\begin{frame}[label={sec:orgcf3a617}]{Standard Deviation}
 \begin{center}
 \includegraphics[width=8cm]{/Users/florianhollenbach/Documents/GitHub/Polisci209_2018/slides/week3/sd.png}
 \end{center}
 \end{frame}
 
 
-\begin{frame}[label={sec:org3cb0f30}]{Describing single Variables}
+\begin{frame}[label={sec:org1ca1f9b}]{Describing single Variables}
 \begin{itemize}
 \item Barplots can be used to summarize factor(?) variables
 \item Proportion of observations in each category as the height of each bar
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org5f04d8d}]{Barplots}
+\begin{frame}[label={sec:org0d82840}]{Barplots}
 \begin{center}
 \includegraphics[width=8cm]{/Users/florianhollenbach/Documents/GitHub/Polisci209_2018/slides/week3/barplot.png}
 \end{center}
 \end{frame}
 
 
-\begin{frame}[label={sec:org5cddf26}]{Histograms}
+\begin{frame}[label={sec:orga6cd9e7}]{Histograms}
 \begin{itemize}
 \item Histograms look similar to barplots
 \item Used for numeric variables
@@ -258,7 +258,7 @@ SD = \(\sqrt{\frac{1}{n} \sum^{N}_{i = 1} (x_{i} - \bar{x})^{2}}\)
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org3406ad8}]{Histograms}
+\begin{frame}[label={sec:orge731850}]{Histograms}
 \begin{itemize}
 \item Each bar is for one bin
 \item Height of each bar is the \emph{density} of the bin
@@ -277,41 +277,41 @@ SD = \(\sqrt{\frac{1}{n} \sum^{N}_{i = 1} (x_{i} - \bar{x})^{2}}\)
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org9481963}]{Histograms}
+\begin{frame}[label={sec:org8acf7d5}]{Histograms}
 \begin{itemize}
 \item Area of each bar is the share of observations that fall into that bin
 \item Area of all bins sum to one
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org6019939}]{Histograms}
+\begin{frame}[label={sec:orga453c42}]{Histograms}
 \begin{center}
 \includegraphics[width=8cm]{/Users/florianhollenbach/Documents/GitHub/Polisci209_2018/slides/week3/histogram.pdf}
 \end{center}
 \end{frame}
 
 
-\begin{frame}[label={sec:org638494d}]{Boxplots}
+\begin{frame}[label={sec:org78c531f}]{Boxplots}
 \begin{itemize}
 \item Boxplots also display the distribution of a numeric variable
 \item Boxplots show the \emph{median}, \emph{quartiles}, and \emph{IQR}
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orgf73f02c}]{Boxplots}
+\begin{frame}[label={sec:org8d50251}]{Boxplots}
 \begin{center}
 \includegraphics[width=8cm]{/Users/florianhollenbach/Documents/GitHub/Polisci209_2018/slides/week3/boxplot.png}
 \end{center}
 \end{frame}
 
 
-\begin{frame}[label={sec:orge9cc12b}]{Boxplots can show how two variables covary}
+\begin{frame}[label={sec:org9a70067}]{Boxplots can show how two variables covary}
 \begin{center}
 \includegraphics[width=8cm]{/Users/florianhollenbach/Documents/GitHub/Polisci209_2018/slides/week3/boxplot2.pdf}
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:orgb6a874d}]{Survey Sampling}
+\begin{frame}[label={sec:org6c3610f}]{Survey Sampling}
 \begin{itemize}
 \item A sample is a small share of the population in that we are interested in
 \end{itemize}
@@ -325,7 +325,7 @@ SD = \(\sqrt{\frac{1}{n} \sum^{N}_{i = 1} (x_{i} - \bar{x})^{2}}\)
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org87e90ac}]{Survey Sampling}
+\begin{frame}[label={sec:org740f7f3}]{Survey Sampling}
 \begin{itemize}
 \item Example: We want to know the voting intentions of Texans (or Americans)
 \item We can hardly ask all eligible voters about their intention
@@ -337,7 +337,7 @@ SD = \(\sqrt{\frac{1}{n} \sum^{N}_{i = 1} (x_{i} - \bar{x})^{2}}\)
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org9a96577}]{Survey Sampling}
+\begin{frame}[label={sec:orgaf7c7f9}]{Survey Sampling}
 \begin{itemize}
 \item The size of the sample is less important than its composition
 \end{itemize}
@@ -351,7 +351,7 @@ SD = \(\sqrt{\frac{1}{n} \sum^{N}_{i = 1} (x_{i} - \bar{x})^{2}}\)
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org2e6b4fe}]{Literary Digest Sample}
+\begin{frame}[label={sec:org14fee2e}]{Literary Digest Sample}
 \begin{itemize}
 \item Mail questionnaire to 10 million people
 
@@ -368,7 +368,7 @@ SD = \(\sqrt{\frac{1}{n} \sum^{N}_{i = 1} (x_{i} - \bar{x})^{2}}\)
 \end{frame}
 
 
-\begin{frame}[label={sec:org47e3b43}]{Quota Samping}
+\begin{frame}[label={sec:orgd65db0a}]{Quota Samping}
 \begin{itemize}
 \item Sample certain groups until quota is filled
 
@@ -376,7 +376,7 @@ SD = \(\sqrt{\frac{1}{n} \sum^{N}_{i = 1} (x_{i} - \bar{x})^{2}}\)
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org27b2827}]{Simple Random Sampling}
+\begin{frame}[label={sec:orgc7e3a52}]{Simple Random Sampling}
 \begin{itemize}
 \item Think of all voters sitting in a box, survey firm randomly draws voters
 
@@ -387,7 +387,7 @@ SD = \(\sqrt{\frac{1}{n} \sum^{N}_{i = 1} (x_{i} - \bar{x})^{2}}\)
 \end{frame}
 
 
-\begin{frame}[label={sec:org1ede10f}]{Simple Random Sampling}
+\begin{frame}[label={sec:org07b56ce}]{Simple Random Sampling}
 \begin{itemize}
 \item Pre-determined number of units are randomly selected from population
 
@@ -397,7 +397,7 @@ SD = \(\sqrt{\frac{1}{n} \sum^{N}_{i = 1} (x_{i} - \bar{x})^{2}}\)
 
 
 
-\begin{frame}[label={sec:orgf9ede7f}]{Simple Random Sampling}
+\begin{frame}[label={sec:org883ee83}]{Simple Random Sampling}
 \begin{itemize}
 \item Not every single sample will be exactly representative
 
@@ -405,7 +405,7 @@ SD = \(\sqrt{\frac{1}{n} \sum^{N}_{i = 1} (x_{i} - \bar{x})^{2}}\)
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org555ea27}]{Simple Random Sampling}
+\begin{frame}[label={sec:orgbed0acd}]{Simple Random Sampling}
 \begin{itemize}
 \item Each single sample can be off and different
 
@@ -425,7 +425,7 @@ SD = \(\sqrt{\frac{1}{n} \sum^{N}_{i = 1} (x_{i} - \bar{x})^{2}}\)
 \end{frame}
 
 
-\begin{frame}[label={sec:orgb740948}]{Random Sampling is hard}
+\begin{frame}[label={sec:orgb899d94}]{Random Sampling is hard}
 \begin{itemize}
 \item How to create sampling frame?
 
@@ -435,7 +435,7 @@ SD = \(\sqrt{\frac{1}{n} \sum^{N}_{i = 1} (x_{i} - \bar{x})^{2}}\)
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org14f39ff}]{Non-reponse bias}
+\begin{frame}[label={sec:orgb6ebd5a}]{Non-reponse bias}
 \begin{itemize}
 \item Unit non-response bias:
 \end{itemize}
@@ -448,7 +448,7 @@ SD = \(\sqrt{\frac{1}{n} \sum^{N}_{i = 1} (x_{i} - \bar{x})^{2}}\)
 
 
 
-\begin{frame}[label={sec:org40a7991}]{Non-reponse bias}
+\begin{frame}[label={sec:org5b03ab1}]{Non-reponse bias}
 \begin{itemize}
 \item Item non-response bias:
 \emph{What was the last crime you committed?}
@@ -458,7 +458,7 @@ SD = \(\sqrt{\frac{1}{n} \sum^{N}_{i = 1} (x_{i} - \bar{x})^{2}}\)
 \end{frame}
 
 
-\begin{frame}[label={sec:org8c49026}]{Why could this be a problem in the Afghanistan example?}
+\begin{frame}[label={sec:org2f26eef}]{Why could this be a problem in the Afghanistan example?}
 \begin{center}
 \includegraphics[width=8cm]{/Users/florianhollenbach/Documents/GitHub/Polisci209_2018/slides/week3/afghan-survey.jpg}
 \end{center}
