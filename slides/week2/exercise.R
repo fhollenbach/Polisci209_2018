@@ -243,7 +243,7 @@ qrt <- quantile(boston$age, probs = seq(from = 0, to = 1, by = (1 / 3)))
 
 boston$age.qrt <- ifelse(boston$age <= qrt[2], 1,
                  ifelse(boston$age > qrt[2] & boston$age <= qrt[3], 2,
-                 ifelse(boston$age > qrt[3], 3, boston$age.qrt)))
+                 ifelse(boston$age > qrt[3], 3, NA)))
 
 ## treatmemnt group change by age
 ### tapply splits first argument, but factor in second argument and applies function in third argument to it, i.e. take the change variable, split it in groups by age quartile, calculate the mean

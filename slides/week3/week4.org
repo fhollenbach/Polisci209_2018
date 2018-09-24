@@ -339,3 +339,12 @@ SD = $\sqrt{\frac{1}{n} \sum^{N}_{i = 1} (x_{i} - \bar{x})^{2}}$
 
 - Item non-response bias:
    /What was the last crime you committed?/
+- Sensitive questions: non-response, social desirability bias
+  /Turnout/, /racial prejudice/, /corruption/
+
+
+* Why could this be a problem in the Afghanistan example?
+
+
+#+ATTR_LATEX: :width 8cm
+[[~/Documents/GitHub/Polisci209_2018/slides/week3/afghan-survey.jpg]]
