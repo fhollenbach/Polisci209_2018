@@ -419,7 +419,9 @@ notification.__
 
 #### Wednesday, September 26th: Bivariate Relationships  -- __Meeting in 1015__
 - Read & Work through QSS 3.5 - 3.7
-
+- [Slides Week 5](../slides/week5/week5.pdf)
+- [Code Bivariate Relationships](../slides/week5/bivariate_relationships.R)
+- [Data Bivariate Relationships](../slides/week5/bivariate_data.csv)
 
 #### Friday, September 28th: Starting with Writing Assignment 1
 - How to write well

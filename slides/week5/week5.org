@@ -1,0 +1,373 @@
+#+OPTIONS: H:1
+#+LATEX_CLASS: beamer
+#+COLUMNS: %45ITEM %10BEAMER_env(Env) %10BEAMER_act(Act) %4BEAMER_col(Col) %8BEAMER_opt(Opt)
+#+BEAMER_THEME: metropolis
+#+BEAMER_COLOR_THEME:
+#+BEAMER_FONT_THEME:
+#+BEAMER_INNER_THEME:
+#+BEAMER_OUTER_THEME:
+#+BEAMER_HEADER:
+
+
+#+LATEX_HEADER: \setbeamertemplate{frame footer}{\insertshortauthor}
+
+#+LATEX_HEADER: \setbeamerfont{page number in head/foot}{size=\tiny}
+#+LATEX_HEADER: \setbeamercolor{footline}{fg=gray}
+
+#+LATEX_HEADER: \author{Florian Hollenbach}
+
+
+#+TITLE: Political Science 209 - Fall 2018
+#+SUBTITLE: Measurement
+#+AUTHOR: Florian Hollenbach
+#+DATE: \today
+#+EMAIL: fhollenbach@tamu.edu
+#+OPTIONS: toc:nil
+#+LATEX_HEADER: \usepackage[english]{isodate}
+#+LATEX_HEADER: \usepackage{amsmath,amsthm,amssymb,amsfonts}
+
+* Survey Sampling
+
+- A sample is a small share of the population in that we are interested in
+
+#+BEAMER: \pause
+
+- How do we draw samples in such a way that polls accurately reflect what is going to happen?
+
+- How to construct samples that will represent the population?
+
+* Survey Sampling
+
+- Example: We want to know the voting intentions of Texans (or Americans)
+- We can hardly ask all eligible voters about their intention
+
+#+BEAMER: \pause
+- We take a /sample/
+
+* Survey Sampling
+
+- The size of the sample is less important than its composition
+
+#+ATTR_LATEX: :width 8cm
+[[~/Documents/GitHub/Polisci209_2018/slides/week5/drudge.jpeg]]
+
+- Never trust an internet poll
+
+* Literary Digest Sample
+
+- Mail questionnaire to 10 million people
+
+- Addresses came from phone books and club memberships
+
+- Problems?
+
+#+BEAMER: \pause
+
+- Biased /sample/
+
+
+* Quota Samping
+
+- Sample certain groups until quota is filled
+
+- Does not mean unobservables are representative
+
+* Simple Random Sampling
+
+- Think of all voters sitting in a box, survey firm randomly draws voters
+
+- Random draws without replacement give us an unbiased estimate of the population
+
+- Everybody has the same chance of being in the sample
+
+
+* Simple Random Sampling
+
+- Pre-determined number of units are randomly selected from population
+
+- Sample will be representative of population on observed and unobserved characteristics
+
+
+
+* Simple Random Sampling
+
+- Not every single sample will be exactly representative
+
+- If we were to take a lot of random samples (say 1000 samples of 1000 respondents), on average the samples would be representative
+
+* Simple Random Sampling
+
+- Each single sample can be off and different
+
+- Polls are associated with uncertainty
+
+#+ATTR_LATEX: :width 8cm
+[[~/Documents/GitHub/Polisci209_2018/slides/week5/cruz.png]]
+
+#+BEAMER: \pause
+
+
+#+ATTR_LATEX: :width 8cm
+[[~/Documents/GitHub/Polisci209_2018/slides/week5/orourke.png]]
+
+
+* Random Sampling is hard
+
+- How to create sampling frame?
+
+- Random digit dialing? Walking to random houses?
+
+- Multi-stage cluster sampling
+
+* Non-reponse bias
+
+- Unit non-response bias:
+
+#+ATTR_LATEX: :width 8cm
+[[~/Documents/GitHub/Polisci209_2018/slides/week5/cohn.png]]
+
+
+
+
+* Non-reponse bias
+
+- Item non-response bias:
+   /What was the last crime you committed?/
+- Sensitive questions: non-response, social desirability bias
+  /Turnout/, /racial prejudice/, /corruption/
+
+
+* Why could this be a problem in the Afghanistan example?
+
+
+#+ATTR_LATEX: :width 8cm
+[[~/Documents/GitHub/Polisci209_2018/slides/week5/afghan-survey.jpg]]
+
+* Examples of Problems of Running Surveys in Afghanistan
+
+
+- unit non-response bias:
+#+BEAMER: \pause
+/some citizens might not want to anser the door/
+
+#+BEAMER: \pause
+- item non-response bias:
+#+BEAMER: \pause
+/Taliban supporters may be less likely to answer questions about Taliban/
+
+#+BEAMER: \pause
+- social desirability bias:
+#+BEAMER: \pause
+/Taliban supporters may not want to admit to supporting Taliban/
+
+
+* Strategies to Ask Sensitive Questions
+\Large{List Experiments}
+
+- list of groups respondent might support
+- Asked to name number of groups they support
+- Treated subject with controversial group, control group without controversial group
+
+
+* Strategies to Ask Sensitive Questions
+:PROPERTIES:
+    :BEAMER_opt: shrink=30
+    :END:
+\Large{List Experiments - Control}
+
+I’m going to read you a list with the names of different
+groups and individuals on it.  After I read the entire
+list, I’d like you to tell me how many of these groups
+and individuals you broadly support, meaning that you
+generally agree with the goals and policies of the group
+or individual.  Please don’t tell me which ones you
+generally agree with; only tell me how many groups or
+individuals you broadly support.
+
+Groups: Karzai Government; National Solidarity Program; Local
+Farmers
+
+* Strategies to Ask Sensitive Questions
+:PROPERTIES:
+    :BEAMER_opt: shrink=30
+    :END:
+\Large{List Experiments - Treated}
+
+I’m going to read you a list with the names of different
+groups and individuals on it.  After I read the entire
+list, I’d like you to tell me how many of these groups
+and individuals you broadly support, meaning that you
+generally agree with the goals and policies of the group
+or individual.  Please don’t tell me which ones you
+generally agree with; only tell me how many groups or
+individuals you broadly support.
+
+Groups: Karzai Government; National Solidarity Program; Local
+Farmers; *ISAF (Taliban)*
+
+* Strategies to Ask Sensitive Questions
+\Large{List Experiments}
+
+- Average difference between Treated and Control group is the estimated percentage of people who support controversial group
+
+
+* Summarizing Bivariate Relationships
+
+- Bivariate relationships are associations between *two* variables
+- Example: treatment of Spanish confederates (X or T) and exclusionary attitudes (Y)
+
+* Simple Summaries of Bivariate Relationships
+
+If X (independent variable) is categorical:
+- Comparison of means
+- boxplots
+
+* Simple Summaries of Bivariate Relationships
+
+If both X (independent variable) and Y (dependent variable) are continuous:
+
+#+BEAMER: \pause
+- Scatterplots
+
+#+BEAMER: \pause
+- Correlation
+
+* Simple Summaries of Bivariate Relationships: Scatterplot
+
+- Direct graphical comparison of two variables
+
+- Use plot(y,x) in /R/
+
+* Scatterplot
+#+begin_src R :eval no
+data <- read.csv("bivariate_data.csv")
+data <- subset(data, year == 2010)
+plot(data$GDP,data$Child.Mortality)
+#+end_src
+
+* Scatterplot
+
+That looks weird, no? What do we do with skewed variables?
+#+ATTR_LATEX: :width 8cm
+[[~/Documents/GitHub/Polisci209_2018/slides/week5/scatter_simple.pdf]]
+
+* What do we do with skewed variables?
+
+
+#+BEAMER: \pause
+- When variable have a small number of observations with extremely large or small positive values, we often take the natural log
+- The natural logarithm is the logarithm with base e, which is a mathematical constant approximately equal to 2.7182 (inverse of $e^{y}$)
+
+
+* Scatterplot
+#+begin_src R :eval no
+plot(log(data$GDP),data$Child.Mortality)
+#+end_src
+
+* Scatterplot
+
+#+ATTR_LATEX: :width 8cm
+[[~/Documents/GitHub/Polisci209_2018/slides/week5/scatter_log_simple.pdf]]
+
+\Large{Better!}
+Let's add labels and nicer points
+
+
+* Scatterplot
+:PROPERTIES:
+    :BEAMER_opt: shrink=35
+    :END:
+#+begin_src R :eval no
+pdf("~/Documents/GitHub/Polisci209_2018/slides/week5/scatter.pdf")
+plot(log(data$GDP),data$Child.Mortality, pch = 16, col = "black",
+xlab = "logged GDP in PPP", ylab = "Child Mortality", main = "Income and Child Mortality")
+dev.off()
+#+end_src
+
+* Scatterplot
+
+#+ATTR_LATEX: :width 8cm
+[[~/Documents/GitHub/Polisci209_2018/slides/week5/scatter.pdf]]
+
+* Scatterplot -- more fun
+:PROPERTIES:
+    :BEAMER_opt: shrink=55
+    :END:
+#+begin_src R :eval no
+## add special points for USA and Germany
+pdf("~/Documents/GitHub/Polisci209_2018/slides/week5/scatter_points.pdf")
+plot(log(data$GDP),data$Child.Mortality, pch = 16, col = "black",
+xlab = "logged GDP in PPP", ylab = "Child Mortality", main = "Income and Child Mortality")
+points(log(data$GDP[data$Country.code == "USA"]), data$Child.Mortality[data$Country.code == "USA"], pch = 17, col = "red") ##USA
+text(11, 16, "USA", col = "red")
+points(log(data$GDP[data$Country.code == "DEU"]), data$Child.Mortality[data$Country.code == "DEU"], pch = 15, col = "gold") ##USA
+text(10.2, 0, "GER", col = "gold")
+dev.off()
+#+end_src
+
+
+* Scatterplot
+
+#+ATTR_LATEX: :width 8cm
+[[~/Documents/GitHub/Polisci209_2018/slides/week5/scatter_points.pdf]]
+
+
+* Bivariate Relationships in Numbers
+
+- How can we quantify the relationship between two continuous variables?
+
+#+BEAMER: \pause
+- Correlation: the most used measure of bivariate relationships
+- Correlation measures how two variables move together relative to their respective means.
+
+* Calculating correlations -- Step 1: Standardizing a variable
+
+- By standardizing we bring all variables on the same scale
+- The resulting mean will be zero, the standard deviation will be one
+- We standardize by subtracting a variables mean and dividing by the standard deviation
+
+* Calculating correlations -- Step 1: Standardizing a variable
+
+- Standardized variables are also called z-scores:
+$z_{i} = \frac{x_{i} - \bar{x} \text{(mean of x)}}{sd_{x} \text{(standard deviation of x)}}$
+
+- The z-score is independent of the scale of the variable or shifts in the variable
+#+BEAMER: \pause
+
+- This means GDP and (GDP*100 + 10000) will have the exact same z-scores
+
+* Calculating correlations -- Step 2: Calculating the correlation
+
+Correlation (x,y) $= \frac{1}{N} \sum^{N}_{i=1}$ z-score of $x_i \times$ z-score of $y_{i}$
+
+#+BEAMER: \pause
+
+Correlation (x,y) $= \frac{x_{i} - \bar{x}}{sd_{x}} \times   \frac{y_{i} - \bar{y}}{sd_{y}}$
+
+* Calculating correlations -- Step 3: Interpretation
+
+- Correlation measures /linear/ association
+- Correlations are between $-1$ and $1$
+
+* Calculating correlations -- Step 3: Interpretation
+#+begin_src R :eval no
+cor(log(data$GDP),data$Child.Mortality, use = "pairwise")
+#+end_src
+
+= -0.7684907
+
+* Calculating correlations -- Step 3: Interpretation
+
+cor(data[, c("GDP", "Child.Mortality", "PolityIV")], use = "pairwise.complete.obs")
+
+* Calculating correlations -- Step 3: Interpretation
+:PROPERTIES:
+    :BEAMER_opt: shrink=45
+    :END:
+#+begin_src R :eval no
+### by hand
+z_gdp <- (log(data$GDP) - mean(log(data$GDP), na.rm = T))/sd(log(data$GDP), na.rm =T)
+z_CM <- (data$Child.Mortality - mean(data$Child.Mortality, na.rm = T))/sd(data$Child.Mortality, na.rm =T)
+cor <- sum(z_gdp*z_CM)/(length(z_gdp)-1)
+ -0.7684907
+#+end_src
