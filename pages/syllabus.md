@@ -425,6 +425,8 @@ notification.__
 
 #### Friday, September 28th: Starting with Writing Assignment 1
 - How to write well
+- [Dataset 1 for Writing Assignment 1](../slides/week5/nominate.csv)
+- [Dataset 2 for Writing Assignment 1](../slides/week5/state-legislators.csv)
 
 
 ## Week 6
@@ -434,12 +436,11 @@ notification.__
 - Homework finish SWIRL Exercise MEASUREMENT 2
 
 #### Wednesday, October 3rd:  In Class Exercise Measurement & Bivariate Relationships
-- Submit first draft of Writing Assignment 1 to eCampus
 
 #### Friday, October 5th:  Introduction to Prediction
 - In-class Quiz no 1
 - Read & Work through QSS 4.1
-- Homework finish SWIRL Exercise PREDICTION 1
+- Submit first draft of Writing Assignment 1 to eCampus
 
 
 ## Week 7
@@ -447,13 +448,14 @@ notification.__
 #### Monday, October 8th: Introduction to Prediction 2
 - Submit Peer-Review Comments for Writing Assignment 1 on eCampus
 - Read & Work through QSS 4.2 
+- Homework finish SWIRL Exercise PREDICTION 1
 
 
 #### Wednesday, October 10th: In Class Exercise Prediction
-- Homework finish SWIRL Exercises PREDICTION 2
 
 #### Friday, October 12th: Introduction to Regression
 - Read & Work through QSS 4.3
+- Homework finish SWIRL Exercises PREDICTION 2
 
 
 
