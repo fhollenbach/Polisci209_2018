@@ -342,7 +342,7 @@ Correlation (x,y) $= \frac{1}{N} \sum^{N}_{i=1}$ z-score of $x_i \times$ z-score
 
 #+BEAMER: \pause
 
-Correlation (x,y) $= \frac{x_{i} - \bar{x}}{sd_{x}} \times   \frac{y_{i} - \bar{y}}{sd_{y}}$
+Correlation (x,y) $= \frac{1}{N} \sum^{N}_{i=1} \frac{x_{i} - \bar{x}}{sd_{x}} \times   \frac{y_{i} - \bar{y}}{sd_{y}}$
 
 * Calculating correlations -- Step 3: Interpretation
 
