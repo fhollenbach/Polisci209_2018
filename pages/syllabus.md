@@ -425,6 +425,7 @@ notification.__
 
 #### Friday, September 28th: Starting with Writing Assignment 1
 - How to write well
+- [Writing Assignment 1](../slides/week5/WritingAssignment1.pdf)
 - [Dataset 1 for Writing Assignment 1](../slides/week5/nominate.csv)
 - [Dataset 2 for Writing Assignment 1](../slides/week5/state-legislators.csv)
 

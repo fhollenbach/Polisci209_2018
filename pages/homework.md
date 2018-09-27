@@ -1,11 +1,14 @@
 ---
-title: Homework Assignment for Pols 209 -- Fall 2018
-description: All homeworks will be posted here
+title: Writing Assignment for Pols 209 -- Fall 2018
+description: All writing assignments will be posted here
 ---
 
 
 
-Below you will find homework assignments Pols209-- Fall 2018
+Below you will find writing assignments Pols209-- Fall 2018
+
+## Writing Assignment 1
+[Writing Assignment 1](../slides/week5/WritingAssignment1.pdf)
 
 <!--
 ## Assignment 1
