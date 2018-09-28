@@ -371,3 +371,57 @@ z_CM <- (data$Child.Mortality - mean(data$Child.Mortality, na.rm = T))/sd(data$C
 cor <- sum(z_gdp*z_CM)/(length(z_gdp)-1)
  -0.7684907
 #+end_src
+
+
+
+* Writing Assignment
+
+First draft: Due on October 5th
+Final Version: Due on October 15th
+
+[[http://fhollenbach.org/Polisci209_2018/slides/week5/WritingAssignment1.pdf][Writing Assignment]]
+
+
+* Structure of the Assignment
+
+- Short Introcution
+  - What is this paper about?
+  - Why does this matter?
+- Main body of text
+- Short Conclusion
+
+* How to write well
+
+- Cite every single outside source!
+- [[https://library.tamu.edu/services/library_tutorials/citing_sources/index.html][See TAMU Library: Citing your Sources]]
+- Preferred: APA style with parenthetical citation
+
+* How to write well
+
+- Be clear and concise in your statements
+- Short sentences
+- Do *not* use words you do not understand yourself
+
+
+* How to write well
+
+- Limited (or no) passive voice:
+  - things don't just happen
+- Be concrete, use active verbs
+
+
+* How to write well
+
+- Each paragraph should contain one important point, or should be “a complete discussion of one topic"
+- Punctuation should clarify
+
+* How to write well
+
+- Use correct grammar, limit spelling errors
+- Revise, proofread, revise!
+
+
+* How to write well
+
+Some more tips are available here:
+[[http://fhollenbach.org/WritingAcademic/][http://fhollenbach.org/WritingAcademic/]]
