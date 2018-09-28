@@ -384,7 +384,7 @@ Final Version: Due on October 15th
 
 * Structure of the Assignment
 
-- Short Introcution
+- Short Introduction
   - What is this paper about?
   - Why does this matter?
 - Main body of text
