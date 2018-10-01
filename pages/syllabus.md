@@ -435,6 +435,8 @@ notification.__
 
 #### Monday, October 1st:  In Class Exercise Measurement & Bivariate Relationships
 - Homework finish SWIRL Exercise MEASUREMENT 2
+- [Slides Week 6](../slides/week6/week6.pdf)
+- [Data for In-class Exercise](../slides/week6/poverty.csv)
 
 #### Wednesday, October 3rd:  In Class Exercise Measurement & Bivariate Relationships
 
