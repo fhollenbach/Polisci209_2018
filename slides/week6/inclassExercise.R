@@ -1,4 +1,4 @@
-### Do changes in one's financial circumstances affect one's decision-making process and cognitive capacity? In an experimental study, researchers randomly selected a group of US respondents to be surveyed before their payday and another group to be surveyed after their payday. Under this design, the respondents of the Before Payday group are more likely to be financially strained than those of the After Payday group. The researchers were interested in investigating whether or not changes in people's financial circumstances affect their decision making and cognitive performance. Other researchers have found that scarcity induce an additional mental load that impedes cognitive capacity. This exercise is based on:
+                                        #x## Do changes in one's financial circumstances affect one's decision-making process and cognitive capacity? In an experimental study, researchers randomly selected a group of US respondents to be surveyed before their payday and another group to be surveyed after their payday. Under this design, the respondents of the Before Payday group are more likely to be financially strained than those of the After Payday group. The researchers were interested in investigating whether or not changes in people's financial circumstances affect their decision making and cognitive performance. Other researchers have found that scarcity induce an additional mental load that impedes cognitive capacity. This exercise is based on:
 
 poverty <- read.csv("poverty.csv")
 hist(poverty$cash, freq = FALSE, xlab = "Cash", main = "Distribution of Cash")
@@ -33,6 +33,7 @@ hist(poverty$log_accts_amt, freq = FALSE,
 
 tapply(poverty$stroop_time, poverty$treatment, mean) -
     mean(poverty$stroop_time[poverty$treatment == "Before Payday"])
+
 
 tapply(poverty$stroop_time, poverty$treatment, median) -
     median(poverty$stroop_time[poverty$treatment == "Before Payday"])
@@ -127,3 +128,84 @@ diff_diff
 
 
 ### In this difference-in-difference design, we see that the effect of treatment on the amount in people's accounts is quite different for the lower income group compared to the higher income group. For the lower income group, we see that the effect of treatment is positive-- people in the After Payday group have a higher balance in their accounts than people in the Before Payday group (the difference is r round(less20k_diff, 2). But for the higher income group, the effect of treatment appears to be negative- those in the After Payday group have r round(abs(great20k_diff), 2) less than those in the Before Payday group. This brings into question the idea that the study successfully manipulated economic resources through their design, especially for higher income individuals.
+
+
+
+
+install.packages("pollstR")
+library(pollstR)
+chart_name <- "2016-general-election-trump-vs-clinton"
+polls2016 <- pollster_charts_polls(chart_name)[["content"]]
+
+
+
+
+polls2016 <- as.data.frame(polls2016)
+names(polls2016)
+
+polls2016[1:3, c("Trump", "Clinton", "start_date", "end_date")]
+
+
+
+
+
+class(polls2016$end_date)
+polls2016$DaysToElection <-
+    as.Date("2016-11-8") - polls2016$end_date
+
+
+plot(polls2016$DaysToElection, polls2016$Clinton,
+     xlab = "Days to the Election", ylab = "Support",
+     xlim = c(550, 0), ylim = c(25, 65), pch = 19,
+     col = "blue")
+points(polls2016$DaysToElection, polls2016$Trump,
+       pch = 20, col = "red")
+
+
+
+plot(polls2016$DaysToElection, polls2016$Clinton, type = "l",
+     xlab = "Days to the Election", ylab = "Support",
+     xlim = c(550, 0), ylim = c(25, 65), pch = 19,
+     col = "blue")
+lines(polls2016$DaysToElection, polls2016$Trump,
+      col = "red")
+
+
+range(polls2016$DaysToElection)
+
+
+for (i in c(1,2,3,4,5) {
+    print(i)
+}
+
+
+values <- c(1, -1, 2)
+results <- rep(NA, 3)
+for (i in 1:3) {
+    cat("iteration", i, "\n")
+    results[i] <- log(values[i])
+}
+
+
+
+days <- 500:26
+window <- 7
+
+Clinton.pred <- Trump.pred <- rep(NA, length(days))
+
+
+for (i in 1:length(days)) {
+    week.data <-
+        subset(polls2016,
+               subset = ((DaysToElection < (days[i] + window))
+                   & (DaysToElection >= days[i])))
+    Clinton.pred[i] <- mean(week.data$Clinton)
+    Trump.pred[i] <- mean(week.data$Trump)
+}
+
+
+
+plot(days, Clinton.pred, type = "l", col = "blue",
+     xlab = "Days to the Election", ylab = "Support",
+     xlim = c(550, 0), ylim = c(25, 65))
+lines(days, Trump.pred, col = "red")

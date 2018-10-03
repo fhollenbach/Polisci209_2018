@@ -97,7 +97,261 @@ Compare the distributions of the Before Payday and After Payday groups for the l
 
 
 * Poverty and economic decision-making
+:PROPERTIES:
+    :BEAMER_opt: shrink=15
+    :END:
 
 *Question 5*
 
 In class, we covered the difference-in-difference design for comparing average treatment effects across treatment and control groups. This design can also be used to compare average treatment effects across different ranges of a pre-treatment variable- a variable that asks about people's circumstances before the treatment and thus could not be affected by the treatment. This is known as heterogeneous treatment effects -- the idea that the treatment may have differential effects for different subpopulations. Let's look at the pre-treatment variable income_less20k. Calculate the treatment effect of Payday on amount in checking and savings accounts separately for respondents earning more than 20,000 dollars a year and those earning less than 20,000 dollars. Use the original accts_amt variable for this calculation. Then take the difference between the effects you calculate. What does this comparison tell you about how payday affects the amount that people have in their accounts? Are you convinced by the authors' main finding from Question 2 in light of your investigation of their success in manipulating cash and account balances before and after payday?
+
+
+* Prediction
+
+#+ATTR_LATEX: :width 8cm
+[[~/Documents/GitHub/Polisci209_2018/slides/week6/paul.png]]
+
+
+* Prediction
+
+- One important task of (social) scientists can be /prediction/
+- Forecasting future events, e.g., conflict, unrest, elections
+- Causal inference, also involves prediction, of what?
+#+BEAMER: \pause
+- To estimate the causal effect we are essentially predicting the /counterfactual/
+
+
+* Prediction
+
+
+#+ATTR_LATEX: :width 8cm
+[[~/Documents/GitHub/Polisci209_2018/slides/week6/famine.pdf]]
+
+
+
+* Prediction
+
+
+#+ATTR_LATEX: :width 8cm
+[[~/Documents/GitHub/Polisci209_2018/slides/week6/five38.png]]
+
+
+
+
+
+* Prediction
+
+- Elections can be predicted using fundamentals
+
+#+BEAMER: \pause
+
+- Or we can use polls to predict results
+
+
+* Prediction with polls
+
+- We will use a nice \R\ package called \pollstR\, which
+    scrapes the data from Huffington Post:
+
+#+ATTR_LATEX: :width 8cm
+[[~/Documents/GitHub/Polisci209_2018/slides/week6/pollsterWebPage.png]]
+
+* Prediction with polls
+:PROPERTIES:
+    :BEAMER_opt: shrink=15
+    :END:
+
+#+begin_src R :eval no
+library(pollstR)
+chart_name <- "2016-general-election-trump-vs-clinton"
+polls2016 <- pollster_charts_polls(chart_name)[["content"]]
+#+end_src
+
+
+* Prediction with polls
+
+- Let's calculate a variable that is /days until the election/
+
+#+begin_src R :eval no
+class(polls2016$end_date)
+polls2016$DaysToElection <-
+    as.Date("2016-11-8") - polls2016$end_date
+#+end_src
+
+* Prediction with polls
+:PROPERTIES:
+    :BEAMER_opt: shrink=25
+    :END:
+
+
+We could make a very simple plot of all the polls over time
+#+begin_src R :eval no
+plot(polls2016$DaysToElection, polls2016$Clinton,
+     xlab = "Days to the Election", ylab = "Support",
+     xlim = c(550, 0), ylim = c(25, 65), pch = 19,
+     col = "blue")
+points(polls2016$DaysToElection, polls2016$Trump,
+       pch = 20, col = "red")
+#+end_src
+
+
+
+* Prediction with polls
+
+
+#+ATTR_LATEX: :width 5cm
+[[~/Documents/GitHub/Polisci209_2018/slides/week6/simplePolls.pdf]]
+
+*But that looks kind of dumb*
+
+#+BEAMER: \pause
+Lines?
+
+* Plotting polls
+:PROPERTIES:
+    :BEAMER_opt: shrink=25
+    :END:
+
+
+#+begin_src R :eval no
+plot(polls2016$DaysToElection, polls2016$Clinton, type = "l",
+     xlab = "Days to the Election", ylab = "Support",
+     xlim = c(550, 0), ylim = c(25, 65), pch = 19,
+     col = "blue")
+lines(polls2016$DaysToElection, polls2016$Trump,
+      col = "red")
+#+end_src
+
+* Prediction with polls
+
+
+#+ATTR_LATEX: :width 5cm
+[[~/Documents/GitHub/Polisci209_2018/slides/week6/Pollslines.pdf]]
+
+
+
+* Prediction with polls
+
+- Never trust a single poll
+- Maybe we could smoothe the polls over time?
+- Average the polls that are close to each other
+
+* Prediction with polls
+
+- This is called a /moving average/
+- Average all the polls within a certain time window
+- Window size determines amount of smoothing
+
+* Creating a Moving Average
+
+- In /R/, for each day, we subset the relevant polls and compute the average
+- That's a lot of subsetting and averaging (532 days)
+- Any ideas of how to do this fast?
+
+#+BEAMER: \pause
+*Loops*
+
+* Loops in R
+
+#+begin_src R :eval no
+for (i in X) {
+    expression1
+    expression2
+    ...
+    expressionN
+}
+#+end_src
+
+
+* Loops in R
+Elements of a loop:
+- /i/: counter (can use any object name other than /i/)
+- /X/: vector containing a set of ordered values the counter takes
+- /expression/: a set of expressions that will be repeatedly evaluated
+
+
+#+BEAMER: \pause
+
+{ }: curly braces to define the beginning and the end
+
+* Loops in R
+Simple Example:
+
+#+begin_src R :eval no
+for (i in c(1,2,3,4,5) {
+    print(i)
+}
+#+end_src
+
+What does this loop do?
+
+* Loops in R
+- Indentation is important for the readability of code (Rstudio does this automagically)
+- Test  Code without loop first by setting the counter to a specific value
+
+
+
+* Loops in R
+
+Printing out an iteration number can be helpful for debugging:
+
+#+begin_src R :eval no
+values <- c(1, -1, 2)
+results <- rep(NA, 3)
+for (i in 1:3) {
+    cat("iteration", i, "\n")
+    results[i] <- log(values[i])
+}
+#+end_src
+
+
+* Loops in R
+Let's create a moving average:
+
+- Begin by creating vector for counter & setting window size
+
+#+begin_src R :eval no
+days <- 500:26
+window <- 7
+#+end_src
+
+
+* Loops in R
+:PROPERTIES:
+    :BEAMER_opt: shrink=25
+    :END:
+
+Create empty vectors
+
+#+begin_src R :eval no
+Clinton.pred <- Trump.pred <- rep(NA, length(days))
+#+end_src
+#+BEAMER: \pause
+
+
+Now the loops:
+#+begin_src R :eval no
+for (i in 1:length(days)) {
+    week.data <-
+        subset(polls2016,
+               subset = ((DaysToElection < (days[i] + window))
+                   & (DaysToElection >= days[i])))
+    Clinton.pred[i] <- mean(week.data$Clinton)
+    Trump.pred[i] <- mean(week.data$Trump)
+}
+#+end_src
+
+* Loops in R
+Smoothed Plot:
+#+begin_src R :eval no
+plot(days, Clinton.pred, type = "l", col = "blue",
+     xlab = "Days to the Election", ylab = "Support",
+     xlim = c(550, 0), ylim = c(25, 65))
+lines(days, Trump.pred, col = "red")
+#+end_src
+
+
+* Smoothed Plot:
+
+#+ATTR_LATEX: :width 5cm
+[[~/Documents/GitHub/Polisci209_2018/slides/week6/Smoothed7.pdf]]
