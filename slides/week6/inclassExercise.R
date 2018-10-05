@@ -209,3 +209,44 @@ plot(days, Clinton.pred, type = "l", col = "blue",
      xlab = "Days to the Election", ylab = "Support",
      xlim = c(550, 0), ylim = c(25, 65))
 lines(days, Trump.pred, col = "red")
+
+
+
+
+days <- 500:26
+window <- 14
+
+Clinton.pred <- Trump.pred <- rep(NA, length(days))
+
+
+for (i in 1:length(days)) {
+    week.data <-
+        subset(polls2016,
+               subset = ((DaysToElection < (days[i] + window))
+                   & (DaysToElection >= days[i])))
+    Clinton.pred[i] <- mean(week.data$Clinton)
+    Trump.pred[i] <- mean(week.data$Trump)
+}
+
+
+plot(days, Clinton.pred, type = "l", col = "blue",
+     xlab = "Days to the Election", ylab = "Support",
+     xlim = c(550, 0), ylim = c(25, 65))
+lines(days, Trump.pred, col = "red")
+
+
+
+text(400, 50, "Clinton", col = "blue")
+text(400, 40, "Trump", col = "red")
+
+
+text(200, 60, "party\n conventions")
+abline(v = as.Date("2016-11-8") - as.Date("2016-7-28"),
+       lty = "dotted", col = "blue")
+abline(v = as.Date("2016-11-8") - as.Date("2016-7-21"),
+       lty = "dotted", col = "red")
+text(50, 30, "debates")
+abline(v = as.Date("2016-11-8") - as.Date("2016-9-26"),
+       lty = "dashed")
+abline(v = as.Date("2016-11-8") - as.Date("2016-10-9"),
+       lty = "dashed")

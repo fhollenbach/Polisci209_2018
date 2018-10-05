@@ -428,3 +428,10 @@ abline(v = as.Date("2016-11-8") - as.Date("2016-9-26"),
 abline(v = as.Date("2016-11-8") - as.Date("2016-10-9"),
        lty = "dashed")
 #+end_src
+
+
+
+* Smoothed Plot:
+
+#+ATTR_LATEX: :width 5cm
+[[~/Documents/GitHub/Polisci209_2018/slides/week6/Smoothed14_text.pdf]]
