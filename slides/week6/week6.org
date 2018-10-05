@@ -150,7 +150,7 @@ In class, we covered the difference-in-difference design for comparing average t
 
 * Prediction with polls
 
-- We will use a nice \R\ package called \pollstR\, which
+- We will use a nice /R/ package called /pollstR/, which
     scrapes the data from Huffington Post:
 
 #+ATTR_LATEX: :width 8cm
@@ -355,3 +355,76 @@ lines(days, Trump.pred, col = "red")
 
 #+ATTR_LATEX: :width 5cm
 [[~/Documents/GitHub/Polisci209_2018/slides/week6/Smoothed7.pdf]]
+
+
+
+* 2 week Smoothing
+:PROPERTIES:
+    :BEAMER_opt: shrink=25
+    :END:
+
+
+
+
+#+begin_src R :eval no
+Clinton.pred <- Trump.pred <- rep(NA, length(days))
+window <- 14
+
+#+end_src
+#+BEAMER: \pause
+
+
+Now the loops:
+#+begin_src R :eval no
+for (i in 1:length(days)) {
+    week.data <-
+        subset(polls2016,
+               subset = ((DaysToElection < (days[i] + window))
+                   & (DaysToElection >= days[i])))
+    Clinton.pred[i] <- mean(week.data$Clinton)
+    Trump.pred[i] <- mean(week.data$Trump)
+}
+#+end_src
+
+*  2 week Smoothing
+
+#+begin_src R :eval no
+plot(days, Clinton.pred, type = "l", col = "blue",
+     xlab = "Days to the Election", ylab = "Support",
+     xlim = c(550, 0), ylim = c(25, 65))
+lines(days, Trump.pred, col = "red")
+#+end_src
+
+
+* Smoothed Plot:
+
+#+ATTR_LATEX: :width 5cm
+[[~/Documents/GitHub/Polisci209_2018/slides/week6/Smoothed14.pdf]]
+
+
+* Smoothed Plot:
+
+Let's add some explanations/legend to the plot
+
+#+begin_src R :eval no
+text(400, 50, "Clinton", col = "blue")
+text(400, 40, "Trump", col = "red")
+#+end_src
+
+
+* Smoothed Plot:
+
+Let's add some explanations/legend to the plot
+
+#+begin_src R :eval no
+text(200, 60, "party\n conventions")
+abline(v = as.Date("2016-11-8") - as.Date("2016-7-28"),
+       lty = "dotted", col = "blue")
+abline(v = as.Date("2016-11-8") - as.Date("2016-7-21"),
+       lty = "dotted", col = "red")
+text(50, 30, "debates")
+abline(v = as.Date("2016-11-8") - as.Date("2016-9-26"),
+       lty = "dashed")
+abline(v = as.Date("2016-11-8") - as.Date("2016-10-9"),
+       lty = "dashed")
+#+end_src
