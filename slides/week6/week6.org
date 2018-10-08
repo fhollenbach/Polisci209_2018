@@ -305,6 +305,34 @@ for (i in 1:3) {
 #+end_src
 
 
+* Let's write a practice loop
+
+- Load state ideology data
+- Subset to state of choice
+- Write loop that prints the following for each year:
+  1. Mean Democrat Ideology
+  2. Mean Republican Ideology
+  3. Polarization
+
+* Let's write a practice loop
+:PROPERTIES:
+    :BEAMER_opt: shrink=25
+    :END:
+
+#+begin_src R :eval no
+data <- subset(data, state == "TX")
+for(i in unique(data$year)){
+    sub.set <- subset(data, year == i)
+    dems <- mean(sub.set$ideology_score[sub.set$party == "Democrat"])
+    cat("Dem ideology", i, dems, "\n")
+    repub <- mean(sub.set$ideology_score[sub.set$party == "Republican"])
+    cat("Repub ideology", i, repub, "\n")
+    cat("Polarization", i, (repub - dems), "\n")
+}
+#+end_src
+
+
+
 * Loops in R
 Let's create a moving average:
 
@@ -413,6 +441,11 @@ text(400, 40, "Trump", col = "red")
 
 
 * Smoothed Plot:
+:PROPERTIES:
+    :BEAMER_opt: shrink=25
+    :END:
+
+
 
 Let's add some explanations/legend to the plot
 
@@ -435,3 +468,143 @@ abline(v = as.Date("2016-11-8") - as.Date("2016-10-9"),
 
 #+ATTR_LATEX: :width 5cm
 [[~/Documents/GitHub/Polisci209_2018/slides/week6/Smoothed14_text.pdf]]
+
+* Add points for actual result
+:PROPERTIES:
+    :BEAMER_opt: shrink=25
+    :END:
+
+
+#+begin_src R :eval no
+plot(days, Clinton.pred, type = "l", col = "blue",
+     xlab = "Days to the Election", ylab = "Support",
+     xlim = c(550, 0), ylim = c(25, 65))
+lines(days, Trump.pred, col = "red")
+text(400, 50, "Clinton", col = "blue")
+text(400, 40, "Trump", col = "red")
+text(200, 60, "party\n conventions")
+abline(v = as.Date("2016-11-8") - as.Date("2016-7-28"),
+       lty = "dotted", col = "blue")
+abline(v = as.Date("2016-11-8") - as.Date("2016-7-21"),
+       lty = "dotted", col = "red")
+text(50, 30, "debates")
+abline(v = as.Date("2016-11-8") - as.Date("2016-9-26"),
+       lty = "dashed")
+abline(v = as.Date("2016-11-8") - as.Date("2016-10-9"),
+       lty = "dashed")
+points(0,46.47, col = "red", pch = 15)
+points(0,48.59, col = "blue", pch = 15)
+#+end_src
+
+
+
+* Add points for actual result
+
+
+
+
+#+ATTR_LATEX: :width 5cm
+[[~/Documents/GitHub/Polisci209_2018/slides/week6/smoothed14_withRes.pdf]]
+
+
+* Prediction and Prediction Error
+
+- Prediction Error = Result (actual outcome) - Prediction
+- Mean prediction error = mean(error)
+- Root mean squared error (RMS) =$\sqrt{mean(error^2)}$
+
+* Prediction and Prediction Error
+:PROPERTIES:
+    :BEAMER_opt: shrink=25
+    :END:
+
+#+begin_src R :eval no
+last.week.data <- subset(polls2016, subset = DaysToElection < 15)
+
+margin <- last.week.data$Clinton - last.week.data$Trump
+true_margin <- 48.59 - 46.47
+
+pred.error <- true_margin - margin
+
+mean.error <- mean(pred.error)
+
+rmse <- sqrt(mean(pred.error^2))
+#+end_src
+
+
+
+
+* National Polls actually weren't that far off
+:PROPERTIES:
+    :BEAMER_opt: shrink=25
+    :END:
+
+#+begin_src R :eval no
+hist(margin, main = "Poll Prediction",
+     xlab = "Predicted Clinton's margin of victory
+(percentage points)")
+abline(v = true_margin,
+       lty = "dotted", col = "red")
+#+end_src
+
+
+
+
+* National Polls actually weren't that far off
+
+#+ATTR_LATEX: :width 7cm
+[[~/Documents/GitHub/Polisci209_2018/slides/week6/hist_pred.pdf]]
+
+* National Polls actually weren't that far off
+
+
+#+begin_src R :eval no
+
+average_error <- margin - true_margin
+hist(average_error, main = "Poll Prediction Error",
+     xlab = "Error in Predicted Clinton's margin of victory
+(percentage points)")
+#+end_src
+
+
+* National Polls actually weren't that far off
+
+
+#+ATTR_LATEX: :width 7cm
+[[~/Documents/GitHub/Polisci209_2018/slides/week6/hist_error.pdf]]
+
+
+* National Polls actually weren't that far off
+
+
+ "Trump outperformed his national polls by only 1 to 2 percentage points in losing the popular vote to Clinton, making them slightly closer to the mark than they were in 2012. Meanwhile, he beat his polls by only 2 to 3 percentage points in the average swing state"
+
+*Nate Silver* (The Real Story of 2016)[https://fivethirtyeight.com/features/the-real-story-of-2016/]
+
+
+* Classification
+
+- Often we care about binary outcomes
+- Did Trump win electoral college?
+- Did civil war occur?
+- Did it rain?
+
+- *Prediction of binary outcome variable = classification problem*
+
+
+* (Mis)Classification
+
+- Wrong prediction $\rightarrow$ misclassification
+     1. true positive: correctly predicting civil war in country X at time T
+     2. false positive: incorrectly predicting civil war in country X at time T
+     3. true negative: correctly predicting *no* civil war in country X at time T
+     4. false negative: incorrectly predicting *no* civil war in country X at time T
+
+- Sometimes false negatives are more (less) important: e.g., civil war
+
+
+* (Mis)Classification
+
+
+#+ATTR_LATEX: :width 8cm
+[[~/Documents/GitHub/Polisci209_2018/slides/week6/misclassification.png]]

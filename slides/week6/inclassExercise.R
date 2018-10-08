@@ -188,6 +188,20 @@ for (i in 1:3) {
 
 
 
+
+data <- subset(data, state == "TX")
+for(i in unique(data$year)){
+    sub.set <- subset(data, year == i)
+    dems <- mean(sub.set$ideology_score[sub.set$party == "Democrat"])
+    cat("Dem ideology", i, dems, "\n")
+    repub <- mean(sub.set$ideology_score[sub.set$party == "Republican"])
+    cat("Repub ideology", i, repub, "\n")
+    cat("Polarization", i, (repub - dems), "\n")
+}
+
+
+
+
 days <- 500:26
 window <- 7
 
@@ -233,13 +247,8 @@ plot(days, Clinton.pred, type = "l", col = "blue",
      xlab = "Days to the Election", ylab = "Support",
      xlim = c(550, 0), ylim = c(25, 65))
 lines(days, Trump.pred, col = "red")
-
-
-
 text(400, 50, "Clinton", col = "blue")
 text(400, 40, "Trump", col = "red")
-
-
 text(200, 60, "party\n conventions")
 abline(v = as.Date("2016-11-8") - as.Date("2016-7-28"),
        lty = "dotted", col = "blue")
@@ -250,3 +259,58 @@ abline(v = as.Date("2016-11-8") - as.Date("2016-9-26"),
        lty = "dashed")
 abline(v = as.Date("2016-11-8") - as.Date("2016-10-9"),
        lty = "dashed")
+
+
+
+
+plot(days, Clinton.pred, type = "l", col = "blue",
+     xlab = "Days to the Election", ylab = "Support",
+     xlim = c(550, 0), ylim = c(25, 65))
+lines(days, Trump.pred, col = "red")
+text(400, 50, "Clinton", col = "blue")
+text(400, 40, "Trump", col = "red")
+text(200, 60, "party\n conventions")
+abline(v = as.Date("2016-11-8") - as.Date("2016-7-28"),
+       lty = "dotted", col = "blue")
+abline(v = as.Date("2016-11-8") - as.Date("2016-7-21"),
+       lty = "dotted", col = "red")
+text(50, 30, "debates")
+abline(v = as.Date("2016-11-8") - as.Date("2016-9-26"),
+       lty = "dashed")
+abline(v = as.Date("2016-11-8") - as.Date("2016-10-9"),
+       lty = "dashed")
+points(0,46.47, col = "red", pch = 15)
+points(0,48.59, col = "blue", pch = 15)
+
+
+
+#### subset to last week
+
+last.week.data <- subset(polls2016, subset = DaysToElection < 15)
+
+margin <- last.week.data$Clinton - last.week.data$Trump
+true_margin <- 48.59 - 46.47
+
+pred.error <- true_margin - margin
+
+mean.error <- mean(pred.error)
+
+rmse <- sqrt(mean(pred.error^2))
+
+
+
+
+
+
+
+hist(margin, main = "Poll Prediction",
+     xlab = "Predicted Clinton's margin of victory
+(percentage points)")
+abline(v = true_margin,
+       lty = "dotted", col = "red")
+
+
+average_error <- margin - true_margin
+hist(average_error, main = "Poll Prediction Error",
+     xlab = "Error in Predicted Clinton's margin of victory
+(percentage points)")
