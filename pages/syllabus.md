@@ -451,7 +451,7 @@ notification.__
 #### Monday, October 8th: Introduction to Prediction 2
 - Submit Peer-Review Comments for Writing Assignment 1 on eCampus
 - Read & Work through QSS 4.2 
-
+- [R code from class](../slides/week6/inclassExercise.R)
 
 #### Wednesday, October 10th: In Class Exercise Prediction
 - Homework finish SWIRL Exercise PREDICTION 1
