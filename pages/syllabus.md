@@ -455,6 +455,7 @@ notification.__
 
 #### Wednesday, October 10th: In Class Exercise Prediction
 - Homework finish SWIRL Exercise PREDICTION 1
+- [Slides Week 7](../slides/week7/week7.pdf)
 
 #### Friday, October 12th: Introduction to Regression
 - Read & Work through QSS 4.3

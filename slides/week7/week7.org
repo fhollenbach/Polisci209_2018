@@ -1,0 +1,171 @@
+#+OPTIONS: H:1
+#+LATEX_CLASS: beamer
+#+COLUMNS: %45ITEM %10BEAMER_env(Env) %10BEAMER_act(Act) %4BEAMER_col(Col) %8BEAMER_opt(Opt)
+#+BEAMER_THEME: metropolis
+#+BEAMER_COLOR_THEME:
+#+BEAMER_FONT_THEME:
+#+BEAMER_INNER_THEME:
+#+BEAMER_OUTER_THEME:
+#+BEAMER_HEADER:
+
+
+#+LATEX_HEADER: \setbeamertemplate{frame footer}{\insertshortauthor}
+
+#+LATEX_HEADER: \setbeamerfont{page number in head/foot}{size=\tiny}
+#+LATEX_HEADER: \setbeamercolor{footline}{fg=gray}
+
+#+LATEX_HEADER: \author{Florian Hollenbach}
+
+
+#+TITLE: Political Science 209 - Fall 2018
+#+SUBTITLE: Linear Regression
+#+AUTHOR: Florian Hollenbach
+#+DATE: \today
+#+EMAIL: fhollenbach@tamu.edu
+#+OPTIONS: toc:nil
+#+LATEX_HEADER: \usepackage[english]{isodate}
+#+LATEX_HEADER: \usepackage{amsmath,amsthm,amssymb,amsfonts}
+
+
+
+* Recall Correlation & Scatterplot
+
+#+ATTR_LATEX: :width 6cm
+[[~/Documents/GitHub/Polisci209_2018/slides/week7/scatter_cor.pdf]]
+
+*What is the correlation?*
+
+* Recall the definition of correlation
+
+Correlation (x,y) $= \frac{1}{N} \sum^{N}_{i=1}$ z-score of $x_i \times$ z-score of $y_{i}$
+
+Correlation (x,y) $= \frac{1}{N} \sum^{N}_{i=1} \frac{x_{i} - \bar{x}}{sd_{x}} \times   \frac{y_{i} - \bar{y}}{sd_{y}}$
+
+
+* Correlations & Scatterplots/Data points
+
+1. positive correlation $\rightsquigarrow$ upward slope
+2. negative correlation $\rightsquigarrow$ downward slope
+3. high correlation $\rightsquigarrow$ tighter, close to a line
+4. correlation *cannot* capture nonlinear relationship
+
+* Correlations & Scatterplots/Data points
+
+#+ATTR_LATEX: :width 8cm
+[[~/Documents/GitHub/Polisci209_2018/slides/week7/correlations.pdf]]
+
+
+* Moving from Correlation to Linear Regression
+
+Preview:
+- linear regression allows us to create predictions
+- linear regression specifies direction of relationship
+- linear regression allows us to examine more than two variables at the same time (/statistical control/)
+
+* Linear Regression
+
+- regression has one *dependent (y)* and /for now/ one *independent (x)* variable
+- regression is a statistical method to estimate the linear relationship between variables
+
+* Linear Regression
+
+- goal of regression is to approximate the (linear) relationship between X and Y as best as possible
+#+BEAMER: \pause
+- regression is the mathematical model to draw best fitting line through cloud of points
+
+
+* Linear Regression
+
+#+ATTR_LATEX: :width 5cm
+[[~/Documents/GitHub/Polisci209_2018/slides/week7/scatter_lm.pdf]]
+
+*Linear regression is the mathematical model to draw best fitting line through cloud of points*
+
+
+
+* Linear Regression
+
+#+ATTR_LATEX: :width 4cm
+[[~/Documents/GitHub/Polisci209_2018/slides/week7/scatter_lm.pdf]]
+
+- regression line is an estimate of the (for now bivariate) relationship between x and y
+- for each x we have a prediction of y: *what would we expect y to be given the value of x?*
+
+
+* What is the equation of a line?
+
+*Equation of a line?*
+#+BEAMER: \pause
+$y = m  x + b$
+
+$\rightarrow$ b? m?
+
+
+* What is the equation of a line?
+
+*Equation of a line?*
+
+$y = m  x + b$
+
+b $\rightarrow$ y-intercept
+
+m $\rightarrow$ slope
+
+#+BEAMER: \pause
+
+*regression equation:*
+
+$Y = \alpha + \beta  X + \epsilon$
+
+$\rightarrow$ $\alpha$? $\beta$? $\epsilon$?
+
+
+* What is the equation of a line?
+
+*Equation of a line?*
+
+$y = m  x + b$
+
+b $\rightarrow$ y-intercept
+
+m $\rightarrow$ slope
+
+
+*regression equation:*
+
+$Y = alpha + \beta  X + \epsilon$
+
+$\alpha$ $\rightarrow$ y-intercept
+
+$\beta$ $\rightarrow$ slope
+
+$\epsilon$ $\rightarrow$ error
+
+
+* Regression equation
+
+#+ATTR_LATEX: :width 7cm
+[[~/Documents/GitHub/Polisci209_2018/slides/week7/scatter_lm_text.pdf]]
+
+
+
+* Regression equation
+
+#+ATTR_LATEX: :width 5cm
+[[~/Documents/GitHub/Polisci209_2018/slides/week7/scatter_lm_text.pdf]]
+
+$Y = 282.46 + -26.61  X + \epsilon$
+
+
+* Regression equation
+
+- but, we don't know the equation that generates the data
+- our regression line is an estimate, based on the collected data
+
+#+BEAMER: \pause
+
+- estimates are denoted with little hats: $\hat{\beta}$ and $\hat{\alpha}$
+
+#+BEAMER: \pause
+
+- $\epsilon$ is an estimate of how good/bad our approximation is

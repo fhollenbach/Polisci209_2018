@@ -608,3 +608,15 @@ hist(average_error, main = "Poll Prediction Error",
 
 #+ATTR_LATEX: :width 8cm
 [[~/Documents/GitHub/Polisci209_2018/slides/week6/misclassification.png]]
+
+
+* (Mis)Classification
+
+- Be aware: the threshold at which we count a prediction as positive matters!
+- What happens to misclassifications if we lower the threshold?
+
+* (Mis)Classification
+
+- Lower threshold $\rightarrow$ more /false positives/
+- Higher threshold $\rightarrow$ more /false negatives/
+- Need to balance both!
