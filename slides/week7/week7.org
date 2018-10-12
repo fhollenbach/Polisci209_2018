@@ -13,7 +13,7 @@
 
 #+LATEX_HEADER: \setbeamerfont{page number in head/foot}{size=\tiny}
 #+LATEX_HEADER: \setbeamercolor{footline}{fg=gray}
-
+#+LATEX_HEADER: \usepackage{amsmath}
 #+LATEX_HEADER: \author{Florian Hollenbach}
 
 
@@ -157,6 +157,34 @@ $\epsilon$ $\rightarrow$ error
 $Y = 282.46 + -26.61  X + \epsilon$
 
 
+
+* Regression equation
+
+Model:
+  \begin{eqnarray*}
+      Y & = & \underbrace{\alpha}_{\textsf{intercept}} +
+              \underbrace{\beta}_{\textsf{slope}}  X +
+              \underbrace{\epsilon}_{\textsf{error term}} \label{eq:linear.model}
+    \end{eqnarray*}
+
+- $Y$: dependent/outcome/response variable
+- $X$: independent/explanatory variable, predictor
+- $(\alpha, \beta)$: coefficients (parameters of the model)
+- $\epsilon$: unobserved error/disturbance term (mean zero)
+
+* Regression: Interpretation of the Parameters:
+
+\begin{eqnarray*}
+      Y & = & \underbrace{\alpha}_{\textsf{intercept}} +
+              \underbrace{\beta}_{\textsf{slope}}  X +
+              \underbrace{\epsilon}_{\textsf{error term}} \label{eq:linear.model}
+\end{eqnarray*}
+
+- $\alpha + \beta X$: average of $Y$ at the given the value of $X$
+- $\alpha$: the value of $Y$ when $X$ is zero
+- $\beta$: increase in $Y$ associated with one unit increase in $X$
+
+
 * Regression equation
 
 - but, we don't know the equation that generates the data
@@ -164,8 +192,163 @@ $Y = 282.46 + -26.61  X + \epsilon$
 
 #+BEAMER: \pause
 
-- estimates are denoted with little hats: $\hat{\beta}$ and $\hat{\alpha}$
+- estimates are denoted with little hats: $\hat{\beta}$, $\hat{\alpha}$
+- $(\hat\alpha, \hat\beta)$: estimated coefficients
+
+#+BEAMER: \pause
+- we can use $(\hat\alpha, \hat\beta, X)$ to create /predicted values/ of y
+- $\widehat{Y} = \hat\alpha + \hat\beta x$: predicted/fitted value
+
+
+* Regression equation
+
+\Large{How far off is our line? How do we know?}
+
+
+* Regression equation
+
+How far off is our line? How do we know?
+
+#+BEAMER: \pause
+$\hat\epsilon = \text{ true } Y - \widehat{Y}$: residuals/error
+
+$\hat\epsilon$'s are an estimate of how good/bad our line approximates the relationship
+
+* Regression
+
+#+ATTR_LATEX: :width 7cm
+[[~/Documents/GitHub/Polisci209_2018/slides/week7/scatter_lm_resid.pdf]]
+
+
+
+* Regression
+
+- $(\alpha, \beta)$ are estimated from the data
+- How do we find $\alpha, \beta$?
+
+* Regression: How do we find $\alpha, \beta$?
+
+*We minimize the sum of the squared residuals*
+
+#+ATTR_LATEX: :width 5cm
+[[~/Documents/GitHub/Polisci209_2018/slides/week7/wat.png]]
+
+
+
+* Regression: How do we find $\alpha, \beta$?
+
+*We minimize the /sum of the squared residuals (SSR)/*
+
+\begin{eqnarray*}
+\textsf{SSR} & = & \sum_{i=1}^n \hat\epsilon_i^2
+              \ = \ \sum_{i=1}^n (Y_i - \widehat{Y_{i}})^2
+              \ = \  \sum_{i=1}^n (Y_i - \hat\alpha - \hat\beta X_i)^2
+\end{eqnarray*}
 
 #+BEAMER: \pause
 
-- $\epsilon$ is an estimate of how good/bad our approximation is
+This also minimizes the root mean squared error: RMSE $= \sqrt{\frac{1}{n}\textsf{SSR}}$
+
+* Regression by Hand
+
+\begin{eqnarray*}
+  \hat\alpha & = & \bar{Y} - \hat\beta \bar{X} \\
+  \hat\beta & = & \frac{\sum_{i=1}^n (Y_i - \overline{Y})(X_i - \overline{X})}{\sum_{i=1}^n (X_i - \overline{X})^2}
+    \end{eqnarray*}
+
+OR:
+#+BEAMER: \pause
+\begin{eqnarray*}
+      \hat\beta & = & \textsf{correlation of $X$ and $Y$} \times
+                      \frac{\textsf{standard deviation of $Y$}}{\textsf{standard
+                      deviation of $X$}}
+    \end{eqnarray*}
+
+
+* Regression by Hand
+
+Regression line always goes through the point of averages ($\hat{X},\hat{Y}$)
+
+\begin{eqnarray*}
+   \widehat{Y}  & = & (\overline{Y} - \hat\beta \overline{X}) + \hat\beta \overline{X} \ =
+                    \ \overline{Y}
+\end{eqnarray*}
+
+
+* Regression always goes through point of averages
+
+#+ATTR_LATEX: :width 7cm
+[[~/Documents/GitHub/Polisci209_2018/slides/week7/scatter_lm_mean.pdf]]
+
+
+* Regression NOT by Hand
+
+*Enough math!*
+
+Fitting/estimating a regression in /R/:
+
+#+begin_src R :eval no
+lm(dependent ~ independent, data = data_object)
+#+end_src
+
+
+* Regression NOT by Hand
+
+*Fitting/estimating a regression in /R/:*
+
+#+begin_src R :eval no
+data <- read.csv("bivariate_data.csv")
+data <- subset(data, Year ==2010)
+result <- lm(Child.Mortality ~ log(GDP) , data = data)
+summary(result)
+#+end_src
+
+
+* Regression NOT by Hand
+
+#+begin_src R :results output :exports both :session
+result <- lm(Child.Mortality ~ log(GDP) , data = data)
+coef(result) ### coefficients
+#+end_src
+
+/R/-output:
+
+(Intercept): $\alpha$
+
+/log(GDP)/: $\beta$
+
+* Model Fit
+
+How well does our regression line fit the data?
+
+How well does the model predict the outcome?
+
+#+BEAMER: \pause
+
+$R^{2}$ or /coefficient of determination/:
+
+\begin{eqnarray*}
+      R^2 & = & 1 - \frac{\textsf{SSR}}{\textsf{Total sum of squares (TSS)}}  \ = \ 1 - \frac{\sum_{i=1}^n \hat\epsilon_i^2}{\sum_{i=1}^n (Y_i - \overline{Y})^2}
+    \end{eqnarray*}
+
+* Model Fit
+
+\begin{eqnarray*}
+      R^2 & = & 1 - \frac{\textsf{SSR}}{\textsf{Total sum of squares (TSS)}}  \ = \ 1 - \frac{\sum_{i=1}^n \hat\epsilon_i^2}{\sum_{i=1}^n (Y_i - \overline{Y})^2}
+    \end{eqnarray*}
+
+$R^{2}$ is also defined as the /explained variance/ in Y
+
+How much of the deviation of Y from the average is explained by X?
+
+
+
+* Model Fit
+:PROPERTIES:
+    :BEAMER_opt: shrink=15
+    :END:
+
+#+begin_src R :results output :exports both :session
+result <- lm(Child.Mortality ~ log(GDP) , data = data)
+summary(result)
+#+end_src

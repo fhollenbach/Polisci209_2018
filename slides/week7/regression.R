@@ -57,3 +57,94 @@ abline(lm, col = "red", lwd = 2)
 text(7, 180, "y-intercept = 282.46", col = "red")
 text(10, 150, "Slope  = -26.61", col = "red")
 dev.off()
+
+### function to create curly braces
+CurlyBraces <- function(x0, x1, y0, y1, pos = 1, direction = 1, depth = 1, color = "black") {
+
+    a=c(1,2,3,48,50)    # set flexion point for spline
+    b=c(0,.2,.28,.7,.8) # set depth for spline flexion point
+
+    curve = spline(a, b, n = 50, method = "natural")$y * depth
+
+    curve = c(curve,rev(curve))
+
+    if (pos == 1){
+        a_sequence = seq(x0,x1,length=100)
+        b_sequence = seq(y0,y1,length=100)
+    }
+    if (pos == 2){
+        b_sequence = seq(x0,x1,length=100)
+        a_sequence = seq(y0,y1,length=100)
+    }
+
+                                        # direction
+    if(direction==1)
+        a_sequence = a_sequence+curve
+    if(direction==2)
+        a_sequence = a_sequence-curve
+
+                                        # pos
+    if(pos==1)
+        lines(a_sequence,b_sequence, lwd=1.5, xpd=NA, col = color) # vertical
+    if(pos==2)
+        lines(b_sequence,a_sequence, lwd=1.5, xpd=NA, col = color) # horizontal
+
+}
+
+
+pdf("~/Documents/GitHub/Polisci209_2018/slides/week7/scatter_lm_resid.pdf")
+plot(log(data$GDP),data$Child.Mortality, pch = 16, col = "black", xlab = "logged GDP in PPP", ylab = "Child Mortality", main = "Income and Child Mortality", xlim = c(6, 12))
+abline(lm, col = "red", lwd = 3)# add regression line
+abline(v = 0, lty = "dashed")
+## misc
+arrows(x0 = 0.1, y0 = -0.75, x1 = 0, y1 = coef(lm)[1], length = 0.1)
+text(0.1, -0.8, "intercept")
+text(0.1, -0.9, expression(hat(alpha)))
+lines(rep(log(data$GDP)[44], 2), c(data$Child.Mortality[44], fitted(lm)[44]))
+arrows(x0 = 11, x1 = log(data$GDP)[44]-0.01, y0 = 150,
+       y1 = data$Child.Mortality[44] - 0.01, length = 0.1)
+text(11, 153, "outcome")
+text(11, 145, expression(y))
+CurlyBraces(x0=log(data$GDP)[44], x1=log(data$GDP)[44], y0=data$Child.Mortality[44],
+            y1=fitted(lm)[44], pos = 1, direction = 1, depth=0.35, color = "black")
+text(10.9, (data$Child.Mortality[44] + fitted(lm)[44])/2 + 6, "residual")
+text(10.9, (data$Child.Mortality[44] + fitted(lm)[44])/2-3, expression(hat(epsilon)))
+arrows(x0 = 11.1, x1 = log(data$GDP)[44] + 0.01, y0 = 30, y1 = fitted(lm)[44] + 0.01,
+       length = 0.1)
+text(11.5, 45, expression(hat(y)))
+text(11.5, 32, "predicted\n value")
+dev.off()
+
+
+
+
+
+pdf("~/Documents/GitHub/Polisci209_2018/slides/week7/scatter_lm_mean.pdf")
+plot(log(data$GDP),data$Child.Mortality, pch = 16, col = "black", xlab = "logged GDP in PPP", ylab = "Child Mortality", main = "Income and Child Mortality", xlim = c(6, 12))
+abline(lm, col = "red", lwd = 3)# add regression line
+abline(v = 0, lty = "dashed")
+## misc
+arrows(x0 = 0.1, y0 = -0.75, x1 = 0, y1 = coef(lm)[1], length = 0.1)
+text(0.1, -0.8, "intercept")
+text(0.1, -0.9, expression(hat(alpha)))
+lines(rep(log(data$GDP)[44], 2), c(data$Child.Mortality[44], fitted(lm)[44]))
+arrows(x0 = 11, x1 = log(data$GDP)[44]-0.01, y0 = 150,
+       y1 = data$Child.Mortality[44] - 0.01, length = 0.1)
+text(11, 153, "outcome")
+text(11, 145, expression(y))
+CurlyBraces(x0=log(data$GDP)[44], x1=log(data$GDP)[44], y0=data$Child.Mortality[44],
+            y1=fitted(lm)[44], pos = 1, direction = 1, depth=0.35, color = "black")
+text(10.9, (data$Child.Mortality[44] + fitted(lm)[44])/2 + 6, "residual")
+text(10.9, (data$Child.Mortality[44] + fitted(lm)[44])/2-3, expression(hat(epsilon)))
+arrows(x0 = 11.1, x1 = log(data$GDP)[44] + 0.01, y0 = 30, y1 = fitted(lm)[44] + 0.01,
+       length = 0.1)
+text(11.5, 45, expression(hat(y)))
+text(11.5, 32, "predicted\n value")
+abline(v = mean(log(data$GDP)), lty = "dotted")
+text(mean(log(data$GDP)) + 0.3, 182, expression(bar(x)))
+text(mean(log(data$GDP)) + 0.5, 175, "mean of x")
+abline(h = mean(data$Child.Mortality), lty = "dotted")
+text(6.5, mean(data$Child.Mortality) + 3, "mean of y")
+text(6.5, mean(data$Child.Mortality) - 5, expression(bar(y)))
+points(mean(log(data$GDP)), mean(data$Child.Mortality), pch = 19)
+dev.off()
