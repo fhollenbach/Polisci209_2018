@@ -241,6 +241,23 @@ $\hat\epsilon$'s are an estimate of how good/bad our line approximates the relat
 
 \begin{eqnarray*}
 \textsf{SSR} & = & \sum_{i=1}^n \hat\epsilon_i^2
+\end{eqnarray*}
+
+* Regression: How do we find $\alpha, \beta$?
+
+*We minimize the /sum of the squared residuals (SSR)/*
+
+\begin{eqnarray*}
+\textsf{SSR} & = & \sum_{i=1}^n \hat\epsilon_i^2
+              \ = \ \sum_{i=1}^n (Y_i - \widehat{Y_{i}})^2
+\end{eqnarray*}
+
+* Regression: How do we find $\alpha, \beta$?
+
+*We minimize the /sum of the squared residuals (SSR)/*
+
+\begin{eqnarray*}
+\textsf{SSR} & = & \sum_{i=1}^n \hat\epsilon_i^2
               \ = \ \sum_{i=1}^n (Y_i - \widehat{Y_{i}})^2
               \ = \  \sum_{i=1}^n (Y_i - \hat\alpha - \hat\beta X_i)^2
 \end{eqnarray*}
