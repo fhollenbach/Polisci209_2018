@@ -468,19 +468,24 @@ notification.__
 
 #### Monday, October 15th:  In Class Exercise Regression (or Catch up)
 - Submit Final Draft of Writing Assignment 1 on eCampus
+- [Slides Week 8](../slides/week8/week8.pdf)
+- [Pres 08 Data](../slides/week8/pres08.csv)
+- [Intrade 08 Data](../slides/week8/intrade08.csv)
+- [2012 Data](../slides/week8/intresults12.csv)
+
 
 #### Wednesday, October 17th: Catch-Up Day & Regression Review
 - Homework finish SWIRL Exercises PREDICTION 3
 
 
 #### Friday, October 19th:  In Class Exercise on Linear Regression
-- Assignment due: QSS exercise 4.5.1
 
 
 ## Week 9
 
 #### Monday, October 22nd:  Introduction to Probability
 - Read & Work through QSS 6.1
+- Assignment due: QSS exercise 4.5.1
 
 
 #### Wednesday, October 24th: Playing Cards

@@ -1,0 +1,256 @@
+% Created 2018-10-14 Sun 15:50
+% Intended LaTeX compiler: pdflatex
+\documentclass[presentation]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{natbib}
+\usepackage[linktocpage,pdfstartview=FitH,colorlinks,
+linkcolor=blue,anchorcolor=blue,
+citecolor=blue,filecolor=blue,menucolor=blue,urlcolor=blue]{hyperref}
+\setbeamertemplate{frame footer}{\insertshortauthor}
+\setbeamerfont{page number in head/foot}{size=\tiny}
+\setbeamercolor{footline}{fg=gray}
+\usepackage{amsmath}
+\author{Florian Hollenbach}
+\usepackage[english]{isodate}
+\usepackage{amsmath,amsthm,amssymb,amsfonts}
+\usetheme{metropolis}
+\usecolortheme{}
+\usefonttheme{}
+\useinnertheme{}
+\useoutertheme{}
+\author{Florian Hollenbach}
+\date{\today}
+\title{Political Science 209 - Fall 2018}
+\subtitle{Linear Regression}
+
+\hypersetup{
+ pdfauthor={Florian Hollenbach},
+ pdftitle={Political Science 209 - Fall 2018},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 25.3.1 (Org mode 9.1.14)}, 
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+
+
+
+\begin{frame}[label={sec:org99ff01c}]{In-class Exercise Linear Regression}
+Please dowload \emph{intrade08.csv} \& \emph{pres08.csv} from class website
+
+\begin{itemize}
+\item Read both data sets into \emph{R}
+\item Create data summary for each data sets
+\end{itemize}
+\end{frame}
+
+\begin{frame}[label={sec:orgbd34cce}]{Variables in the intrade data}
+\begin{itemize}
+\item \emph{day}: Date of the session
+\item \emph{statename}: Full name of each state (including District of Columbia in 2008)
+\item \emph{state}: Abbreviation of each state (including District of Columbia in 2008)
+\item \emph{PriceD}: Closing price (predicted vote share) of Democratic Nominee's market
+\item \emph{PriceR}: Closing price (predicted vote share) of Republican Nominee's market
+\item \emph{VolumeD}: Total session trades of Democratic Party Nominee's market
+\item \emph{VolumeR}: Total session trades of Republican Party Nominee's market
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}[label={sec:orgfb838da}]{Variables in the pres08 data}
+\begin{itemize}
+\item \emph{state.name}: Full name of state (only in pres2008)
+\item \emph{state}: Two letter state abbreviation
+\item \emph{Obama}: Vote percentage for Obama
+\item \emph{McCain}: Vote percentage for McCain
+\item \emph{EV}: Number of electoral college votes for this state
+\end{itemize}
+\end{frame}
+
+\begin{frame}[label={sec:org52fb95b}]{Combining data sets}
+\begin{itemize}
+\item First we have to combine the different data sets
+\item To do so, we need an identifier that tells \emph{R} which observations to match to each other
+\item What could we use?
+\end{itemize}
+
+\pause
+
+\alert{state variable}
+\end{frame}
+
+\begin{frame}[fragile,label={sec:org3f7dc2d}]{Combining data sets}
+ \begin{itemize}
+\item Use \emph{merge()} function
+\end{itemize}
+
+\begin{verbatim}
+merge(x,y, by =)
+intresults08 <- merge(intrade08, pres08, by = "state")
+head(merge)
+\end{verbatim}
+\end{frame}
+
+
+\begin{frame}[label={sec:org67606a8}]{Question 1}
+Create a \emph{DaysToElection} variable by subtracting the day of the election from each day in the dataset. Now create a \emph{state margin of victory} variable to predict, and a \emph{betting market margin} to predict it with.
+
+\alert{election day in 2008: Nov, 4th}
+\end{frame}
+
+\begin{frame}[fragile,shrink=20,label={sec:org0b139f1}]{Solution 1}
+ \begin{verbatim}
+intresults08$DaysToElection
+ <- as.Date("2008-11-04") - as.Date(intresults08$day)
+
+intresults08$obama.intmarg <- intresults08$PriceD - intresults08$PriceR
+intresults08$obama.actmarg <- intresults08$Obama - intresults08$McCain
+\end{verbatim}
+\end{frame}
+
+
+\begin{frame}[label={sec:org44d59a7}]{Question 2}
+Considering only the trading \alert{one day from the election}, predict the actual electoral margins from the trading margins using a linear model. Does it predict well? How would you visualize the predictions and the outcomes together? Hint: because we only have one predictor you can use \emph{abline}.
+\end{frame}
+
+\begin{frame}[fragile,shrink=20,label={sec:org0870aa7}]{Solution 2}
+ \begin{verbatim}
+latest08 <- intresults08[intresults08$DaysToElection == 1,]
+int.fit08 <- lm(obama.actmarg ~ obama.intmarg, data = latest08)
+coef(int.fit08)
+summary(int.fit08)$r.squared
+plot(latest08$obama.intmarg, latest08$obama.actmarg,
+    xlab="Market's margin for Obama", ylab="Obama margin")
+abline(int.fit08)
+\end{verbatim}
+\end{frame}
+
+
+
+\begin{frame}[label={sec:org6a16719}]{Question 3}
+What would be the prediction for the margin of victory if the InTrade margin was 25? Mark this point on the previous plot.
+\end{frame}
+
+
+\begin{frame}[fragile,shrink=20,label={sec:org091916f}]{Solution 3}
+ \begin{verbatim}
+coef(int.fit08)[1] + coef(int.fit08)[2]*25
+
+plot(latest08$obama.intmarg, latest08$obama.actmarg,
+    xlab="Market's margin for Obama", ylab="Obama margin")
+abline(int.fit08)
+points(25,(coef(int.fit08)[1] + coef(int.fit08)[2]*25), col = "red")
+\end{verbatim}
+\end{frame}
+
+
+
+
+\begin{frame}[shrink=20,label={sec:org72e0584}]{Question 4}
+Even efficient markets aren’t omniscient. Information comes in about the election every day and the market prices should reflect any change in information that seem to matter to the outcome.
+
+We can examine how and about what the markets change their minds by looking at which states they are confident about, and which they update their ‘opinions’ (i.e. their prices) about. Over the period before the election, let’s see how prices for each state are evolving. We can get a compact summary of price movement by fitting a linear model to Obama’s margin for each state over the 20 days before the election.
+
+We will summarise price movement by the direction (up or down) and rate of change (large or small) of price over time. This is basically also what people in finance do, but they get paid more…
+
+\alert{Start by plotting Obama’s margin in West Virginia against the number of days until the election and modeling the relationship with a linear model. Use the last 20 days. Show the model's predictions on each day and the data. What does this model's slope coefficient tells us about which direction the margin is changing and also how fast it is changing?}
+\end{frame}
+
+
+\begin{frame}[fragile,shrink=20,label={sec:orgb136147}]{Solution 4}
+ \begin{verbatim}
+stnames <- unique(intresults08$state.name)
+recent <- subset(intresults08, subset=(DaysToElection <= 20)
+ & (state.name==stnames[1]))
+
+recent.mod <- lm(obama.intmarg ~ DaysToElection, data=recent)
+plot(recent$DaysToElection, recent$obama.intmarg,
+xlab="Days to election", ylab="Market's Obama margin")
+abline(recent.mod)
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[label={sec:org104b42b}]{Question 5}
+Let's do the same thing for all states and collect the slope coefficients (\(\beta\)'s). How can we modify the code from the answer to the previous question? Then plot the distribution of changes for all states.
+\end{frame}
+
+\begin{frame}[fragile,shrink=25,label={sec:org6bdf7f2}]{Solution 5}
+ \begin{verbatim}
+stnames <- unique(intresults08$state.name)
+change <- rep(NA, length(unique(intresults08$state.name)))
+names(change) <- unique(intresults08$state.name)
+
+for(i in 1: length(unique(intresults08$state.name))){
+recent <- subset(intresults08, subset=(DaysToElection <= 20)
+& (state.name==stnames[i]))
+
+recent.mod <- lm(obama.intmarg ~ DaysToElection, data=recent)
+change[i] <- coef(recent.mod)[2]
+}
+hist(change)
+\end{verbatim}
+\end{frame}
+
+
+\begin{frame}[label={sec:orgb2adebd}]{Questin 5}
+Estimate a linear model using the intrade margin in the average intrade margin in the week before the election to predict vote margin in 2008. How well does the model predict?
+\end{frame}
+
+\begin{frame}[fragile,shrink=25,label={sec:org8b3954e}]{Solution 5}
+ \begin{verbatim}
+latest08 <- intresults08[intresults08$DaysToElection <8,]
+average.Intrade <- tapply(latest08$obama.intmarg, latest08$state, mean)
+true.margin <- tapply(latest08$obama.actmarg, latest08$state, mean)
+
+int.fit08 <- lm(true.margin ~ average.Intrade)
+coef(int.fit08)
+summary(int.fit08)$r.squared
+
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[label={sec:orgebcacc4}]{Question 6}
+Next, we read in the same data for the 2012 election. Use the linear model created above to create predictions for the margin in 2012. Calculate and plot the prediction error.
+\end{frame}
+
+\begin{frame}[fragile,shrink=25,label={sec:org260015c}]{Solution 6}
+ \begin{verbatim}
+data2012 <- read.csv("intresults12.csv")
+data2012$DaysToElection <- as.Date("2008-11-06") - as.Date(data2012$day)
+data2012$obama.intmarg <- data2012$PriceD - data2012$PriceR
+data2012$obama.actmarg <- data2012$Obama - data2012$Romney
+\end{verbatim}
+\end{frame}
+
+
+\begin{frame}[fragile,shrink=25,label={sec:org2e41f7d}]{Solution 6}
+ \begin{verbatim}
+latest12
+<- data2012[data2012$DaysToElection <8,]
+
+average.Intrade12
+<- tapply(latest12$obama.intmarg, latest12$state, mean, na.rm = T)
+
+true.margin12
+<- tapply(latest12$obama.actmarg, latest12$state, mean, na.rm = T)
+
+prediction
+<- coef(int.fit08)[1] + coef(int.fit08)[2]*average.Intrade12
+
+error <- true.margin12 - prediction
+hist(error)
+\end{verbatim}
+\end{frame}
+\end{document}
