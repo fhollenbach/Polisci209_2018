@@ -71,7 +71,7 @@ Please dowload /intrade08.csv/ & /pres08.csv/ from class website
 #+begin_src R :eval no
 merge(x,y, by =)
 intresults08 <- merge(intrade08, pres08, by = "state")
-head(merge)
+head(intresults08)
 #+end_src
 
 

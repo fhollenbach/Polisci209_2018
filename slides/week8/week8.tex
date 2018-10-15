@@ -1,4 +1,4 @@
-% Created 2018-10-14 Sun 15:50
+% Created 2018-10-15 Mon 08:57
 % Intended LaTeX compiler: pdflatex
 \documentclass[presentation]{beamer}
 \usepackage[utf8]{inputenc}
@@ -47,7 +47,7 @@ citecolor=blue,filecolor=blue,menucolor=blue,urlcolor=blue]{hyperref}
 
 
 
-\begin{frame}[label={sec:org99ff01c}]{In-class Exercise Linear Regression}
+\begin{frame}[label={sec:orgd756849}]{In-class Exercise Linear Regression}
 Please dowload \emph{intrade08.csv} \& \emph{pres08.csv} from class website
 
 \begin{itemize}
@@ -56,7 +56,7 @@ Please dowload \emph{intrade08.csv} \& \emph{pres08.csv} from class website
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orgbd34cce}]{Variables in the intrade data}
+\begin{frame}[label={sec:org4e46777}]{Variables in the intrade data}
 \begin{itemize}
 \item \emph{day}: Date of the session
 \item \emph{statename}: Full name of each state (including District of Columbia in 2008)
@@ -69,7 +69,7 @@ Please dowload \emph{intrade08.csv} \& \emph{pres08.csv} from class website
 \end{frame}
 
 
-\begin{frame}[label={sec:orgfb838da}]{Variables in the pres08 data}
+\begin{frame}[label={sec:org5144c61}]{Variables in the pres08 data}
 \begin{itemize}
 \item \emph{state.name}: Full name of state (only in pres2008)
 \item \emph{state}: Two letter state abbreviation
@@ -79,7 +79,7 @@ Please dowload \emph{intrade08.csv} \& \emph{pres08.csv} from class website
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org52fb95b}]{Combining data sets}
+\begin{frame}[label={sec:org55baa31}]{Combining data sets}
 \begin{itemize}
 \item First we have to combine the different data sets
 \item To do so, we need an identifier that tells \emph{R} which observations to match to each other
@@ -91,7 +91,7 @@ Please dowload \emph{intrade08.csv} \& \emph{pres08.csv} from class website
 \alert{state variable}
 \end{frame}
 
-\begin{frame}[fragile,label={sec:org3f7dc2d}]{Combining data sets}
+\begin{frame}[fragile,label={sec:org9baca3b}]{Combining data sets}
  \begin{itemize}
 \item Use \emph{merge()} function
 \end{itemize}
@@ -99,18 +99,18 @@ Please dowload \emph{intrade08.csv} \& \emph{pres08.csv} from class website
 \begin{verbatim}
 merge(x,y, by =)
 intresults08 <- merge(intrade08, pres08, by = "state")
-head(merge)
+head(intresults08)
 \end{verbatim}
 \end{frame}
 
 
-\begin{frame}[label={sec:org67606a8}]{Question 1}
+\begin{frame}[label={sec:org0019c9e}]{Question 1}
 Create a \emph{DaysToElection} variable by subtracting the day of the election from each day in the dataset. Now create a \emph{state margin of victory} variable to predict, and a \emph{betting market margin} to predict it with.
 
 \alert{election day in 2008: Nov, 4th}
 \end{frame}
 
-\begin{frame}[fragile,shrink=20,label={sec:org0b139f1}]{Solution 1}
+\begin{frame}[fragile,shrink=20,label={sec:org3e32abf}]{Solution 1}
  \begin{verbatim}
 intresults08$DaysToElection
  <- as.Date("2008-11-04") - as.Date(intresults08$day)
@@ -121,11 +121,11 @@ intresults08$obama.actmarg <- intresults08$Obama - intresults08$McCain
 \end{frame}
 
 
-\begin{frame}[label={sec:org44d59a7}]{Question 2}
+\begin{frame}[label={sec:org94536f4}]{Question 2}
 Considering only the trading \alert{one day from the election}, predict the actual electoral margins from the trading margins using a linear model. Does it predict well? How would you visualize the predictions and the outcomes together? Hint: because we only have one predictor you can use \emph{abline}.
 \end{frame}
 
-\begin{frame}[fragile,shrink=20,label={sec:org0870aa7}]{Solution 2}
+\begin{frame}[fragile,shrink=20,label={sec:orgdad1358}]{Solution 2}
  \begin{verbatim}
 latest08 <- intresults08[intresults08$DaysToElection == 1,]
 int.fit08 <- lm(obama.actmarg ~ obama.intmarg, data = latest08)
@@ -139,12 +139,12 @@ abline(int.fit08)
 
 
 
-\begin{frame}[label={sec:org6a16719}]{Question 3}
+\begin{frame}[label={sec:org9074a89}]{Question 3}
 What would be the prediction for the margin of victory if the InTrade margin was 25? Mark this point on the previous plot.
 \end{frame}
 
 
-\begin{frame}[fragile,shrink=20,label={sec:org091916f}]{Solution 3}
+\begin{frame}[fragile,shrink=20,label={sec:orga101098}]{Solution 3}
  \begin{verbatim}
 coef(int.fit08)[1] + coef(int.fit08)[2]*25
 
@@ -158,7 +158,7 @@ points(25,(coef(int.fit08)[1] + coef(int.fit08)[2]*25), col = "red")
 
 
 
-\begin{frame}[shrink=20,label={sec:org72e0584}]{Question 4}
+\begin{frame}[shrink=20,label={sec:org11ee0f1}]{Question 4}
 Even efficient markets aren’t omniscient. Information comes in about the election every day and the market prices should reflect any change in information that seem to matter to the outcome.
 
 We can examine how and about what the markets change their minds by looking at which states they are confident about, and which they update their ‘opinions’ (i.e. their prices) about. Over the period before the election, let’s see how prices for each state are evolving. We can get a compact summary of price movement by fitting a linear model to Obama’s margin for each state over the 20 days before the election.
@@ -169,7 +169,7 @@ We will summarise price movement by the direction (up or down) and rate of chang
 \end{frame}
 
 
-\begin{frame}[fragile,shrink=20,label={sec:orgb136147}]{Solution 4}
+\begin{frame}[fragile,shrink=20,label={sec:org5204b1a}]{Solution 4}
  \begin{verbatim}
 stnames <- unique(intresults08$state.name)
 recent <- subset(intresults08, subset=(DaysToElection <= 20)
@@ -182,11 +182,11 @@ abline(recent.mod)
 \end{verbatim}
 \end{frame}
 
-\begin{frame}[label={sec:org104b42b}]{Question 5}
+\begin{frame}[label={sec:orgee752ab}]{Question 5}
 Let's do the same thing for all states and collect the slope coefficients (\(\beta\)'s). How can we modify the code from the answer to the previous question? Then plot the distribution of changes for all states.
 \end{frame}
 
-\begin{frame}[fragile,shrink=25,label={sec:org6bdf7f2}]{Solution 5}
+\begin{frame}[fragile,shrink=25,label={sec:org3fcca66}]{Solution 5}
  \begin{verbatim}
 stnames <- unique(intresults08$state.name)
 change <- rep(NA, length(unique(intresults08$state.name)))
@@ -204,11 +204,11 @@ hist(change)
 \end{frame}
 
 
-\begin{frame}[label={sec:orgb2adebd}]{Questin 5}
+\begin{frame}[label={sec:org66f1983}]{Questin 5}
 Estimate a linear model using the intrade margin in the average intrade margin in the week before the election to predict vote margin in 2008. How well does the model predict?
 \end{frame}
 
-\begin{frame}[fragile,shrink=25,label={sec:org8b3954e}]{Solution 5}
+\begin{frame}[fragile,shrink=25,label={sec:org050e536}]{Solution 5}
  \begin{verbatim}
 latest08 <- intresults08[intresults08$DaysToElection <8,]
 average.Intrade <- tapply(latest08$obama.intmarg, latest08$state, mean)
@@ -221,11 +221,11 @@ summary(int.fit08)$r.squared
 \end{verbatim}
 \end{frame}
 
-\begin{frame}[label={sec:orgebcacc4}]{Question 6}
+\begin{frame}[label={sec:org3db6b5b}]{Question 6}
 Next, we read in the same data for the 2012 election. Use the linear model created above to create predictions for the margin in 2012. Calculate and plot the prediction error.
 \end{frame}
 
-\begin{frame}[fragile,shrink=25,label={sec:org260015c}]{Solution 6}
+\begin{frame}[fragile,shrink=25,label={sec:orgde54915}]{Solution 6}
  \begin{verbatim}
 data2012 <- read.csv("intresults12.csv")
 data2012$DaysToElection <- as.Date("2008-11-06") - as.Date(data2012$day)
@@ -235,7 +235,7 @@ data2012$obama.actmarg <- data2012$Obama - data2012$Romney
 \end{frame}
 
 
-\begin{frame}[fragile,shrink=25,label={sec:org2e41f7d}]{Solution 6}
+\begin{frame}[fragile,shrink=25,label={sec:orga9e43be}]{Solution 6}
  \begin{verbatim}
 latest12
 <- data2012[data2012$DaysToElection <8,]
