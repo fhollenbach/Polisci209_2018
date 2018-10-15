@@ -2,11 +2,9 @@
 
 intrade08 <- read.csv("intrade08.csv")
 pres08  <- read.csv("pres08.csv")
-polls08  <- read.csv("polls08.csv")
 
 summary(intrade08)
 summary(pres08)
-summary(polls08)
 
 
 intresults08 <- merge(intrade08, pres08, by = "state")
