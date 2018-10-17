@@ -39,8 +39,9 @@ points(25,(coef(int.fit08)[1] + coef(int.fit08)[2]*25), col = "red")
 
 stnames <- unique(intresults08$state.name)
 recent <- subset(intresults08, subset=(DaysToElection <= 20) & (state.name==stnames[50]))
-recent.mod <- lm(obama.intmarg ~ DaysToElection, data=recent)
-plot(recent$DaysToElection, recent$obama.intmarg, xlab="Days to election", ylab="Market's Obama margin")
+recent$daysnew <- recent$DaysToElection * (-1)
+recent.mod <- lm(obama.intmarg ~ daysnew, data=recent)
+plot(recent$daysnew, recent$obama.intmarg, xlab="Days to election", ylab="Market's Obama margin")
 abline(recent.mod)
 
 

@@ -478,17 +478,19 @@ notification.__
 - Homework finish SWIRL Exercises PREDICTION 3
 
 
-#### Friday, October 19th:  In Class Exercise on Linear Regression
+#### Friday, October 19th: Regression and Causality
+- Read & Work through QSS 4.3
+
 
 
 ## Week 9
 
-#### Monday, October 22nd:  Introduction to Probability
+#### Monday, October 22nd: Regression and Causality
+
+
+#### Wednesday, October 24th: Introduction to Probability
 - Read & Work through QSS 6.1
 - Assignment due: QSS exercise 4.5.1
-
-
-#### Wednesday, October 24th: Playing Cards
 
 #### Friday, October 26th:  Reviewing Probability 1
 
