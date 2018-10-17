@@ -490,7 +490,9 @@ notification.__
 
 #### Wednesday, October 24th: Introduction to Probability
 - Read & Work through QSS 6.1
-- Assignment due: QSS exercise 4.5.1
+- Assignment due: QSS exercise 4.5.2 *Questions 1-5*
+- [Data for Assignment](../slides/week8/progresa.csv)
+
 
 #### Friday, October 26th:  Reviewing Probability 1
 
