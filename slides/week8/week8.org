@@ -257,3 +257,229 @@ prediction
 error <- true.margin12 - prediction
 hist(error)
 #+end_src
+
+
+* Linear Regression and RCTs
+
+Can we estimate regression models on data from experiments?
+
+#+BEAMER: \pause
+
+*Yes, treatment status as the independent variable (0 or 1)*
+
+
+* Linear Regression and RCTs
+
+-  y = \alpha + \beta * treatment + \epsilon
+
+- \beta = average treatment effect
+
+- The two predicted values are the average outcome under each condition
+
+#+BEAMER: \pause
+
+- \beta: Predicted change in Y /caused/ by increase of /T/ by 1
+
+#+BEAMER: \pause
+
+*Remember, generally regression coefficents are not to be interpreted as causal effects!*
+
+
+
+
+* Linear Regression with multiple independent variables
+
+\begin{eqnarray*}
+      Y & = & \alpha + \beta_1 X_1 + \beta_2 X_2 + \cdots + \beta_p X_p + \epsilon
+\end{eqnarray*}
+
+- principle of regression model stays the same
+
+- we attempt to draw the best fitting line through a cloud of points (now in multiple dimensions)
+
+*  Linear Regression with multiple independent variables
+
+We still minimize the sum of the squared residuals:
+
+\begin{eqnarray*}
+      \textsf{SSR} & = & \sum_{i=1}^n \hat\epsilon_i^2
+    \end{eqnarray*}
+
+
+*  Linear Regression with multiple independent variables
+
+We still minimize the sum of the squared residuals:
+
+\begin{eqnarray*}
+      \textsf{SSR} & = & \sum_{i=1}^n \hat\epsilon_i^2 \ = \ \sum_{i=1}^n
+                         (Y_i - \hat{Y})^2
+    \end{eqnarray*}
+
+
+*  Linear Regression with multiple independent variables
+
+We still minimize the sum of the squared residuals:
+
+
+\begin{eqnarray*}
+      \textsf{SSR} & = & \sum_{i=1}^n \hat\epsilon_i^2 \ = \ \sum_{i=1}^n
+                         (Y_i - \hat{Y})^2
+    \end{eqnarray*}
+
+And thus:
+
+\begin{eqnarray*}
+
+ \textsf{SSR} &=& \sum_{i=1}^n (Y_i - (\hat\alpha + \hat\beta_1 X_{i1} +
+                         \hat\beta_2 X_{i2} + \cdots + \hat\beta_p X_{ip}))^2
+    \end{eqnarray*}
+
+
+
+*  Linear Regression with multiple independent variables
+
+Interpretation:
+
+- $\alpha$: Intercept or $\hat{y}$ when all $X_{p} = 0$
+
+#+BEAMER: \pause
+
+- $\beta_{p}$: Slope of predictor $X_{p}$
+
+#+BEAMER: \pause
+
+- $\beta_{p}$: Predicted change in $\hat{Y}$ when $X_{p}$ increases by $1$ *and* all other predictors *are held constant*!
+
+
+
+*  Linear Regression with multiple independent variables
+
+- $\beta_{p}$: Predicted change in $\hat{Y}$ when $X_{p}$ increases by $1$ *and* all other predictors *are held constant*!
+
+- we can use the multiple regression to *control for confounders*
+
+#+BEAMER: \pause
+
+- impact of each individual predictor when the other predictors do not change
+
+- Example: Association between income and child mortality when regime type is not changing
+
+*  Linear Regression with multiple independent variables in /R/
+
+
+#+begin_src R :eval no
+result <- lm(y ~ x1 + x2 + x3 + x4, data = data)
+coef(result)
+#+end_src
+
+
+
+*  Linear Regression with multiple independent variables in /R/
+
+
+#+begin_src R :eval no
+data <- read.csv("bivariate_data.csv")
+data2010 <- subset(data, Year == 2010)
+bivar <- lm(Child.Mortality ~ log(GDP), data = data)
+coef(bivar)
+summary(bivar)$r.squared
+#+end_src
+
+*  Linear Regression with multiple independent variables in /R/
+
+
+
+#+begin_src R :results output :exports both :session
+data <- read.csv("bivariate_data.csv")
+data2010 <- subset(data, Year == 2010)
+bivar <- lm(Child.Mortality ~ log(GDP), data = data2010)
+coef(bivar)
+summary(bivar)$r.squared
+#+end_src
+
+
+
+
+*  Linear Regression with multiple independent variables in /R/
+:PROPERTIES:
+    :BEAMER_opt: shrink=20
+    :END:
+
+
+#+begin_src R :eval no
+data <- read.csv("bivariate_data.csv")
+data2010 <- subset(data, Year == 2010)
+multiple <- lm(Child.Mortality ~ log(GDP) + PolityIV, data = data2010)
+coef(multiple)
+summary(multiple)$r.squared
+#+end_src
+
+
+
+*  Linear Regression with multiple independent variables in /R/
+:PROPERTIES:
+    :BEAMER_opt: shrink=20
+    :END:
+
+
+#+begin_src R :results output :exports both :session
+data <- read.csv("bivariate_data.csv")
+data2010 <- subset(data, Year == 2010)
+multiple <- lm(Child.Mortality ~ log(GDP) + PolityIV, data = data2010)
+coef(multiple)
+summary(multiple)$r.squared
+#+end_src
+
+
+
+*  Linear Regression with multiple independent variables in /R/
+:PROPERTIES:
+    :BEAMER_opt: shrink=20
+    :END:
+
+
+#+begin_src R :results output :exports both :session
+data <- read.csv("bivariate_data.csv")
+data2010 <- subset(data, Year == 2010)
+multiple <- lm(Child.Mortality ~ log(GDP) + PolityIV, data = data2010)
+coef(multiple)
+coef(bivar)
+#+end_src
+
+
+*  Linear Regression with multiple independent variables in /R/
+
+- In multiple regression models we want to adjust the goodness of fit statistic by the number of variables included
+- This is done via the degrees of freedom (DF) adjustment:
+
+\begin{eqnarray*}
+      \textsf{adjusted} R^{2} & = & 1 - \frac{SSR /(n-p-1)}{TSS/(n-1)}
+    \end{eqnarray*}
+
+*  Linear Regression with multiple independent variables in /R/
+:PROPERTIES:
+    :BEAMER_opt: shrink=20
+    :END:
+
+#+begin_src R :eval no
+data <- read.csv("bivariate_data.csv")
+data2010 <- subset(data, Year == 2010)
+multiple <- lm(Child.Mortality ~ log(GDP) + PolityIV, data = data2010)
+coef(multiple)
+summary(multiple)$r.squared
+summary(multiple)$adj.r.squared
+#+end_src
+
+*  Linear Regression with multiple independent variables in /R/
+:PROPERTIES:
+    :BEAMER_opt: shrink=20
+    :END:
+
+#+begin_src R :results output :exports both :session
+data <- read.csv("bivariate_data.csv")
+data2010 <- subset(data, Year == 2010)
+multiple <- lm(Child.Mortality ~ log(GDP) + PolityIV, data = data2010)
+coef(multiple)
+summary(multiple)$r.squared
+summary(multiple)$adj.r.squared
+#+end_src
