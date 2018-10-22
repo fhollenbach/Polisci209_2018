@@ -268,6 +268,18 @@ Can we estimate regression models on data from experiments?
 *Yes, treatment status as the independent variable (0 or 1)*
 
 
+
+* Linear Regression and RCTs
+
+-  y = \alpha + \beta * treatment + \epsilon
+
+
+- What is the interpretation of \alpha here?
+
+#+BEAMER: \pause
+
+- What is the interpretation of \beta?
+
 * Linear Regression and RCTs
 
 -  y = \alpha + \beta * treatment + \epsilon
@@ -284,7 +296,50 @@ Can we estimate regression models on data from experiments?
 
 *Remember, generally regression coefficents are not to be interpreted as causal effects!*
 
+* Race and Job Applications
+:PROPERTIES:
+    :BEAMER_opt: shrink=20
+    :END:
 
+#+begin_src R :results output :exports both :session
+resume <- read.csv("resume.csv")
+head(resume)
+#+end_src
+
+- Randomized "race" in job applications
+- What is the effect of race on likelyhood of callback?
+
+*Marianne Bertrand and Sendhil Mullainathan (American Economic Review 2004)*
+
+* Race and Job Applications
+:PROPERTIES:
+    :BEAMER_opt: shrink=30
+    :END:
+
+#+begin_src R :results output :exports both :session
+mean(resume$call[resume$race == "black"])
+mean(resume$call[resume$race == "white"])
+mean(resume$call[resume$race == "black"]) - mean(resume$call[resume$race == "white"])
+#+end_src
+
+
+* Race and Job Applications
+:PROPERTIES:
+    :BEAMER_opt: shrink=20
+    :END:
+
+#+begin_src R :results output :exports both :session
+linear <- lm(call ~ race, data = resume)
+coef(linear)
+#+end_src
+
+R automatically turns the factor into a dummy (binary) variable
+
+
+#+BEAMER: \pause
+
+- \alpha is the intercept, when X = 0 (i.e. race is "black")
+- \beta is change in \hat{Y} when X is set to 1 (i.e. race is "white")
 
 
 * Linear Regression with multiple independent variables
@@ -483,3 +538,4 @@ coef(multiple)
 summary(multiple)$r.squared
 summary(multiple)$adj.r.squared
 #+end_src
+
