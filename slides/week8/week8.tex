@@ -1,4 +1,4 @@
-% Created 2018-10-21 Sun 21:23
+% Created 2018-10-22 Mon 08:57
 % Intended LaTeX compiler: pdflatex
 \documentclass[presentation]{beamer}
 \usepackage[utf8]{inputenc}
@@ -47,7 +47,7 @@ citecolor=blue,filecolor=blue,menucolor=blue,urlcolor=blue]{hyperref}
 
 
 
-\begin{frame}[label={sec:org50e6ecf}]{In-class Exercise Linear Regression}
+\begin{frame}[label={sec:org616081a}]{In-class Exercise Linear Regression}
 Please dowload \emph{intrade08.csv} \& \emph{pres08.csv} from class website
 
 \begin{itemize}
@@ -56,7 +56,7 @@ Please dowload \emph{intrade08.csv} \& \emph{pres08.csv} from class website
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org2978653}]{Variables in the intrade data}
+\begin{frame}[label={sec:orgcb2fc10}]{Variables in the intrade data}
 \begin{itemize}
 \item \emph{day}: Date of the session
 \item \emph{statename}: Full name of each state (including District of Columbia in 2008)
@@ -69,7 +69,7 @@ Please dowload \emph{intrade08.csv} \& \emph{pres08.csv} from class website
 \end{frame}
 
 
-\begin{frame}[label={sec:orga99802a}]{Variables in the pres08 data}
+\begin{frame}[label={sec:org7e150a9}]{Variables in the pres08 data}
 \begin{itemize}
 \item \emph{state.name}: Full name of state (only in pres2008)
 \item \emph{state}: Two letter state abbreviation
@@ -79,7 +79,7 @@ Please dowload \emph{intrade08.csv} \& \emph{pres08.csv} from class website
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org8ad034d}]{Combining data sets}
+\begin{frame}[label={sec:org66effeb}]{Combining data sets}
 \begin{itemize}
 \item First we have to combine the different data sets
 \item To do so, we need an identifier that tells \emph{R} which observations to match to each other
@@ -91,7 +91,7 @@ Please dowload \emph{intrade08.csv} \& \emph{pres08.csv} from class website
 \alert{state variable}
 \end{frame}
 
-\begin{frame}[fragile,label={sec:org4a6e462}]{Combining data sets}
+\begin{frame}[fragile,label={sec:org23cbed4}]{Combining data sets}
  \begin{itemize}
 \item Use \emph{merge()} function
 \end{itemize}
@@ -104,13 +104,13 @@ head(intresults08)
 \end{frame}
 
 
-\begin{frame}[label={sec:org26498c9}]{Question 1}
+\begin{frame}[label={sec:org5916179}]{Question 1}
 Create a \emph{DaysToElection} variable by subtracting the day of the election from each day in the dataset. Now create a \emph{state margin of victory} variable to predict, and a \emph{betting market margin} to predict it with.
 
 \alert{election day in 2008: Nov, 4th}
 \end{frame}
 
-\begin{frame}[fragile,shrink=20,label={sec:org59ef098}]{Solution 1}
+\begin{frame}[fragile,shrink=20,label={sec:org9d022db}]{Solution 1}
  \begin{verbatim}
 intresults08$DaysToElection
  <- as.Date("2008-11-04") - as.Date(intresults08$day)
@@ -121,11 +121,11 @@ intresults08$obama.actmarg <- intresults08$Obama - intresults08$McCain
 \end{frame}
 
 
-\begin{frame}[label={sec:org2ddf9a2}]{Question 2}
+\begin{frame}[label={sec:org2af84e8}]{Question 2}
 Considering only the trading \alert{one day from the election}, predict the actual electoral margins from the trading margins using a linear model. Does it predict well? How would you visualize the predictions and the outcomes together? Hint: because we only have one predictor you can use \emph{abline}.
 \end{frame}
 
-\begin{frame}[fragile,shrink=20,label={sec:orge619302}]{Solution 2}
+\begin{frame}[fragile,shrink=20,label={sec:orgd2a885a}]{Solution 2}
  \begin{verbatim}
 latest08 <- intresults08[intresults08$DaysToElection == 1,]
 int.fit08 <- lm(obama.actmarg ~ obama.intmarg, data = latest08)
@@ -139,12 +139,12 @@ abline(int.fit08)
 
 
 
-\begin{frame}[label={sec:orgef86169}]{Question 3}
+\begin{frame}[label={sec:orgcbe01db}]{Question 3}
 What would be the prediction for the margin of victory if the InTrade margin was 25? Mark this point on the previous plot.
 \end{frame}
 
 
-\begin{frame}[fragile,shrink=20,label={sec:orgcb49d62}]{Solution 3}
+\begin{frame}[fragile,shrink=20,label={sec:org89ef846}]{Solution 3}
  \begin{verbatim}
 coef(int.fit08)[1] + coef(int.fit08)[2]*25
 
@@ -158,7 +158,7 @@ points(25,(coef(int.fit08)[1] + coef(int.fit08)[2]*25), col = "red")
 
 
 
-\begin{frame}[shrink=20,label={sec:orge403a51}]{Question 4}
+\begin{frame}[shrink=20,label={sec:org869e010}]{Question 4}
 Even efficient markets aren’t omniscient. Information comes in about the election every day and the market prices should reflect any change in information that seem to matter to the outcome.
 
 We can examine how and about what the markets change their minds by looking at which states they are confident about, and which they update their ‘opinions’ (i.e. their prices) about. Over the period before the election, let’s see how prices for each state are evolving. We can get a compact summary of price movement by fitting a linear model to Obama’s margin for each state over the 20 days before the election.
@@ -169,7 +169,7 @@ We will summarise price movement by the direction (up or down) and rate of chang
 \end{frame}
 
 
-\begin{frame}[fragile,shrink=20,label={sec:org0ba530c}]{Solution 4}
+\begin{frame}[fragile,shrink=20,label={sec:orgd39f9b5}]{Solution 4}
  \begin{verbatim}
 stnames <- unique(intresults08$state.name)
 recent <- subset(intresults08, subset=(DaysToElection <= 20)
@@ -182,11 +182,11 @@ abline(recent.mod)
 \end{verbatim}
 \end{frame}
 
-\begin{frame}[label={sec:org7499a39}]{Question 5}
+\begin{frame}[label={sec:org9530f6d}]{Question 5}
 Let's do the same thing for all states and collect the slope coefficients (\(\beta\)'s). How can we modify the code from the answer to the previous question? Then plot the distribution of changes for all states.
 \end{frame}
 
-\begin{frame}[fragile,shrink=25,label={sec:org79a6da6}]{Solution 5}
+\begin{frame}[fragile,shrink=25,label={sec:orga4c514b}]{Solution 5}
  \begin{verbatim}
 stnames <- unique(intresults08$state.name)
 change <- rep(NA, length(unique(intresults08$state.name)))
@@ -204,11 +204,11 @@ hist(change)
 \end{frame}
 
 
-\begin{frame}[label={sec:orgb1445e1}]{Questin 5}
+\begin{frame}[label={sec:orga45e50f}]{Questin 5}
 Estimate a linear model using the intrade margin in the average intrade margin in the week before the election to predict vote margin in 2008. How well does the model predict?
 \end{frame}
 
-\begin{frame}[fragile,shrink=25,label={sec:org73f447e}]{Solution 5}
+\begin{frame}[fragile,shrink=25,label={sec:orgc581ed2}]{Solution 5}
  \begin{verbatim}
 latest08 <- intresults08[intresults08$DaysToElection <8,]
 average.Intrade <- tapply(latest08$obama.intmarg, latest08$state, mean)
@@ -221,11 +221,11 @@ summary(int.fit08)$r.squared
 \end{verbatim}
 \end{frame}
 
-\begin{frame}[label={sec:org370c0b7}]{Question 6}
+\begin{frame}[label={sec:org82f7dc2}]{Question 6}
 Next, we read in the same data for the 2012 election. Use the linear model created above to create predictions for the margin in 2012. Calculate and plot the prediction error.
 \end{frame}
 
-\begin{frame}[fragile,shrink=25,label={sec:orgc5aad3b}]{Solution 6}
+\begin{frame}[fragile,shrink=25,label={sec:org18f3046}]{Solution 6}
  \begin{verbatim}
 data2012 <- read.csv("intresults12.csv")
 data2012$DaysToElection <- as.Date("2008-11-06") - as.Date(data2012$day)
@@ -235,7 +235,7 @@ data2012$obama.actmarg <- data2012$Obama - data2012$Romney
 \end{frame}
 
 
-\begin{frame}[fragile,shrink=25,label={sec:orgec81d46}]{Solution 6}
+\begin{frame}[fragile,shrink=25,label={sec:org6df5d16}]{Solution 6}
  \begin{verbatim}
 latest12
 <- data2012[data2012$DaysToElection <8,]
@@ -255,7 +255,7 @@ hist(error)
 \end{frame}
 
 
-\begin{frame}[label={sec:org847ac32}]{Linear Regression and RCTs}
+\begin{frame}[label={sec:org6cab27f}]{Linear Regression and RCTs}
 Can we estimate regression models on data from experiments?
 
 \pause
@@ -265,7 +265,7 @@ Can we estimate regression models on data from experiments?
 
 
 
-\begin{frame}[label={sec:orgda3310f}]{Linear Regression and RCTs}
+\begin{frame}[label={sec:orgea6265f}]{Linear Regression and RCTs}
 \begin{itemize}
 \item y = \(\alpha\) + \(\beta\) * treatment + \(\epsilon\)
 \end{itemize}
@@ -282,7 +282,7 @@ Can we estimate regression models on data from experiments?
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org0e5b78b}]{Linear Regression and RCTs}
+\begin{frame}[label={sec:org57df42e}]{Linear Regression and RCTs}
 \begin{itemize}
 \item y = \(\alpha\) + \(\beta\) * treatment + \(\epsilon\)
 
@@ -302,7 +302,7 @@ Can we estimate regression models on data from experiments?
 \alert{Remember, generally regression coefficents are not to be interpreted as causal effects!}
 \end{frame}
 
-\begin{frame}[fragile,shrink=20,label={sec:orgbad7774}]{Race and Job Applications}
+\begin{frame}[fragile,shrink=20,label={sec:org3aea0f2}]{Race and Job Applications}
  \begin{verbatim}
 resume <- read.csv("resume.csv")
 head(resume)
@@ -327,7 +327,7 @@ head(resume)
 \alert{Marianne Bertrand and Sendhil Mullainathan (American Economic Review 2004)}
 \end{frame}
 
-\begin{frame}[fragile,shrink=30,label={sec:orgb1b3b06}]{Race and Job Applications}
+\begin{frame}[fragile,shrink=30,label={sec:org99c9f48}]{Race and Job Applications}
  \begin{verbatim}
 mean(resume$call[resume$race == "black"])
 mean(resume$call[resume$race == "white"])
@@ -344,7 +344,7 @@ mean(resume$call[resume$race == "black"]) - mean(resume$call[resume$race == "whi
 \end{frame}
 
 
-\begin{frame}[fragile,shrink=20,label={sec:org5a08210}]{Race and Job Applications}
+\begin{frame}[fragile,shrink=20,label={sec:orgc8f2bb7}]{Race and Job Applications}
  \begin{verbatim}
 linear <- lm(call ~ race, data = resume)
 coef(linear)
@@ -368,7 +368,7 @@ R automatically turns the factor into a dummy (binary) variable
 \end{frame}
 
 
-\begin{frame}[label={sec:orgc1d94bc}]{Linear Regression with multiple independent variables}
+\begin{frame}[label={sec:orga503693}]{Linear Regression with multiple independent variables}
 \begin{eqnarray*}
       Y & = & \alpha + \beta_1 X_1 + \beta_2 X_2 + \cdots + \beta_p X_p + \epsilon
 \end{eqnarray*}
@@ -380,7 +380,7 @@ R automatically turns the factor into a dummy (binary) variable
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org539d21e}]{Linear Regression with multiple independent variables}
+\begin{frame}[label={sec:org38b4bb1}]{Linear Regression with multiple independent variables}
 We still minimize the sum of the squared residuals:
 
 \begin{eqnarray*}
@@ -389,7 +389,7 @@ We still minimize the sum of the squared residuals:
 \end{frame}
 
 
-\begin{frame}[label={sec:org6e420f8}]{Linear Regression with multiple independent variables}
+\begin{frame}[label={sec:org3dfc89d}]{Linear Regression with multiple independent variables}
 We still minimize the sum of the squared residuals:
 
 \begin{eqnarray*}
@@ -399,7 +399,7 @@ We still minimize the sum of the squared residuals:
 \end{frame}
 
 
-\begin{frame}[label={sec:org489c360}]{Linear Regression with multiple independent variables}
+\begin{frame}[label={sec:org5249cdd}]{Linear Regression with multiple independent variables}
 We still minimize the sum of the squared residuals:
 
 
@@ -419,7 +419,7 @@ And thus:
 
 
 
-\begin{frame}[label={sec:org5bb9688}]{Linear Regression with multiple independent variables}
+\begin{frame}[label={sec:org3f61f3b}]{Linear Regression with multiple independent variables}
 Interpretation:
 
 \begin{itemize}
@@ -441,7 +441,7 @@ Interpretation:
 
 
 
-\begin{frame}[label={sec:orgd871f47}]{Linear Regression with multiple independent variables}
+\begin{frame}[label={sec:orge68d71f}]{Linear Regression with multiple independent variables}
 \begin{itemize}
 \item \(\beta_{p}\): Predicted change in \(\hat{Y}\) when \(X_{p}\) increases by \(1\) \alert{and} all other predictors \alert{are held constant}!
 
@@ -457,7 +457,7 @@ Interpretation:
 \end{itemize}
 \end{frame}
 
-\begin{frame}[fragile,label={sec:orgf65f235}]{Linear Regression with multiple independent variables in \emph{R}}
+\begin{frame}[fragile,label={sec:orgec9b1d7}]{Linear Regression with multiple independent variables in \emph{R}}
  \begin{verbatim}
 result <- lm(y ~ x1 + x2 + x3 + x4, data = data)
 coef(result)
@@ -466,7 +466,7 @@ coef(result)
 
 
 
-\begin{frame}[fragile,label={sec:orgf17f3ee}]{Linear Regression with multiple independent variables in \emph{R}}
+\begin{frame}[fragile,label={sec:org8bde946}]{Linear Regression with multiple independent variables in \emph{R}}
  \begin{verbatim}
 data <- read.csv("bivariate_data.csv")
 data2010 <- subset(data, Year == 2010)
@@ -476,7 +476,7 @@ summary(bivar)$r.squared
 \end{verbatim}
 \end{frame}
 
-\begin{frame}[fragile,label={sec:orgdf8b564}]{Linear Regression with multiple independent variables in \emph{R}}
+\begin{frame}[fragile,label={sec:orgc642ab1}]{Linear Regression with multiple independent variables in \emph{R}}
  \begin{verbatim}
 data <- read.csv("bivariate_data.csv")
 data2010 <- subset(data, Year == 2010)
@@ -497,7 +497,7 @@ summary(bivar)$r.squared
 
 
 
-\begin{frame}[fragile,shrink=20,label={sec:orgf16483a}]{Linear Regression with multiple independent variables in \emph{R}}
+\begin{frame}[fragile,shrink=20,label={sec:orgf416f8d}]{Linear Regression with multiple independent variables in \emph{R}}
  \begin{verbatim}
 data <- read.csv("bivariate_data.csv")
 data2010 <- subset(data, Year == 2010)
@@ -509,7 +509,7 @@ summary(multiple)$r.squared
 
 
 
-\begin{frame}[fragile,shrink=20,label={sec:org20a128f}]{Linear Regression with multiple independent variables in \emph{R}}
+\begin{frame}[fragile,shrink=20,label={sec:org0c23239}]{Linear Regression with multiple independent variables in \emph{R}}
  \begin{verbatim}
 data <- read.csv("bivariate_data.csv")
 data2010 <- subset(data, Year == 2010)
@@ -529,7 +529,7 @@ summary(multiple)$r.squared
 
 
 
-\begin{frame}[fragile,shrink=20,label={sec:org848cc00}]{Linear Regression with multiple independent variables in \emph{R}}
+\begin{frame}[fragile,shrink=20,label={sec:org5237c62}]{Linear Regression with multiple independent variables in \emph{R}}
  \begin{verbatim}
 data <- read.csv("bivariate_data.csv")
 data2010 <- subset(data, Year == 2010)
@@ -549,7 +549,7 @@ coef(bivar)
 \end{frame}
 
 
-\begin{frame}[label={sec:org5183ef4}]{Linear Regression with multiple independent variables in \emph{R}}
+\begin{frame}[label={sec:org0986a5f}]{Linear Regression with multiple independent variables in \emph{R}}
 \begin{itemize}
 \item In multiple regression models we want to adjust the goodness of fit statistic by the number of variables included
 \item This is done via the degrees of freedom (DF) adjustment:
@@ -560,7 +560,7 @@ coef(bivar)
     \end{eqnarray*}
 \end{frame}
 
-\begin{frame}[fragile,shrink=20,label={sec:orgf221aa8}]{Linear Regression with multiple independent variables in \emph{R}}
+\begin{frame}[fragile,shrink=20,label={sec:org2938e7e}]{Linear Regression with multiple independent variables in \emph{R}}
  \begin{verbatim}
 data <- read.csv("bivariate_data.csv")
 data2010 <- subset(data, Year == 2010)
@@ -571,7 +571,7 @@ summary(multiple)$adj.r.squared
 \end{verbatim}
 \end{frame}
 
-\begin{frame}[fragile,shrink=20,label={sec:org9d94373}]{Linear Regression with multiple independent variables in \emph{R}}
+\begin{frame}[fragile,shrink=20,label={sec:orgcec6cbc}]{Linear Regression with multiple independent variables in \emph{R}}
  \begin{verbatim}
 data <- read.csv("bivariate_data.csv")
 data2010 <- subset(data, Year == 2010)
