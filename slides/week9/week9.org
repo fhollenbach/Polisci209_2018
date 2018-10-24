@@ -1,0 +1,302 @@
+#+OPTIONS: H:1
+#+LATEX_CLASS: beamer
+#+COLUMNS: %45ITEM %10BEAMER_env(Env) %10BEAMER_act(Act) %4BEAMER_col(Col) %8BEAMER_opt(Opt)
+#+BEAMER_THEME: metropolis
+#+BEAMER_COLOR_THEME:
+#+BEAMER_FONT_THEME:
+#+BEAMER_INNER_THEME:
+#+BEAMER_OUTER_THEME:
+#+BEAMER_HEADER:
+
+
+#+LATEX_HEADER: \setbeamertemplate{frame footer}{\insertshortauthor}
+
+#+LATEX_HEADER: \setbeamerfont{page number in head/foot}{size=\tiny}
+#+LATEX_HEADER: \setbeamercolor{footline}{fg=gray}
+#+LATEX_HEADER: \usepackage{amsmath}
+#+LATEX_HEADER: \author{Florian Hollenbach}
+
+
+#+TITLE: Political Science 209 - Fall 2018
+#+SUBTITLE: Probability
+#+AUTHOR: Florian Hollenbach
+#+DATE: \today
+#+EMAIL: fhollenbach@tamu.edu
+#+OPTIONS: toc:nil
+#+LATEX_HEADER: \usepackage[english]{isodate}
+#+LATEX_HEADER: \usepackage{amsmath,amsthm,amssymb,amsfonts}
+
+
+
+* Why probability?
+
+- *Probability rules our lives*
+
+- It is everywhere!
+
+* Why probability?
+
+- Humans are really bad at interpreting probabilities
+
+- Even worse at calculating (estimating) probabilities
+
+* Why probability?
+
+
+#+ATTR_LATEX: :width 8cm
+[[~/Documents/GitHub/Polisci209_2018/slides/week9/media_prob.png]]
+
+* Why probability?
+
+- What are the chances it rains tomorrow?
+
+#+BEAMER: \pause
+
+- What are the chances you win the lottery?
+
+#+BEAMER: \pause
+
+- What is the probabilty of getting an A in pols 209?
+
+* Why probability?
+
+- We use probability to express and calculate uncertainty
+
+- /Preview/: later we will use probability to make statements about the uncertainty in our data analysis
+
+* Two fundamental concepts of probability
+
+- Frequentist: long-run frequency of events
+  - *ratio between the number of times the event occurs and the number of trials*
+  - example: coin flips
+
+#+BEAMER: \pause
+
+- Bayesian: belief about the likelihood of event occurrence
+  - evidence based belief
+  - often more sensible philosophy in political world
+
+* Important Terms
+
+1. *Experiment*: an action or a set of actions that produce stochastic events of interest
+
+#+BEAMER: \pause
+
+2. *sample space*: a set of all possible outcomes of the experiment, typically denoted by \Omega
+
+#+BEAMER: \pause
+
+3. *event*: a subset of the sample space
+
+(Imai - QSS)
+
+* Example
+
+What is the experiment, sample space, and one event for coin flips or the pulling a single card out of a deck of 52?
+
+* Defining Probability
+
+Probability of event A = P(A) = $\frac{\text{number of elements in A}}{\text{number of elements in sample space}}$
+
+#+BEAMER: \pause
+
+Probability of Head = P(H) = $\frac{1}{2}$
+
+
+* Example
+
+What is the probability of 3 head in 3 flips?
+
+Sample space?
+
+#+BEAMER: \pause
+
+\Omega = {HHH,HHT,HTH,THH, HTT, THT, TTH, TTT}
+
+#+BEAMER: \pause
+
+What is the event space we are interested in?
+
+#+BEAMER: \pause
+
+{HHH}
+
+* Example
+
+What is the probability of 3 head in 3 flips?
+
+
+#+BEAMER: \pause
+
+P(HHH) = $\frac{1}{8}$
+
+
+* Example
+
+What is the probability of 2 head in 3 flips?
+
+\Omega = {HHH,HHT,HTH,THH, HTT, THT, TTH, TTT}
+
+What is the event space we are interested in?
+
+#+BEAMER: \pause
+
+{HHT, HTH, THH}
+
+#+BEAMER: \pause
+
+P(2 H) = $\frac{3}{8}$
+
+* Axioms (rules) of Probability
+
+- the probability of *any* event A is at least 0
+  - P(A) $\geq$ 0
+
+#+BEAMER: \pause
+
+- The total sum of all possible outcomes in the sample space must be 1
+  - P(\Omega) = 1
+
+#+BEAMER: \pause
+
+- If A and B are mutually exclusive (*meaning only one or the other can happen*), then P(A or B) = P(A) + P(B)
+
+
+* Axioms (rules) of Probability
+
+A^{c} - complement to A, i.e. part of sample space not in A
+
+Sometimes it is easier to calculate the probability of an event by using its complement
+
+
+
+* Using the complement:
+
+What is the probability of having at least one Tail on three coin flips?
+
+\Omega = {HHH,HHT,HTH,THH, HTT, THT, TTH, TTT}
+
+#+BEAMER: \pause
+
+P(at least one T) = $\frac{7}{8}$
+
+P(at least one T) = 1 - P(HHH) = 1 - $\frac{1}{8}$
+
+
+
+* Example of simple probability
+
+What is the probability of getting a Queen as the first card from a full deck?
+
+\Omega = {?}
+
+Event space = {?}
+
+
+#+BEAMER: \pause
+
+p(Queen) = $\frac{4}{52} = \frac{1}{13}$
+
+
+
+
+* How to quickly count the sample space when order matters: permutations
+
+- Often we do not want to or can't write out all possible combinations by hand
+
+- How many possibilities are there to arrange letters numbers 1,2,3?
+
+#+BEAMER: \pause
+
+Three outcomes: 1, 2, 3 & three draws
+
+#+BEAMER: \pause
+First draw: A,B, or C
+
+Second draw: two possibilities
+
+Third draw: one left
+
+3 x 2 x 1 possibilities
+
+* How to quickly count the sample space when order matters: permutations
+
+Permutations count many ways we can *order* k objects out of a set of n unique objects
+
+$_{n}P_{k} = n \times (n-1) \times (n-2) \times ... \times (n-k + 1) = \frac{n!}{(n-k)!}$
+
+What does n! stand for?
+
+#+BEAMER: \pause
+
+n! = n-factorial = $n \times (n-1) \times (n-2) \times ... \times (n-n+1)
+
+$3! = 3 \times 2 \times 1$
+
+*Note: 0! = 1*
+
+
+* Permutation Example:
+
+How many ways can we arrange four cards out of a the 13 spades in our card deck?
+
+first draw: ?
+#+BEAMER: \pause
+
+$13 \times 12 \times 11 \times 10$
+
+#+BEAMER: \pause
+
+$ \frac{13!}{(13-4)!} =  \frac{13!}{9!} = 17160$
+
+* Birthday Problem
+
+Impress your family over Thanksgiving!
+
+What is the probability that at least two people in this room have the same birthday?
+
+
+* Birthday Problem
+
+Can the law of total probabilities and complement help us?
+
+#+BEAMER: \pause
+
+Yes, P(at least two share bday) = 1 - P(nobody shares bday)
+
+* Birthday Problem
+
+ P(nobody shares bday)?
+
+First find event space, i.e. everyone has a unique birthday
+
+#+BEAMER: \pause
+
+How many possibilities for birthdays in a year?
+
+#+BEAMER: \pause
+
+365
+
+#+BEAMER: \pause
+
+How many unique arrangements would we need for nobody to share the birthday?
+
+/number of people in room - k/
+
+* Birthday Problem
+
+1. $_{365}P_{k} = \frac{365!}{(365-k)!}$ possibilities to arrange k unique birthdays over 365 days
+
+2. What is the sample space? *All the different possibilities for k birthdays (even non-unique).*
+
+#+BEAMER: \pause
+$365^{k}$
+
+* Birthday Problem
+
+P(at least two share bday) = 1 - P(nobody shares bday) = 1 - $\frac{365!}{(365-k)! \times 365^{k}}$
+
+#+BEAMER: \pause
+
+P(at least two share bday): k = 10; 0.116, k = 23; 0.504, and k = 68; 0.999.

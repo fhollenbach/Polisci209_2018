@@ -492,7 +492,7 @@ notification.__
 - Read & Work through QSS 6.1
 - Assignment due: QSS exercise 4.5.2 *Questions 1-5*
 - [Data for Assignment](../slides/week8/progresa.csv)
-
+- [Slides Probability](../slides/week9/week9.pdf)
 
 #### Friday, October 26th:  Reviewing Probability 1
 
@@ -514,7 +514,7 @@ notification.__
 
 #### Friday, November 2nd: Starting with Writing Assigment 2
 - Homework finish SWIRL Exercise PROBABILITY 1
-
+- *In-class Quiz no 2*
 
 
 ## Week 11
