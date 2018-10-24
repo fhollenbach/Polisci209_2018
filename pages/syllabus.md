@@ -490,8 +490,6 @@ notification.__
 
 #### Wednesday, October 24th: Introduction to Probability
 - Read & Work through QSS 6.1
-- Assignment due: QSS exercise 4.5.2 *Questions 1-5*
-- [Data for Assignment](../slides/week8/progresa.csv)
 - [Slides Probability](../slides/week9/week9.pdf)
 
 #### Friday, October 26th:  Reviewing Probability 1
@@ -504,11 +502,10 @@ notification.__
 
 #### Monday, October 29th: Conditional Probability
 - Read & Work through QSS 6.2
-
+- Assignment due: QSS exercise 4.5.2 *Questions 1-5*
+- [Data for Assignment](../slides/week8/progresa.csv)
 
 #### Wednesday, October 31st: In class Exercise on Probability
-- Read & Work through QSS 6.3
-
 
 
 
@@ -520,11 +517,12 @@ notification.__
 ## Week 11
 
 #### Monday, November 5th: More Probability
-- Read & Work through QSS 6.4 - 6.5
+- Read & Work through QSS 6.3
 - Homework finish SWIRL Exercise PROBABILITY 2
 
 
-#### Wednesday, November 7th: Reviewing Probability
+#### Wednesday, November 7th: Large Sample Theorems
+- Read & Work through QSS 6.4 - 6.5
 
 #### Friday, November 9th: In Class Exercise on Election Fraud in Russia 
 - Submit first draft of Writing Assignment 2 to eCampus
