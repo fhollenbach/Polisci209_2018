@@ -92,7 +92,7 @@
 
 * Example
 
-What is the experiment, sample space, and one event for coin flips or the pulling a single card out of a deck of 52?
+What is the experiment, sample space, and one event for coin flips or pulling a single card out of a deck of 52?
 
 * Defining Probability
 
@@ -247,14 +247,17 @@ $13 \times 12 \times 11 \times 10$
 
 #+BEAMER: \pause
 
-$ \frac{13!}{(13-4)!} =  \frac{13!}{9!} = 17160$
+$ \frac{13!}{(13-4)!} =  \frac{13!}{9!} = \frac{13 \times 12 \times ... \times 1}{9 \times 8 \times ... \times 1} = 17160$
 
 * Birthday Problem
 
 Impress your family over Thanksgiving!
 
+#+BEAMER: \pause
+
 What is the probability that at least two people in this room have the same birthday?
 
+How could we figure that out?
 
 * Birthday Problem
 
@@ -268,7 +271,11 @@ Yes, P(at least two share bday) = 1 - P(nobody shares bday)
 
  P(nobody shares bday)?
 
-First find event space, i.e. everyone has a unique birthday
+What is the event space?
+
+#+BEAMER: \pause
+
+Event space:  everyone has a unique birthday. How many different possibilities?
 
 #+BEAMER: \pause
 
@@ -299,4 +306,151 @@ P(at least two share bday) = 1 - P(nobody shares bday) = 1 - $\frac{365!}{(365-k
 
 #+BEAMER: \pause
 
-P(at least two share bday): k = 10; 0.116, k = 23; 0.504, and k = 68; 0.999.
+P(at least two share bday):
+
+k = 10; 0.116,
+
+k = 23; 0.504,
+
+and k = 68; 0.999.
+
+
+* Combinations
+
+Combinations are similar to permutations, except that the ordering doesn't matter
+
+So with respect to combinations of 3 out of 26 letters, ABC, BAC, CAB, etc are the same
+
+#+BEAMER: \pause
+
+There are *always* fewer combinations than permutations
+
+* Combinations vs. Permutations
+
+Draw 2 out of letters ABC
+
+Permutations:
+#+BEAMER: \pause
+
+AB, AC, BA, BC, CA, CB =  $\frac{3!}{1!}$
+
+Combinations:
+
+#+BEAMER: \pause
+
+AB, AC, BC
+
+* How to Calculate Combinations
+
+Calculate permutations and then account for the fact that we overcounted due to ordering
+
+Get rid of counts of different arrangements of same combination: divide by k!
+
+$_{n}C_{k} = {n \choose k} = \frac{_{n}P_{k}}{k!} = \frac{n!}{k!(n-k)!}$
+
+
+#+BEAMER: \pause
+Why divide by k! ?
+
+#+BEAMER: \pause
+for two sampled elements, we have 2!(= 2×1 = 2): A, B = AB, BA
+
+
+* Lottery
+
+What is the probability of winning (simplified) Mega Millions?
+
+Pick five numbers between 1 and 70
+
+Probability of getting 5 correct?
+
+
+* Lottery
+
+Probability of getting 5 correct?
+
+What is the size of the event space?
+
+#+BEAMER: \pause
+
+1 ticket
+
+
+* Lottery
+
+Pick five numbers between 1 and 70
+
+Sample space?
+
+#+BEAMER: \pause
+
+${70 \choose 5} = \frac{70!}{5! \times (70-5)!} =  \frac{70!}{5! \times 65!}$
+
+
+#+BEAMER: \pause
+
+ 12,103,014
+
+* Lottery
+
+${n \choose k}$ in /R/
+
+choose(n,k)
+
+#+begin_src R :results output :exports both :session
+choose(70,5)
+#+end_src
+
+
+
+* Samping /with/ and /without/ Replacement
+
+Two ways to sample (draw) data:
+
+     - with replacement: put draw back in box
+
+     - without replacement: keep draw, ticket can *not* be drawn again
+
+#+BEAMER: \pause
+If we are sampling for a survey, what technique do we use?
+
+
+* Simulating the birthday problem in /R/
+
+- Instead of calculating probabilities, we can often simulate them in /R/
+
+- Use /R/ to draw k birthdays and see whether any duplicates exist
+
+#+BEAMER: \pause
+
+- We repeat the experiment over and over (~ 1000 times). The share of experiments in which we found duplicates, will represent P(at least one shared bday)
+
+* Simulating the birthday problem in /R/
+
+#+begin_src R :results output :exports both :session
+k <- 23 # number of people
+sims <- 1000 # number of simulations
+event <- 0 # counter
+for (i in 1:sims) {
+    days <- sample(1:365, k, replace = TRUE)
+    days.unique <- unique(days) # unique birthdays
+    if (length(days.unique) < k) {
+        event <- event + 1 } }
+event / sims
+#+end_src
+
+
+
+* Simulating the birthday problem in /R/
+
+The larger the number of simulation iterations, the better the accuracy
+#+begin_src R :results output :exports both :session
+sims <- 10000 # number of simulations
+event <- 0 # counter
+for (i in 1:sims) {
+    days <- sample(1:365, k, replace = TRUE)
+    days.unique <- unique(days) # unique birthdays
+    if (length(days.unique) < k) {
+        event <- event + 1  }}
+event / sims
+#+end_src
