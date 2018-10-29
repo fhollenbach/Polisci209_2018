@@ -1,0 +1,129 @@
+% Created 2018-10-28 Sun 21:35
+% Intended LaTeX compiler: pdflatex
+\documentclass[presentation]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{natbib}
+\usepackage[linktocpage,pdfstartview=FitH,colorlinks,
+linkcolor=blue,anchorcolor=blue,
+citecolor=blue,filecolor=blue,menucolor=blue,urlcolor=blue]{hyperref}
+\setbeamertemplate{frame footer}{\insertshortauthor}
+\setbeamerfont{page number in head/foot}{size=\tiny}
+\setbeamercolor{footline}{fg=gray}
+\usepackage{amsmath}
+\author{Florian Hollenbach}
+\usepackage[english]{isodate}
+\usepackage{amsmath,amsthm,amssymb,amsfonts}
+\usetheme{metropolis}
+\usecolortheme{}
+\usefonttheme{}
+\useinnertheme{}
+\useoutertheme{}
+\author{Florian Hollenbach}
+\date{\today}
+\title{Political Science 209 - Fall 2018}
+\subtitle{Probability II}
+
+\hypersetup{
+ pdfauthor={Florian Hollenbach},
+ pdftitle={Political Science 209 - Fall 2018},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 25.3.1 (Org mode 9.1.14)}, 
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+
+\begin{frame}[label={sec:org82408ca}]{Conditional Probability}
+\begin{center}
+\includegraphics[width=8cm]{/Users/florianhollenbach/Documents/GitHub/Polisci209_2018/slides/week10/boom.png}
+\end{center}
+\end{frame}
+
+
+
+\begin{frame}[label={sec:org8fb118b}]{Conditional Probability}
+Sometimes information about one event can help inform us about likelihood of another event
+
+Examples?
+
+\pause
+
+\begin{itemize}
+\item What is the probability of rolling a 5 and then a 6?
+
+\item What is the probability of rolling a 5 and then a 6 given that we rolled a 5 first?
+\end{itemize}
+\end{frame}
+
+\begin{frame}[label={sec:org084c793}]{Conditional Probability}
+If it is cloudy outside, gives us additional information about likelihood of rain
+
+If we know that one party will win the House, makes it more likely that party will win certain Senate races
+\end{frame}
+
+\begin{frame}[label={sec:orgf808cf0}]{Independence}
+If the occurrence of one event (A) gives us information about likelihood of another event, then the two events are \alert{not} independent.
+
+\pause
+
+\alert{Independence} of two events implies that information about one event does not help us in knowing whether the second event will occur.
+\end{frame}
+
+\begin{frame}[label={sec:org568bc66}]{Independence}
+For many real world examples, independence does not hold
+
+Knowledge about other events allows us to improve guesses/probability calculations
+\end{frame}
+
+\begin{frame}[label={sec:org82ee84b}]{Conditional Probability}
+P(A | B)
+
+\emph{Probability of A given/conditional that B has happened}
+\end{frame}
+
+\begin{frame}[label={sec:orgc3a3095}]{Conditional Probability}
+P(A | B) = \(\frac{P(A and B)}{P(B)}\)
+
+
+\emph{Probability of A and B happening (joint)  divided by probability of B happening (marginal)}
+\end{frame}
+
+
+\begin{frame}[label={sec:org5d33783}]{Conditional Probability}
+P(rolled 5 then 6) = ?
+
+\pause
+
+P(rolled 5 then 6) = \(\frac{1}{36}\)
+
+P(rolled 5 then 6 | 5 first) =  \(\frac{P(5 then 6)}{P(6)}\)
+
+\pause
+
+
+\(\frac{\frac{1}{36}}{\frac{1}{6}} = \frac{1}{6}\)
+\end{frame}
+
+
+\begin{frame}[label={sec:org03a49c9}]{Conditional Probability}
+The probability that it is Friday and that a student is absent is 0.03. What is the probability that student is absent, given that it is Friday?
+
+P(absent | Friday) = ?
+
+\pause
+
+P(absent | Friday) = \(\frac{0.03}{0.2} = 0.15\)
+\end{frame}
+\end{document}

@@ -504,6 +504,7 @@ notification.__
 - Read & Work through QSS 6.2
 - Assignment due: QSS exercise 4.5.2 *Questions 1-5*
 - [Data for Assignment](../slides/week8/progresa.csv)
+- [Slides Conditional Probability](../slides/week10/week10.pdf)
 
 #### Wednesday, October 31st: In class Exercise on Probability
 

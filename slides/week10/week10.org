@@ -1,0 +1,108 @@
+
+#+OPTIONS: H:1
+#+LATEX_CLASS: beamer
+#+COLUMNS: %45ITEM %10BEAMER_env(Env) %10BEAMER_act(Act) %4BEAMER_col(Col) %8BEAMER_opt(Opt)
+#+BEAMER_THEME: metropolis
+#+BEAMER_COLOR_THEME:
+#+BEAMER_FONT_THEME:
+#+BEAMER_INNER_THEME:
+#+BEAMER_OUTER_THEME:
+#+BEAMER_HEADER:
+
+
+#+LATEX_HEADER: \setbeamertemplate{frame footer}{\insertshortauthor}
+
+#+LATEX_HEADER: \setbeamerfont{page number in head/foot}{size=\tiny}
+#+LATEX_HEADER: \setbeamercolor{footline}{fg=gray}
+#+LATEX_HEADER: \usepackage{amsmath}
+#+LATEX_HEADER: \author{Florian Hollenbach}
+
+
+#+TITLE: Political Science 209 - Fall 2018
+#+SUBTITLE: Probability II
+#+AUTHOR: Florian Hollenbach
+#+DATE: \today
+#+EMAIL: fhollenbach@tamu.edu
+#+OPTIONS: toc:nil
+#+LATEX_HEADER: \usepackage[english]{isodate}
+#+LATEX_HEADER: \usepackage{amsmath,amsthm,amssymb,amsfonts}
+
+* Conditional Probability
+
+
+#+ATTR_LATEX: :width 8cm
+[[~/Documents/GitHub/Polisci209_2018/slides/week10/boom.png]]
+
+
+
+* Conditional Probability
+
+Sometimes information about one event can help inform us about likelihood of another event
+
+Examples?
+
+#+BEAMER: \pause
+
+- What is the probability of rolling a 5 and then a 6?
+
+- What is the probability of rolling a 5 and then a 6 given that we rolled a 5 first?
+
+* Conditional Probability
+
+If it is cloudy outside, gives us additional information about likelihood of rain
+
+If we know that one party will win the House, makes it more likely that party will win certain Senate races
+
+* Independence
+
+If the occurrence of one event (A) gives us information about likelihood of another event, then the two events are *not* independent.
+
+#+BEAMER: \pause
+
+*Independence* of two events implies that information about one event does not help us in knowing whether the second event will occur.
+
+* Independence
+
+For many real world examples, independence does not hold
+
+Knowledge about other events allows us to improve guesses/probability calculations
+
+* Conditional Probability
+
+P(A | B)
+
+/Probability of A given/conditional that B has happened/
+
+* Conditional Probability
+
+  P(A | B) = $\frac{P(A and B)}{P(B)}$
+
+
+/Probability of A and B happening (joint)  divided by probability of B happening (marginal)/
+
+
+* Conditional Probability
+
+P(rolled 5 then 6) = ?
+
+#+BEAMER: \pause
+
+P(rolled 5 then 6) = $\frac{1}{36}$
+
+P(rolled 5 then 6 | 5 first) =  $\frac{P(5 then 6)}{P(6)}$
+
+#+BEAMER: \pause
+
+
+$\frac{\frac{1}{36}}{\frac{1}{6}} = \frac{1}{6}$
+
+
+* Conditional Probability
+
+The probability that it is Friday and that a student is absent is 0.03. What is the probability that student is absent, given that it is Friday?
+
+P(absent | Friday) = ?
+
+#+BEAMER: \pause
+
+P(absent | Friday) = $\frac{0.03}{0.2} = 0.15$
