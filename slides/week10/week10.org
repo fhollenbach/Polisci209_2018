@@ -80,6 +80,14 @@ P(A | B)
 
 /Probability of A and B happening (joint)  divided by probability of B happening (marginal)/
 
+* Conditional Probability
+
+Definitions:
+
+P(A and B) - joint probability
+
+P(A) - marginal probability
+
 
 * Conditional Probability
 
@@ -89,7 +97,7 @@ P(rolled 5 then 6) = ?
 
 P(rolled 5 then 6) = $\frac{1}{36}$
 
-P(rolled 5 then 6 | 5 first) =  $\frac{P(5 then 6)}{P(6)}$
+P(rolled 5 then 6 | 5 first) =  $\frac{P(5 then 6)}{P(5)}$
 
 #+BEAMER: \pause
 
@@ -106,3 +114,67 @@ P(absent | Friday) = ?
 #+BEAMER: \pause
 
 P(absent | Friday) = $\frac{0.03}{0.2} = 0.15$
+
+
+* Conditional Probability
+
+
+P(A | B) = $\frac{P(A and B)}{P(B)}$
+
+
+Also means:
+
+P(A and B) = P(A | B) P(B)
+
+
+
+* Probability Problems
+
+What is the probability of drawing any card between 2 and
+10, or jack, queen, king in any color?
+
+
+* Probability Problems
+
+What is the probability of drawing two kings from a full deck of cards?
+
+#+BEAMER: \pause
+
+P(2 kings) = $\frac{4}{52} \times$?
+
+#+BEAMER: \pause
+
+P(2 kings) = $\frac{4}{52} \times \frac{3}{51} = \frac{12}{2652} =\frac{1}{221}$
+
+
+* Probability Problems
+
+| Annual income | Took 209 | Took 309 | 	TOTAL |
+| Under $50,000  |       30 |       5  |            35 |
+| $50,000 to $100,000   | 25 | 6 | 35 |
+| over $100,000  | 10 | 9  | 19|
+
+What is the probability of any student making over $100,000?
+
+
+
+* Probability Problems
+
+| Annual income | Took 209 | Took 309 | 	TOTAL |
+| Under $50,000  |       30 |       5  |            35 |
+| $50,000 to $100,000   | 25 | 6 | 35 |
+| over $100,000  | 10 | 9  | 19|
+
+What is the probability of a student making over $100,000, conditional that he took 309?
+
+
+
+* Probability Problems
+
+| Annual income | Took 209 | Took 309 | 	TOTAL |
+| Under $50,000  |       30 |       5  |            35 |
+| $50,000 to $100,000   | 25 | 6 | 35 |
+| over $100,000  | 10 | 9  | 19|
+
+
+What is the probability of a having taken 309, conditional on  making over $100,000?
