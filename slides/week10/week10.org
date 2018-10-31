@@ -67,6 +67,11 @@ For many real world examples, independence does not hold
 
 Knowledge about other events allows us to improve guesses/probability calculations
 
+* Independence
+
+When two events are independence, the probability of both happening is equal to the individual probabilities multiplied together
+
+
 * Conditional Probability
 
 P(A | B)
@@ -126,6 +131,20 @@ Also means:
 
 P(A and B) = P(A | B) P(B)
 
+* Independence
+
+If A and B are independent, then
+
+         - P(A | B) = P(A) &  P(B | A) = P(B)
+
+         - P(A and B) = P(A) $\times$ P(B)
+
+* Independence
+
+If A|C and B|C are independent, then
+
+- P(A and B | C) = P(A |C) $\times$ P(B | C)
+
 
 
 * Probability Problems
@@ -150,9 +169,36 @@ P(2 kings) = $\frac{4}{52} \times \frac{3}{51} = \frac{12}{2652} =\frac{1}{221}$
 * Probability Problems
 
 | Annual income | Took 209 | Took 309 | 	TOTAL |
-| Under $50,000  |       30 |       5  |            35 |
-| $50,000 to $100,000   | 25 | 6 | 35 |
-| over $100,000  | 10 | 9  | 19|
+| Under $50,000  |       36 |       24 |            60 |
+| $50,000 to $100,000   | 109 | 56 |165  |
+| over $100,000  | 35 | 40 | 75 |
+| Total | 180 | 120 | 300 |
+
+Is the probability of making over $100,000 and the probability of having taken 309 independent?
+
+* Probability Problems
+
+
+| Annual income | Took 209 | Took 309 | 	TOTAL |
+| Under $50,000  |       36 |       24 |            60 |
+| $50,000 to $100,000   | 109 | 56 |165  |
+| over $100,000  | 35 | 40 | 75 |
+| Total | 180 | 120 | 300 |
+
+Is the probability of making over $100,000 and the probability of having taken 309 independent?
+
+P(over $100k & 309) = P(over $100k) $\times$ P(309)?
+
+
+
+* Probability Problems
+
+
+| Annual income | Took 209 | Took 309 | 	TOTAL |
+| Under $50,000  |       36 |       24 |            60 |
+| $50,000 to $100,000   | 109 | 56 |165  |
+| over $100,000  | 35 | 40 | 75 |
+| Total | 180 | 120 | 300 |
 
 What is the probability of any student making over $100,000?
 
@@ -160,10 +206,12 @@ What is the probability of any student making over $100,000?
 
 * Probability Problems
 
+
 | Annual income | Took 209 | Took 309 | 	TOTAL |
-| Under $50,000  |       30 |       5  |            35 |
-| $50,000 to $100,000   | 25 | 6 | 35 |
-| over $100,000  | 10 | 9  | 19|
+| Under $50,000  |       36 |       24 |            60 |
+| $50,000 to $100,000   | 109 | 56 |165  |
+| over $100,000  | 35 | 40 | 75 |
+| Total | 180 | 120 | 300 |
 
 What is the probability of a student making over $100,000, conditional that he took 309?
 
@@ -171,10 +219,12 @@ What is the probability of a student making over $100,000, conditional that he t
 
 * Probability Problems
 
+
 | Annual income | Took 209 | Took 309 | 	TOTAL |
-| Under $50,000  |       30 |       5  |            35 |
-| $50,000 to $100,000   | 25 | 6 | 35 |
-| over $100,000  | 10 | 9  | 19|
+| Under $50,000  |       36 |       24 |            60 |
+| $50,000 to $100,000   | 109 | 56 |165  |
+| over $100,000  | 35 | 40 | 75 |
+| Total | 180 | 120 | 300 |
 
 
 What is the probability of a having taken 309, conditional on  making over $100,000?
