@@ -506,11 +506,11 @@ notification.__
 - [Data for Assignment](../slides/week8/progresa.csv)
 - [Slides Conditional Probability](../slides/week10/week10.pdf)
 
-#### Wednesday, October 31st: In class Exercise on Probability
+#### Wednesday, October 31st: Conditional Probability
 
 
 
-#### Friday, November 2nd: Starting with Writing Assigment 2
+#### Friday, November 2nd:  In class Exercise on Probability
 - Homework finish SWIRL Exercise PROBABILITY 1
 - *In-class Quiz no 2*
 
@@ -522,11 +522,11 @@ notification.__
 - Homework finish SWIRL Exercise PROBABILITY 2
 
 
-#### Wednesday, November 7th: Large Sample Theorems
+#### Wednesday, November 7th: Starting Writing Assignment 2
 - Read & Work through QSS 6.4 - 6.5
+- Assignment due: QSS exercise 6.6.1 (Questions 1-4)
 
-#### Friday, November 9th: In Class Exercise on Election Fraud in Russia 
-- Submit first draft of Writing Assignment 2 to eCampus
+#### Friday, November 9th: Large Sample Theorems
 
 
 
@@ -534,14 +534,14 @@ notification.__
 
 #### Monday, November 12th: Reviewing Homework + Introduction to Uncertainty
 - Read & Work through QSS Chapter 7.1.1 - 7.1.4
-- Assignment due: QSS exercise 6.6.1
 
 #### Wednesday, November 14th:  Introduction to Uncertainty Continued
-- Submit Peer-Review Comments for Writing Assignment 2 on eCampus
+
 
 #### Friday, November 16th:  In Class Exercises about Uncertainty
 - Read & Work through QSS Chapter 7.1.5 - 7.1.6
 - Homework finish SWIRL Exercise UNCERTAINTY 1
+- Submit first draft of Writing Assignment 2 to eCampus
 
 
 
@@ -549,6 +549,7 @@ notification.__
 
 #### Monday, November 19th: In Class Exercises on Uncertainty
 - Read & Work through QSS Chapter 7.1.5 - 7.1.6
+- Submit Peer-Review Comments for Writing Assignment 2 on eCampus
 
 
 
@@ -559,11 +560,11 @@ Turkey Break!
 ## Week 14
 #### Monday, November 26th: In Class Exercise on Uncertainty 
 - Homework finish SWIRL Exercise UNCERTAINTY 2
-- Submit Final Draft of Writing Assignment 2 on eCampus
 
 
 #### Wednesday, November 28th: Linear Regression with Uncertainty
 - Read & Work through QSS Chapter 7.3.1-7.3.4
+- Submit Final Draft of Writing Assignment 2 on eCampus
 
 
 #### Friday, November 30th: In class Exercise on Regression with Uncertainty
