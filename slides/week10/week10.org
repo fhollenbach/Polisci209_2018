@@ -228,3 +228,90 @@ What is the probability of a student making over $100,000, conditional that he t
 
 
 What is the probability of a having taken 309, conditional on  making over $100,000?
+
+
+
+* The Monty Hall Paradox!
+
+What is the Monty Hall Paradox?
+
+
+* The Monty Hall Paradox!
+
+
+
+
+#+ATTR_LATEX: :width 8cm
+[[~/Documents/GitHub/Polisci209_2018/slides/week10/monty.jpeg]]
+
+
+
+
+* The Monty Hall Paradox!
+
+What is the probability of winning a car when not switching?
+
+P(car) = ?
+
+
+
+* The Monty Hall Paradox!
+
+What is the probability of winning a car when not switching?
+
+P(car) = $\frac{1}{3}$
+
+
+* The Monty Hall Paradox!
+
+What is the probability of winning a car when switching?
+
+#+BEAMER: \pause
+
+Consider two scenarios: picking door with car first and picking door with goat first
+
+* The Monty Hall Paradox: switching
+
+Consider two scenarios: picking door with car first and picking door with goat first
+
+1. What is the probability of getting the car when switching after picking the car first?
+
+2. What is the probability of getting the car when switching after picking a goat first?
+
+
+* The Monty Hall Paradox: switching
+
+
+P(car when switching) = P(car | car first)$\times$ P(car first) + P(car | goat first) $\times$ P(goat first)
+
+#+BEAMER: \pause
+
+
+P(car when switching) = 0 $\times \frac{1}{3}$ + 1 $\times \frac{2}{3}$
+
+#+BEAMER: \pause
+
+P(car when switching) = $\frac{2}{3}$
+
+
+* The Monty Hall Paradox: in /R/
+:PROPERTIES:
+    :BEAMER_opt: shrink=20
+    :END:
+
+#+begin_src R :eval no
+sims <- 1000
+doors <- c("goat", "goat", "car")
+result.switch <- result.noswitch <- rep(NA, sims)
+for (i in 1:sims) {
+    ## randomly choose the initial door
+first <- sample(1:3, size = 1)
+result.noswitch[i] <- doors[first]
+remain <- doors[-first] # remaining two doors
+## Monty chooses one door with a goat
+monty <- sample((1:2)[remain == "goat"], size = 1)
+result.switch[i] <- remain[-monty]
+}
+mean(result.noswitch == "car")
+mean(result.switch == "car")
+#+end_src
