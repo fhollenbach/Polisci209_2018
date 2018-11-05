@@ -315,3 +315,216 @@ result.switch[i] <- remain[-monty]
 mean(result.noswitch == "car")
 mean(result.switch == "car")
 #+end_src
+
+
+
+
+* Bayes' Rule/Theorem
+
+How should we update our beliefs about event A after learning about some data related to the event?
+
+#+BEAMER: \pause
+
+Example: What is the probability of a person developing lung cancer?
+#+BEAMER: \pause
+
+How does the probability change once we learn about the person's smoking habits?
+
+* Bayes Rule/Theorem
+
+
+P(A | B) = $\frac{P(B|A) P(A)}{P(B)}$
+
+*P(A)* : prior probability of event A
+
+*P(A | B)*: posterior probability of event A given observed data B
+
+#+BEAMER: \pause
+
+*P(B | A)*: probability of observing B given A
+
+#+BEAMER: \pause
+
+*P(B | A) $\times$ P(A)* ?
+
+* Bayes Rule/Theorem
+
+
+P(A | B) = $\frac{P(B|A) P(A)}{P(B)}$
+
+*P(A)* : prior probability of event A
+
+*P(A | B)*: posterior probability of event A given observed data B
+
+#+BEAMER: \pause
+
+*P(B | A)*: probability of observing B given A
+
+#+BEAMER: \pause
+
+*P(B | A) $\times$ P(A)* = *P(B and A)*
+
+* Bayes Rule/Theorem
+
+
+P(A | B) = $\frac{P(B|A) P(A)}{P(B)} = \frac{P(B and A)}{P(B)}$
+
+
+
+* Bayes Rule/Theorem
+
+P(A | B) = $\frac{P(B|A) P(A)}{P(B)} = \frac{P(B|A) P(A)}{P(B|A)P(A) + P(B|A^{c})P(A^{c})}$
+
+
+* Bayes Rule/Theorem
+
+- Does your doctor know Bayes' rule? Cause he/she should!
+- Example of medical tests:
+
+  - every test comes with a reliability/accuracy
+  - remember: false positive, false negative, etc
+
+* Bayes Rule/Theorem
+
+What is the probability of being pregnant, given that you have a positive test?
+
+P(p | + ) = $\frac{P( + | p) P(p)}{P(+)}$
+
+#+BEAMER: \pause
+
+Decompose P(+), say test is 99 % accurate
+
+* Bayes Rule/Theorem
+
+What is the probability of being pregnant, given that you have a positive test?
+
+P(preg | + ) = $\frac{P( + | p) P(p)}{P(+)} = \frac{P( + | p) P(p)}{P( + | p)P(p) + P( + | \text{not p})P(\text{not p})}$
+
+* Bayes Rule/Theorem
+
+What is the probability of being pregnant, given that you have a positive test?
+
+P(p | +) = $\frac{P( + | p) P(p)}{P( + | p)P(p) + P( + | \text{not p})P(\text{not p})}$
+
+#+BEAMER: \pause
+
+P(p | +) = $\frac{0.99 P(p)}{ 0.99 P(p) + 0.05 P(\text{not p})}$
+
+#+BEAMER: \pause
+
+P(p | +) = $\frac{0.99 0.5}{ 0.99 \times 0.5 + 0.05 \times 0.5}  =0.95$
+
+
+* Bayes Rule/Theorem
+
+But what happens if your prior probability is stronger?
+
+#+BEAMER: \pause
+
+P(p | +) = $\frac{0.99 P(p)}{ 0.99 P(p) + 0.05 P(\text{not p})}$
+
+#+BEAMER: \pause
+
+P(p | +) = $\frac{0.99 0.2}{ 0.99 \times 0.2 + 0.05 \times 0.8}  =0.83$
+
+
+* Bayes Rule/Theorem
+
+But what happens if your prior probability is stronger?
+
+P(p | +) = $\frac{0.99 0.05}{ 0.99 \times 0.05 + 0.01 \times 0.95}  =0.51$
+
+
+* Bayes Rule/Theorem
+
+Many of our tests are not this good and disease is very rare:
+
+     - high-risk for down syndrome test
+     - P(+ | DS) = 0.86
+     - P(+ | not DS) = 0.05
+     - P(DS) = 0.003
+
+
+#+BEAMER: \pause
+
+P(DS | +) =  $\frac{P( + | DS) P(DS)}{P( + | DS)P(DS) + P( + | \text{not DS})P(\text{not DS})}$
+
+#+BEAMER: \pause
+
+P(DS | +) =  $\frac{0.86 \times 0.003}{0.86 \times 0.003 + 0.05*0.997}$
+
+
+* Bayes Rule/Theorem
+
+Many of our tests are not this good and disease is very rare:
+
+     - high-risk for down syndrome test
+     - P(+ | DS) = 0.86
+     - P(+ | not DS) = 0.05
+     - P(DS) = 0.003
+
+
+#+BEAMER: \pause
+
+P(DS | +) =  $\frac{P( + | DS) P(DS)}{P( + | DS)P(DS) + P( + | \text{not DS})P(\text{not DS})}$
+
+#+BEAMER: \pause
+
+P(DS | +) =  $\frac{0.86 \times 0.003}{0.86 \times 0.003 + 0.05*0.997} = 0.049$
+
+Changes with age!
+
+
+* Random Variables and Probability Distributions
+
+- What is a random variable? We assigns a number to an event
+     - coin flip: tail= 0; heads= 1
+     - Senate election: Ted Cruz= 0; Beto O'Rourke= 1
+     - Voting: vote = 1; not vote = 0
+
+
+
+#+BEAMER: \pause
+
+Probability distribution: Probability of an event that a random variable takes a certain value
+
+
+* Random Variables and Probability Distributions
+
+- P(coin =1); P(coin = 0)
+- P(election = 1); P(election = 0)
+
+
+* Random Variables and Probability Distributions
+
+- *Probability density function (PDF)*: f(x) How likely does X take a particular value?
+- *Probability mass function (PMF)*: When X is discrete, f(x)=P(X =x)
+
+#+BEAMER: \pause
+
+- *Cumulative distribution function (CDF)*: F(x) = P(X $\leq$ x)
+       - What is the probability that a random variable X takes a value equal to or less than x?
+       - Area under the density curve
+       - Non-decreasing
+
+
+* Random Variables and Probability Distributions
+
+- *PMF*: for $x \in \{0, 1, \dots, n\}$,
+    $f(x) \ = \ P(X = x) \ = \ {n \choose x} p^x (1-p)^{n-x}$
+
+- *CDF*: for $x \in \{0, 1, \dots, n\}$
+    $F(x) \ = \ P(X \le x) \ = \ \sum_{k = 0}^x {n\choose k} p^k (1-p)^{n-k}$
+
+
+
+* Random Variables and Probability Distributions
+
+- Example: flip a fair coin 3 times
+
+    $f(x) \ = \ P(X = x) \ = \ {n \choose x} p^x (1-p)^{n-x}$
+    $f(x) \ = \ P(X = 1) \ = \ {3 \choose 1} 0.5^1 (0.5)^{2}$ = 3*0.5*0.5^2 = 0.375$
+
+
+#+ATTR_LATEX: :width 5cm
+[[~/Documents/GitHub/Polisci209_2018/slides/week10/barplot.pdf]]
