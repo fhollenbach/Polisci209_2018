@@ -504,11 +504,11 @@ Probability distribution: Probability of an event that a random variable takes a
 
 - *Cumulative distribution function (CDF)*: F(x) = P(X $\leq$ x)
        - What is the probability that a random variable X takes a value equal to or less than x?
-       - Area under the density curve
+       - Area under the density curve (either we use the sum $\Sigma$ or integral $\int$)
        - Non-decreasing
 
 
-* Random Variables and Probability Distributions
+* Random Variables and Probability Distributions: Binomial Distribution
 
 - *PMF*: for $x \in \{0, 1, \dots, n\}$,
     $f(x) \ = \ P(X = x) \ = \ {n \choose x} p^x (1-p)^{n-x}$
@@ -518,7 +518,7 @@ Probability distribution: Probability of an event that a random variable takes a
 
 
 
-* Random Variables and Probability Distributions
+* Random Variables and Probability Distributions: Binomial Distribution
 
 - Example: flip a fair coin 3 times
 
@@ -526,5 +526,141 @@ Probability distribution: Probability of an event that a random variable takes a
     $f(x) \ = \ P(X = 1) \ = \ {3 \choose 1} 0.5^1 (0.5)^{2}$ = 3*0.5*0.5^2 = 0.375$
 
 
+* Random Variables and Probability Distributions: Binomial Distribution
+
+#+begin_src R :eval no
+x <- 0:3
+barplot(dbinom(x, size = 3, prob = 0.5), ylim = c(0, 0.4), names.arg = x, xlab = "x",
+        ylab = "Density", main = "Probability mass function")
+x <- -1:4
+pb <- pbinom(x, size = 3, prob = 0.5)
+plot(x[1:2], rep(pb[1], 2), ylim = c(0, 1), type = "s", xlim = c(-1, 4), xlab = "x",
+     ylab = "Probability", main = "Cumulative distribution function")
+for (i in 2:(length(x)-1)) {
+    lines(x[i:(i+1)], rep(pb[i], 2))
+}
+points(x[2:(length(x)-1)], pb[2:(length(x)-1)], pch = 19)
+points(x[2:(length(x)-1)], pb[1:(length(x)-2)])
+#+end_src R
+
+
+
+
+* Random Variables and Probability Distributions: Binomial Distribution
+
+#+begin_src R :results output :exports
+x <- 0:3
+barplot(dbinom(x, size = 3, prob = 0.5), ylim = c(0, 0.4), names.arg = x, xlab = "x",
+        ylab = "Density", main = "Probability mass function")
+x <- -1:4
+pb <- pbinom(x, size = 3, prob = 0.5)
+plot(x[1:2], rep(pb[1], 2), ylim = c(0, 1), type = "s", xlim = c(-1, 4), xlab = "x",
+     ylab = "Probability", main = "Cumulative distribution function")
+for (i in 2:(length(x)-1)) {
+    lines(x[i:(i+1)], rep(pb[i], 2))
+}
+points(x[2:(length(x)-1)], pb[2:(length(x)-1)], pch = 19)
+points(x[2:(length(x)-1)], pb[1:(length(x)-2)])
+#+end_src R
+
+
+* Random Variables and Probability Distributions: Normal Distribution
+
+
+ *Normal distribution* also called *Gaussian*
+
+
 #+ATTR_LATEX: :width 5cm
-[[~/Documents/GitHub/Polisci209_2018/slides/week10/barplot.pdf]]
+[[~/Documents/GitHub/Polisci209_2018/slides/week10/paranormal.jpg]]
+[[~/Documents/GitHub/Polisci209_2018/slides/week10/gauss.jpeg]]
+
+* Random Variables and Probability Distributions: Normal Distribution
+
+
+ *Normal distribution* with mean $\mu$ and standard deviation $\sigma$
+ - *PDF*:
+   $f(x) \ = \ \frac{1}{\sqrt{2\pi} \sigma}\exp\left(-\frac{(x - \mu)^2}{2\sigma^2}\right)$
+ - *CDF* (no simple formula. use \R{} to compute it):
+   $F(x) \ = \ P(X \le x) \ = \ \int_{-\infty}^x
+   \frac{1}{\sqrt{2\pi}\sigma}\exp\left(-\frac{(t - \mu)^2}{2\sigma^2}\right) dt$
+
+
+
+* Random Variables and Probability Distributions: Normal Distribution
+
+#+begin_src R :results output :exports
+x <- seq(from = -7, to = 7, by = 0.01)
+lwd <- 1.5
+plot(x, dnorm(x), xlab = "x", ylab = "density", type = "l",
+     main = "Probability density function", ylim = c(0, 0.9))
+lines(x, dnorm(x, sd = 2), col = "red", lwd = lwd)
+lines(x, dnorm(x, mean = 1, sd = 0.5), col = "blue", lwd = lwd)
+text(3, 0.7, "mean = 1\n s.d. = 0.5", col = "blue")
+text(-2, 0.4, "mean = 0\n s.d. = 1")
+text(-4.5, 0.15, "mean = 0\n s.d. = 2", col = "red")
+plot(x, pnorm(x), xlab = "x", ylab = "probability", type = "l",
+     main = "Cumulative distribution function", lwd = lwd)
+lines(x, pnorm(x, sd = 2), col = "red", lwd = lwd)
+lines(x, pnorm(x, mean = 1, sd = 0.5), col = "blue", lwd = lwd)
+text(2.5, 0.2, "mean = 1\n s.d. = 0.5", col = "blue")
+text(-1, 0.8, "mean = 0\n s.d. = 1")
+text(-4, 0.2, "mean = 0\n s.d. = 2", col = "red")
+#+end_src R
+
+
+* Random Variables and Probability Distributions: Normal Distribution in R
+
+#+begin_src R :eval no
+### PDF
+x <- seq(from = -7, to = 7, by = 0.01)
+plot(x, dnorm(x), xlab = "x", ylab = "density", type = "l",
+     main = "Probability density function", ylim = c(0, 0.9))
+lines(x, dnorm(x, sd = 2), col = "red", lwd = lwd)
+lines(x, dnorm(x, mean = 1, sd = 0.5), col = "blue", lwd = lwd)
+#### CDF
+plot(x, pnorm(x), xlab = "x", ylab = "probability", type = "l",
+     main = "Cumulative distribution function", lwd = lwd)
+lines(x, pnorm(x, sd = 2), col = "red", lwd = lwd)
+lines(x, pnorm(x, mean = 1, sd = 0.5), col = "blue", lwd = lwd)
+#+end_src R
+
+* Random Variables and Probability Distributions: Normal Distribution
+
+Let $X \sim mathcal{N}(\mu,\,\sigma^{2})$, and c be some constant
+
+- Adding/subtracting to/from a random variable that is normally distributed also results in a variable with a normal distribution:
+  Z = X + c then $Z  \sim mathcal{N}(\mu +c,\,\sigma^{2})$
+
+#+BEAMER: \pause
+
+
+- Multiplying or dividing a random variable that is normally distributed also results in a variable with a normal distribution:
+  Z = X$\times$c then $Z  \sim mathcal{N}(\mu \times c,\,(\sigma \times c)^{2})$
+
+- Z-score of a random variable that is normally distributed has mean 0 and sd = 1
+
+
+* Random Variables and Probability Distributions: Normal Distribution
+
+Curve of the standard normal distribution:
+
+- Symmetric around 0
+- Total area under the curve is 100%
+- Area between -1 and 1 is ~68%
+- Area between -2 and 2 is ~95%
+- Area between -3 and 3 is ~99.7%
+
+* Random Variables and Probability Distributions: Normal Distribution
+
+
+
+#+begin_src R :results output :exports
+x <- seq(from = -7, to = 7, by = 0.01)
+lwd <- 1.5
+plot(x, dnorm(x), xlab = "x", ylab = "density", type = "l",
+     main = "Probability density function", ylim = c(0, 0.9))
+abline(v= -1, col = "red")
+abline(v= 1, col = "red")
+abline(v= -2, col = "green")
+abline(v= 2, col = "green")
+#+end_src R
