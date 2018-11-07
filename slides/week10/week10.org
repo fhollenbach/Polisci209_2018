@@ -665,7 +665,7 @@ Let $X \sim N(\mu,\,\sigma^{2})$, and c be some constant
 
 
 - Multiplying or dividing a random variable that is normally distributed also results in a variable with a normal distribution:
- $ Z = X\timesc$ then $Z  \sim N(\mu \times c,\,(\sigma \times c)^{2})$
+ $Z = X\times c$ then $Z  \sim N(\mu \times c,\,(\sigma \times c)^{2})$
 
 - Z-score of a random variable that is normally distributed has mean 0 and sd = 1
 
