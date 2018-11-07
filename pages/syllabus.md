@@ -524,6 +524,8 @@ notification.__
 #### Wednesday, November 7th: Starting Writing Assignment 2
 - Read & Work through QSS 6.4 - 6.5
 - Assignment due: QSS exercise 6.6.1 (Questions 1-4)
+- [PresData for Writing Assignment 2](../data/Presdata.csv)
+- [Writing Assignmnent 2](../slides/week10/WritingAssigment2.pdf)
 
 #### Friday, November 9th: Large Sample Theorems
 - Homework finish SWIRL Exercise PROBABILITY 2
