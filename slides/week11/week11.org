@@ -1,0 +1,420 @@
+
+
+
+#+OPTIONS: H:1
+#+LATEX_CLASS: beamer
+#+COLUMNS: %45ITEM %10BEAMER_env(Env) %10BEAMER_act(Act) %4BEAMER_col(Col) %8BEAMER_opt(Opt)
+#+BEAMER_THEME: metropolis
+#+BEAMER_COLOR_THEME:
+#+BEAMER_FONT_THEME:
+#+BEAMER_INNER_THEME:
+#+BEAMER_OUTER_THEME:
+#+BEAMER_HEADER:
+
+
+#+LATEX_HEADER: \setbeamertemplate{frame footer}{\insertshortauthor}
+
+#+LATEX_HEADER: \setbeamerfont{page number in head/foot}{size=\tiny}
+#+LATEX_HEADER: \setbeamercolor{footline}{fg=gray}
+#+LATEX_HEADER: \usepackage{amsmath}
+#+LATEX_HEADER: \author{Florian Hollenbach}
+
+
+#+TITLE: Political Science 209 - Fall 2018
+#+SUBTITLE: Probability III
+#+AUTHOR: Florian Hollenbach
+#+DATE: \today
+#+EMAIL: fhollenbach@tamu.edu
+#+OPTIONS: toc:nil
+#+LATEX_HEADER: \usepackage[english]{isodate}
+#+LATEX_HEADER: \usepackage{amsmath,amsthm,amssymb,amsfonts}
+#+LATEX_HEADER: \newcommand{\E}{\mathbb{E}}
+#+LATEX_HEADER: \newcommand{\V}{\mathbb{V}}
+
+
+* Random Variables and Probability Distributions
+
+- What is a random variable? We assigns a number to an event
+     - coin flip: tail= 0; heads= 1
+     - Senate election: Ted Cruz= 0; Beto O'Rourke= 1
+     - Voting: vote = 1; not vote = 0
+
+
+
+#+BEAMER: \pause
+
+Probability distribution: Probability of an event that a random variable takes a certain value
+
+
+* Random Variables and Probability Distributions
+
+- P(coin =1); P(coin = 0)
+- P(election = 1); P(election = 0)
+
+
+* Random Variables and Probability Distributions
+
+- *Probability density function (PDF)*: f(x) How likely does X take a particular value?
+- *Probability mass function (PMF)*: When X is discrete, f(x)=P(X =x)
+
+#+BEAMER: \pause
+
+- *Cumulative distribution function (CDF)*: F(x) = P(X $\leq$ x)
+       - What is the probability that a random variable X takes a value equal to or less than x?
+       - Area under the density curve (either we use the sum $\Sigma$ or integral $\int$)
+       - Non-decreasing
+
+
+* Random Variables and Probability Distributions: Binomial Distribution
+
+- *PMF*: for $x \in \{0, 1, \dots, n\}$,
+    $f(x) \ = \ P(X = x) \ = \ {n \choose x} p^x (1-p)^{n-x}$
+
+- *PMF* function to tell us: what is the probability of x /successes/ given n trials with with P(x) = p
+
+#+BEAMER: \pause
+
+In /R/:
+#+begin_src R :results output :exports both :session
+dbinom(x = 2, size = 4, prob = 0.1) ## prob of 2 successes in 4 trials with p =0.1
+#+end_src
+
+
+
+
+* Random Variables and Probability Distributions: Binomial Distribution
+
+- *CDF*: for $x \in \{0, 1, \dots, n\}$
+    $F(x) \ = \ P(X \le x) \ = \ \sum_{k = 0}^x {n\choose k} p^k (1-p)^{n-k}$
+
+- *CDF* function to tell us: what is the probability of /x or fewer/ /successes/ given n trials with with P(x) = p
+
+#+BEAMER: \pause
+
+In /R/:
+#+begin_src R :results output :exports both :session
+pbinom(2, size = 4, prob = 0.1) ## prob of 2 or fewer successes in 4 trials with p =0.1
+#+end_src
+
+* PMF and CDF
+
+CDF of F(x) is equal to the sum of the results from calculating the PMF for all values smaller and equal to x
+
+#+BEAMER: \pause
+
+
+In /R/:
+#+begin_src R :results output :exports both :session
+pbinom(2, size = 4, prob = 0.1) ## CDF
+
+sum(dbinom(c(0,1,2),4,0.1)) ## summing up the pdfs
+#+end_src
+
+* Random Variables and Probability Distributions: Binomial Distribution
+
+- Example: flip a fair coin 3 times
+
+    $f(x) \ = \ P(X = x) \ = \ {n \choose x} p^x (1-p)^{n-x}$
+
+    $f(x) \ = \ P(X = 1) \ = \ {3 \choose 1} 0.5^1 (0.5)^{2} = 3*0.5*0.5^2 = 0.375$
+
+
+* Random Variables and Probability Distributions: Binomial Distribution
+:PROPERTIES:
+    :BEAMER_opt: shrink=35
+    :END:
+
+#+begin_src R :eval no
+x <- 0:3
+barplot(dbinom(x, size = 3, prob = 0.5), ylim = c(0, 0.4), names.arg = x, xlab = "x",
+        ylab = "Density", main = "Probability mass function")
+#+end_src
+
+
+
+* Random Variables and Probability Distributions: Binomial Distribution
+
+#+ATTR_LATEX: :width 6cm
+[[~/Documents/GitHub/Polisci209_2018/slides/week11/barplot.pdf]]
+
+
+* Random Variables and Probability Distributions: Binomial Distribution
+:PROPERTIES:
+    :BEAMER_opt: shrink=35
+    :END:
+
+
+
+#+begin_src R :eval no
+x <- -1:4
+pb <- pbinom(x, size = 3, prob = 0.5)
+plot(x[1:2], rep(pb[1], 2), ylim = c(0, 1), type = "s", xlim = c(-1, 4), xlab = "x",
+     ylab = "Probability", main = "Cumulative distribution function")
+for (i in 2:(length(x)-1)) {
+    lines(x[i:(i+1)], rep(pb[i], 2))
+}
+points(x[2:(length(x)-1)], pb[2:(length(x)-1)], pch = 19)
+points(x[2:(length(x)-1)], pb[1:(length(x)-2)])
+#+end_src
+
+
+
+
+* Random Variables and Probability Distributions: Binomial Distribution
+
+
+#+ATTR_LATEX: :width 6cm
+[[~/Documents/GitHub/Polisci209_2018/slides/week11/cdf_binom.pdf]]
+
+
+
+* Random Variables and Probability Distributions: Normal Distribution
+
+ *Normal distribution*
+
+#+ATTR_LATEX: :width 6cm
+[[~/Documents/GitHub/Polisci209_2018/slides/week11/paranormal.jpg]]
+
+
+
+* Random Variables and Probability Distributions: Normal Distribution
+
+
+ *Normal distribution* also called *Gaussian distribution*
+
+
+
+#+ATTR_LATEX: :width 6cm
+[[~/Documents/GitHub/Polisci209_2018/slides/week11/gauss.jpeg]]
+
+
+* Normal distribution
+
+- Takes on values from -$\infty$ to $\infty$
+- Defined by two things: $\mu$ and $\sigma^{2}$
+              - Mean and Variance (standard deviation squared)
+
+
+- Mean defines the location of the distribution
+- Variance defines the spread
+
+
+
+* Random Variables and Probability Distributions: Normal Distribution
+
+
+ *Normal distribution* with mean $\mu$ and standard deviation $\sigma$
+ - *PDF*:
+   $f(x) \ = \ \frac{1}{\sqrt{2\pi} \sigma}\exp\left(-\frac{(x - \mu)^2}{2\sigma^2}\right)$
+
+#+BEAMER: \pause
+
+
+In /R/:
+#+begin_src R :results output :exports both :session
+dnorm(2, mean = 2, sd = 2) ## probability of x =2 with normal variable mean 2 sd 2
+#+end_src
+
+
+
+* Random Variables and Probability Distributions: Normal Distribution
+
+
+ - *CDF* (no simple formula. use \R{} to compute it):
+   $F(x) \ = \ P(X \le x) \ = \ \int_{-\infty}^x
+   \frac{1}{\sqrt{2\pi}\sigma}\exp\left(-\frac{(t - \mu)^2}{2\sigma^2}\right) dt$
+
+- What will be F(x =2) for N(2,4)?
+#+BEAMER: \pause
+
+In /R/:
+#+begin_src R :results output :exports both :session
+pnorm(2, mean = 2, sd = 2) ## probability of x =2 with normal variable mean 2 sd 2
+#+end_src
+
+
+* Normal distribution
+
+- Normal distribution is symmetric around the mean
+- Mean = Median
+
+
+
+
+
+* Random Variables and Probability Distributions: Normal Distribution
+
+
+#+ATTR_LATEX: :width 5cm
+[[~/Documents/GitHub/Polisci209_2018/slides/week11/normal.pdf]]
+
+
+* Random Variables and Probability Distributions: Normal Distribution in R
+:PROPERTIES:
+    :BEAMER_opt: shrink=30
+    :END:
+
+#+begin_src R :eval no
+x <- seq(from = -7, to = 7, by = 0.01)
+plot(x, dnorm(x), xlab = "x", ylab = "density", type = "l",
+     main = "Probability density function", ylim = c(0, 0.9))
+lines(x, dnorm(x, sd = 2), col = "red", lwd = lwd)
+lines(x, dnorm(x, mean = 1, sd = 0.5), col = "blue", lwd = lwd)
+#+end_src
+
+
+* Random Variables and Probability Distributions: Normal Distribution in R
+
+#+ATTR_LATEX: :width 5cm
+[[~/Documents/GitHub/Polisci209_2018/slides/week11/normal_pdf.pdf]]
+
+
+* Random Variables and Probability Distributions: Normal Distribution in R
+:PROPERTIES:
+    :BEAMER_opt: shrink=30
+    :END:
+
+#+begin_src R :eval no
+plot(x, pnorm(x), xlab = "x", ylab = "probability", type = "l",
+     main = "Cumulative distribution function", lwd = lwd)
+lines(x, pnorm(x, sd = 2), col = "red", lwd = lwd)
+lines(x, pnorm(x, mean = 1, sd = 0.5), col = "blue", lwd = lwd)
+#+end_src
+
+
+* Random Variables and Probability Distributions: Normal Distribution in R
+
+#+ATTR_LATEX: :width 5cm
+[[~/Documents/GitHub/Polisci209_2018/slides/week11/normal_cdf.pdf]]
+
+
+* Random Variables and Probability Distributions: Normal Distribution
+
+Let $X \sim N(\mu,\,\sigma^{2})$, and c be some constant
+
+- Adding/subtracting to/from a random variable that is normally distributed also results in a variable with a normal distribution:
+  Z = X + c then $Z \sim N(\mu +c,\,\sigma^{2})$
+
+#+BEAMER: \pause
+
+
+- Multiplying or dividing a random variable that is normally distributed also results in a variable with a normal distribution:
+ $Z = X\times c$ then $Z  \sim N(\mu \times c,\,(\sigma \times c)^{2})$
+
+- Z-score of a random variable that is normally distributed has mean 0 and sd = 1
+
+
+* Random Variables and Probability Distributions: Normal Distribution
+
+Curve of the standard normal distribution:
+
+- Symmetric around 0
+- Total area under the curve is 100%
+- Area between -1 and 1 is ~68%
+- Area between -2 and 2 is ~95%
+- Area between -3 and 3 is ~99.7%
+
+* Random Variables and Probability Distributions: Normal Distribution
+:PROPERTIES:
+    :BEAMER_opt: shrink=30
+    :END:
+
+#+begin_src R :eval no
+x <- seq(from = -7, to = 7, by = 0.01)
+lwd <- 1.5
+plot(x, dnorm(x), xlab = "x", ylab = "density", type = "l",
+     main = "Probability density function", ylim = c(0, 0.9))
+abline(v= -1, col = "red")
+abline(v= 1, col = "red")
+abline(v= -2, col = "green")
+abline(v= 2, col = "green")
+#+end_src
+
+
+
+* Random Variables and Probability Distributions: Normal Distribution
+
+#+ATTR_LATEX: :width 7cm
+[[~/Documents/GitHub/Polisci209_2018/slides/week11/normal_example.pdf]]
+
+
+* Random Variables and Probability Distributions: Normal Distribution
+
+Curve of the *any* normal distribution:
+
+- Symmetric around 0
+- Total area under the curve is 100%
+- Area between -1SD and +1SD is ~68%
+- Area between -2SD and +2SD is ~95%
+- Area between -3SD and +3SD is ~99.7%
+
+
+* Random Variables
+
+/Expectations/, /Means/, and /Variances/
+
+For probability distributions, means should not be confused with /sample means/
+
+Expectations or means of a random variable have specific meanings for its the probability distribution
+
+
+* Means and Expectation
+
+A sample mean varies from sample to sample
+
+Mean of a probability distribution is a theoretical construct and constant
+
+#+BEAMER: \pause
+
+Example: Age of undergraduate body at A&M
+
+* Means and Expectation
+
+The expectation of a random variable is equal to the sum of all possibilities /weighted/ by the probabilities
+
+#+BEAMER: \pause
+
+Example: expectation of rolling one die
+
+$\E(X)$ = $\frac{1}{6} \times 1 + \frac{1}{6} \times 2 + \frac{1}{6} \times 3 + \frac{1}{6} \times 4 \frac{1}{6} \times 5 \frac{1}{6} \times 6 = 3.5$
+
+
+
+* Means and Expectation
+
+The expectation of a random variable is equal to the sum of all possibilities /weighted/ by the probabilities
+
+\begin{equation*}
+     \E(X) \ = \ \left\{\begin{array}{ll}
+                          \sum_{x} x\ f(x)
+                          & \textsf{if } X \ \textsf{is discrete} \\
+                          \int x\ f(x) dx & \textsf{if } X \ \textsf{is continuous}
+                        \end{array}\right.
+\end{equation*}
+
+* Means and Expectation
+
+Remember the lottery!
+
+Expected value: winnings $\times$ p(winning) + 0 $\times$ p(not winning)
+
+
+* Means and Expectation
+
+What is $\E(X)$ for the number of heads in 100 coin flips?
+
+#+BEAMER: \pause
+
+$\E(X) = 0.5\times 1 + 0.5\times 1+ ... + 0.5\times 1 = 0.5*100 = 50$
+
+* Variance
+
+- Variance is standard deviation squared
+
+- Variance in a probability distribution indicates how much uncertainty exists
+
+- Similar *but not the same* as sample standard deviation
+
+* Variance
+
+Population variance: $\V(X) \ = \ \E[\{X - \E(X)\}^2] \ = \ \E(X^2) - \{\E(X)\}^2$

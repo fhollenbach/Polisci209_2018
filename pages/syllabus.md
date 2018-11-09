@@ -519,25 +519,26 @@ notification.__
 
 #### Monday, November 5th: More Probability
 - Read & Work through QSS 6.3
+- [Slides Random Variables](../slides/week11/week11.pdf)
 
 
 #### Wednesday, November 7th: Starting Writing Assignment 2
 - Read & Work through QSS 6.4 - 6.5
-- Assignment due: QSS exercise 6.6.1 (Questions 1-4)
 - [PresData for Writing Assignment 2](../data/Presdata.csv)
 - [Writing Assignment 2](../slides/week10/WritingAssignment2.pdf)
 
 #### Friday, November 9th: Large Sample Theorems
-- Homework finish SWIRL Exercise PROBABILITY 2
+- Assignment due: QSS exercise 6.6.1 (Questions 1-4)
 
 
 
 ## Week 12
 
-#### Monday, November 12th: Introduction to Uncertainty
-- Read & Work through QSS Chapter 7.1.1 - 7.1.4
+#### Monday, November 12th: Law of Large Numbers
+- Homework finish SWIRL Exercise PROBABILITY 2
 
-#### Wednesday, November 14th:  Introduction to Uncertainty Continued
+#### Wednesday, November 14th:  Introduction to Uncertainty
+- Read & Work through QSS Chapter 7.1.1 - 7.1.4
 
 
 #### Friday, November 16th:  In Class Exercises about Uncertainty
