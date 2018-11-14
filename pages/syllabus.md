@@ -539,7 +539,7 @@ notification.__
 
 #### Wednesday, November 14th:  Introduction to Uncertainty
 - Read & Work through QSS Chapter 7.1.1 - 7.1.4
-
+- [Slides Week 13](../slides/week13/week13.pdf)
 
 #### Friday, November 16th:  In Class Exercises about Uncertainty
 - Read & Work through QSS Chapter 7.1.5 - 7.1.6
