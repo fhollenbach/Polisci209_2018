@@ -1,4 +1,4 @@
-% Created 2018-11-13 Tue 10:14
+% Created 2018-11-15 Thu 21:34
 % Intended LaTeX compiler: pdflatex
 \documentclass[presentation]{beamer}
 \usepackage[utf8]{inputenc}
@@ -48,7 +48,7 @@ citecolor=blue,filecolor=blue,menucolor=blue,urlcolor=blue]{hyperref}
 \maketitle
 
 
-\begin{frame}[label={sec:orgbe86744}]{Random Variables and Probability Distributions}
+\begin{frame}[label={sec:org5f660ea}]{Random Variables and Probability Distributions}
 \begin{itemize}
 \item What is a random variable? We assigns a number to an event
 \begin{itemize}
@@ -66,7 +66,7 @@ Probability distribution: Probability of an event that a random variable takes a
 \end{frame}
 
 
-\begin{frame}[label={sec:orgfea3f72}]{Random Variables and Probability Distributions}
+\begin{frame}[label={sec:orgedf0a05}]{Random Variables and Probability Distributions}
 \begin{itemize}
 \item P(coin =1); P(coin = 0)
 \item P(election = 1); P(election = 0)
@@ -74,7 +74,7 @@ Probability distribution: Probability of an event that a random variable takes a
 \end{frame}
 
 
-\begin{frame}[label={sec:orgc84f591}]{Random Variables and Probability Distributions}
+\begin{frame}[label={sec:org7a40ade}]{Random Variables and Probability Distributions}
 \begin{itemize}
 \item \alert{Probability density function (PDF)}: f(x) How likely does X take a particular value?
 \item \alert{Probability mass function (PMF)}: When X is discrete, f(x)=P(X =x)
@@ -93,7 +93,7 @@ Probability distribution: Probability of an event that a random variable takes a
 \end{frame}
 
 
-\begin{frame}[fragile,label={sec:orgc3b94b1}]{Random Variables and Probability Distributions: Binomial Distribution}
+\begin{frame}[fragile,label={sec:org7ef6b24}]{Random Variables and Probability Distributions: Binomial Distribution}
  \begin{itemize}
 \item \alert{PMF}: for \(x \in \{0, 1, \dots, n\}\),
 \(f(x) \ = \ P(X = x) \ = \ {n \choose x} p^x (1-p)^{n-x}\)
@@ -116,7 +116,7 @@ dbinom(x = 2, size = 4, prob = 0.1) ## prob of 2 successes in 4 trials with p =0
 
 
 
-\begin{frame}[fragile,label={sec:org0f189bc}]{Random Variables and Probability Distributions: Binomial Distribution}
+\begin{frame}[fragile,label={sec:orgefdd2c4}]{Random Variables and Probability Distributions: Binomial Distribution}
  \begin{itemize}
 \item \alert{CDF}: for \(x \in \{0, 1, \dots, n\}\)
 \(F(x) \ = \ P(X \le x) \ = \ \sum_{k = 0}^x {n\choose k} p^k (1-p)^{n-k}\)
@@ -136,7 +136,7 @@ pbinom(2, size = 4, prob = 0.1) ## prob of 2 or fewer successes in 4 trials with
 \end{verbatim}
 \end{frame}
 
-\begin{frame}[fragile,label={sec:orgfed2307}]{PMF and CDF}
+\begin{frame}[fragile,label={sec:org7e89944}]{PMF and CDF}
  CDF of F(x) is equal to the sum of the results from calculating the PMF for all values smaller and equal to x
 
 \pause
@@ -156,7 +156,7 @@ sum(dbinom(c(0,1,2),4,0.1)) ## summing up the pdfs
 \end{verbatim}
 \end{frame}
 
-\begin{frame}[label={sec:org591ecee}]{Random Variables and Probability Distributions: Binomial Distribution}
+\begin{frame}[label={sec:org5cebe3d}]{Random Variables and Probability Distributions: Binomial Distribution}
 \begin{itemize}
 \item Example: flip a fair coin 3 times
 
@@ -167,7 +167,7 @@ sum(dbinom(c(0,1,2),4,0.1)) ## summing up the pdfs
 \end{frame}
 
 
-\begin{frame}[fragile,shrink=35,label={sec:orga49a444}]{Random Variables and Probability Distributions: Binomial Distribution}
+\begin{frame}[fragile,shrink=35,label={sec:orgb1f5b02}]{Random Variables and Probability Distributions: Binomial Distribution}
  \begin{verbatim}
 x <- 0:3
 barplot(dbinom(x, size = 3, prob = 0.5), ylim = c(0, 0.4), names.arg = x, xlab = "x",
@@ -177,14 +177,14 @@ barplot(dbinom(x, size = 3, prob = 0.5), ylim = c(0, 0.4), names.arg = x, xlab =
 
 
 
-\begin{frame}[label={sec:orgca4c973}]{Random Variables and Probability Distributions: Binomial Distribution}
+\begin{frame}[label={sec:org8b91b94}]{Random Variables and Probability Distributions: Binomial Distribution}
 \begin{center}
 \includegraphics[width=6cm]{/Users/florianhollenbach/Documents/GitHub/Polisci209_2018/slides/week11/barplot.pdf}
 \end{center}
 \end{frame}
 
 
-\begin{frame}[fragile,shrink=35,label={sec:org7da350a}]{Random Variables and Probability Distributions: Binomial Distribution}
+\begin{frame}[fragile,shrink=35,label={sec:org0c12b64}]{Random Variables and Probability Distributions: Binomial Distribution}
  \begin{verbatim}
 x <- -1:4
 pb <- pbinom(x, size = 3, prob = 0.5)
@@ -201,7 +201,7 @@ points(x[2:(length(x)-1)], pb[1:(length(x)-2)])
 
 
 
-\begin{frame}[label={sec:orga2789f9}]{Random Variables and Probability Distributions: Binomial Distribution}
+\begin{frame}[label={sec:org2c7ac6a}]{Random Variables and Probability Distributions: Binomial Distribution}
 \begin{center}
 \includegraphics[width=6cm]{/Users/florianhollenbach/Documents/GitHub/Polisci209_2018/slides/week11/cdf_binom.pdf}
 \end{center}
@@ -209,7 +209,7 @@ points(x[2:(length(x)-1)], pb[1:(length(x)-2)])
 
 
 
-\begin{frame}[label={sec:org592e025}]{Random Variables and Probability Distributions: Normal Distribution}
+\begin{frame}[label={sec:org1a9a5aa}]{Random Variables and Probability Distributions: Normal Distribution}
 \alert{Normal distribution}
 
 \begin{center}
@@ -219,7 +219,7 @@ points(x[2:(length(x)-1)], pb[1:(length(x)-2)])
 
 
 
-\begin{frame}[label={sec:org22faf0d}]{Random Variables and Probability Distributions: Normal Distribution}
+\begin{frame}[label={sec:org17b3814}]{Random Variables and Probability Distributions: Normal Distribution}
 \alert{Normal distribution} also called \alert{Gaussian distribution}
 
 
@@ -230,7 +230,7 @@ points(x[2:(length(x)-1)], pb[1:(length(x)-2)])
 \end{frame}
 
 
-\begin{frame}[label={sec:org48f2f15}]{Normal distribution}
+\begin{frame}[label={sec:org47d6e1e}]{Normal distribution}
 \begin{itemize}
 \item Takes on values from -\(\infty\) to \(\infty\)
 \item Defined by two things: \(\mu\) and \(\sigma^{2}\)
@@ -248,7 +248,7 @@ points(x[2:(length(x)-1)], pb[1:(length(x)-2)])
 
 
 
-\begin{frame}[fragile,label={sec:orgdae4942}]{Random Variables and Probability Distributions: Normal Distribution}
+\begin{frame}[fragile,label={sec:org05219cb}]{Random Variables and Probability Distributions: Normal Distribution}
  \alert{Normal distribution} with mean \(\mu\) and standard deviation \(\sigma\)
 \begin{itemize}
 \item \alert{PDF}:
@@ -270,7 +270,7 @@ dnorm(2, mean = 2, sd = 2) ## probability of x =2 with normal variable mean 2 sd
 
 
 
-\begin{frame}[fragile,label={sec:org49fa151}]{Random Variables and Probability Distributions: Normal Distribution}
+\begin{frame}[fragile,label={sec:orgb29ddf5}]{Random Variables and Probability Distributions: Normal Distribution}
  \begin{itemize}
 \item \alert{CDF} (no simple formula. use \R{} to compute it):
 \(F(x) \ = \ P(X \le x) \ = \ \int_{-\infty}^x
@@ -292,7 +292,7 @@ pnorm(2, mean = 2, sd = 2) ## probability of x =2 with normal variable mean 2 sd
 \end{frame}
 
 
-\begin{frame}[label={sec:orge6440f4}]{Normal distribution}
+\begin{frame}[label={sec:orgbcf0e7a}]{Normal distribution}
 \begin{itemize}
 \item Normal distribution is symmetric around the mean
 \item Mean = Median
@@ -303,14 +303,14 @@ pnorm(2, mean = 2, sd = 2) ## probability of x =2 with normal variable mean 2 sd
 
 
 
-\begin{frame}[label={sec:orgb2d4a33}]{Random Variables and Probability Distributions: Normal Distribution}
+\begin{frame}[label={sec:org03e82cc}]{Random Variables and Probability Distributions: Normal Distribution}
 \begin{center}
 \includegraphics[width=5cm]{/Users/florianhollenbach/Documents/GitHub/Polisci209_2018/slides/week11/normal.pdf}
 \end{center}
 \end{frame}
 
 
-\begin{frame}[fragile,shrink=30,label={sec:org6af5946}]{Random Variables and Probability Distributions: Normal Distribution in R}
+\begin{frame}[fragile,shrink=30,label={sec:org8674453}]{Random Variables and Probability Distributions: Normal Distribution in R}
  \begin{verbatim}
 x <- seq(from = -7, to = 7, by = 0.01)
 plot(x, dnorm(x), xlab = "x", ylab = "density", type = "l",
@@ -321,14 +321,14 @@ lines(x, dnorm(x, mean = 1, sd = 0.5), col = "blue", lwd = lwd)
 \end{frame}
 
 
-\begin{frame}[label={sec:orga6fa808}]{Random Variables and Probability Distributions: Normal Distribution in R}
+\begin{frame}[label={sec:org34881dd}]{Random Variables and Probability Distributions: Normal Distribution in R}
 \begin{center}
 \includegraphics[width=5cm]{/Users/florianhollenbach/Documents/GitHub/Polisci209_2018/slides/week11/normal_pdf.pdf}
 \end{center}
 \end{frame}
 
 
-\begin{frame}[fragile,shrink=30,label={sec:org1be3f6b}]{Random Variables and Probability Distributions: Normal Distribution in R}
+\begin{frame}[fragile,shrink=30,label={sec:orgdfa7e32}]{Random Variables and Probability Distributions: Normal Distribution in R}
  \begin{verbatim}
 plot(x, pnorm(x), xlab = "x", ylab = "probability", type = "l",
      main = "Cumulative distribution function", lwd = lwd)
@@ -338,14 +338,14 @@ lines(x, pnorm(x, mean = 1, sd = 0.5), col = "blue", lwd = lwd)
 \end{frame}
 
 
-\begin{frame}[label={sec:orga8a5b9a}]{Random Variables and Probability Distributions: Normal Distribution in R}
+\begin{frame}[label={sec:org8151561}]{Random Variables and Probability Distributions: Normal Distribution in R}
 \begin{center}
 \includegraphics[width=5cm]{/Users/florianhollenbach/Documents/GitHub/Polisci209_2018/slides/week11/normal_cdf.pdf}
 \end{center}
 \end{frame}
 
 
-\begin{frame}[label={sec:orgffc7549}]{Random Variables and Probability Distributions: Normal Distribution}
+\begin{frame}[label={sec:org0301030}]{Random Variables and Probability Distributions: Normal Distribution}
 Let \(X \sim N(\mu,\,\sigma^{2})\), and c be some constant
 
 \begin{itemize}
@@ -365,7 +365,7 @@ Z = X + c then \(Z \sim N(\mu +c,\,\sigma^{2})\)
 \end{frame}
 
 
-\begin{frame}[label={sec:org529db18}]{Random Variables and Probability Distributions: Normal Distribution}
+\begin{frame}[label={sec:orgde8f89c}]{Random Variables and Probability Distributions: Normal Distribution}
 Curve of the standard normal distribution:
 
 \begin{itemize}
@@ -377,7 +377,7 @@ Curve of the standard normal distribution:
 \end{itemize}
 \end{frame}
 
-\begin{frame}[fragile,shrink=30,label={sec:org3754d36}]{Random Variables and Probability Distributions: Normal Distribution}
+\begin{frame}[fragile,shrink=30,label={sec:orgfbb04d7}]{Random Variables and Probability Distributions: Normal Distribution}
  \begin{verbatim}
 x <- seq(from = -7, to = 7, by = 0.01)
 lwd <- 1.5
@@ -392,18 +392,18 @@ abline(v= 2, col = "green")
 
 
 
-\begin{frame}[label={sec:org89cdec9}]{Random Variables and Probability Distributions: Normal Distribution}
+\begin{frame}[label={sec:org307ef66}]{Random Variables and Probability Distributions: Normal Distribution}
 \begin{center}
 \includegraphics[width=7cm]{/Users/florianhollenbach/Documents/GitHub/Polisci209_2018/slides/week11/normal_example.pdf}
 \end{center}
 \end{frame}
 
 
-\begin{frame}[label={sec:org28f6639}]{Random Variables and Probability Distributions: Normal Distribution}
+\begin{frame}[label={sec:org8f8d974}]{Random Variables and Probability Distributions: Normal Distribution}
 Curve of the \alert{any} normal distribution:
 
 \begin{itemize}
-\item Symmetric around 0
+\item Symmetric around mean
 \item Total area under the curve is 100\%
 \item Area between -1SD and +1SD is \textasciitilde{}68\%
 \item Area between -2SD and +2SD is \textasciitilde{}95\%
@@ -412,7 +412,7 @@ Curve of the \alert{any} normal distribution:
 \end{frame}
 
 
-\begin{frame}[label={sec:orge32bd9b}]{Random Variables}
+\begin{frame}[label={sec:org2c3b447}]{Random Variables}
 \emph{Expectations}, \emph{Means}, and \emph{Variances}
 
 For probability distributions, means should not be confused with \emph{sample means}
@@ -421,7 +421,7 @@ Expectations or means of a random variable have specific meanings for its the pr
 \end{frame}
 
 
-\begin{frame}[label={sec:org11bf46a}]{Means and Expectation}
+\begin{frame}[label={sec:org3e3fc86}]{Means and Expectation}
 A sample mean varies from sample to sample
 
 Mean of a probability distribution is a theoretical construct and constant
@@ -431,7 +431,7 @@ Mean of a probability distribution is a theoretical construct and constant
 Example: Age of undergraduate body at A\&M
 \end{frame}
 
-\begin{frame}[label={sec:org12de81d}]{Means and Expectation}
+\begin{frame}[label={sec:org7d52123}]{Means and Expectation}
 The expectation of a random variable is equal to the sum of all possibilities \emph{weighted} by the probabilities
 
 \pause
@@ -443,7 +443,7 @@ Example: expectation of rolling one die
 
 
 
-\begin{frame}[label={sec:org0db51f0}]{Means and Expectation}
+\begin{frame}[label={sec:orgc511f9b}]{Means and Expectation}
 The expectation of a random variable is equal to the sum of all possibilities \emph{weighted} by the probabilities
 
 \begin{equation*}
@@ -455,14 +455,14 @@ The expectation of a random variable is equal to the sum of all possibilities \e
 \end{equation*}
 \end{frame}
 
-\begin{frame}[label={sec:org50d8c2a}]{Means and Expectation}
+\begin{frame}[label={sec:org42917ab}]{Means and Expectation}
 Remember the lottery!
 
 Expected value: winnings \(\times\) p(winning) + 0 \(\times\) p(not winning)
 \end{frame}
 
 
-\begin{frame}[label={sec:orgc9d9acd}]{Means and Expectation}
+\begin{frame}[label={sec:orgd59f084}]{Means and Expectation}
 What is \(\E(X)\) for the number of heads in 100 coin flips?
 
 \pause
@@ -470,7 +470,7 @@ What is \(\E(X)\) for the number of heads in 100 coin flips?
 \(\E(X) = 0.5\times 1 + 0.5\times 1+ ... + 0.5\times 1 = 0.5*100 = 50\)
 \end{frame}
 
-\begin{frame}[label={sec:org8024de8}]{Variance}
+\begin{frame}[label={sec:orgdc33274}]{Variance}
 \begin{itemize}
 \item Variance is standard deviation squared
 
@@ -480,7 +480,7 @@ What is \(\E(X)\) for the number of heads in 100 coin flips?
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orgb1a9c5a}]{Variance}
+\begin{frame}[label={sec:orgb1bd9cc}]{Variance}
 Population variance: \(\V(X) \ = \ \E[\{X - \E(X)\}^2] \ = \ \E(X^2) - \{\E(X)\}^2\)
 \end{frame}
 \end{document}

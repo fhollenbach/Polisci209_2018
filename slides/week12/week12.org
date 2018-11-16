@@ -342,7 +342,7 @@ abline(v= 2, col = "green")
 
 Curve of the *any* normal distribution:
 
-- Symmetric around 0
+- Symmetric around mean
 - Total area under the curve is 100%
 - Area between -1SD and +1SD is ~68%
 - Area between -2SD and +2SD is ~95%
