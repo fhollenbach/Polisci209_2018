@@ -173,9 +173,11 @@ We estimate the standard deviation of the sampling distribution from the observe
 
 * Polling Example
 
-Say we took a sample of 1000 students and asked whether they support Jimbo or not
+Say we took a sample of 1500 students and asked whether they support Jimbo or not
 
 Define a random variable $X_{i} = 1$ if student /i/ supports Jimbo, $X_{i}=0$ if not
+
+#+BEAMER: \pause
 
 Binomial distribution with success probability p and size N where p is the proportion of /all students/ who support Jimbo (population dist)
 
@@ -292,7 +294,7 @@ We can use the approximation to the sampling distribution, $\overline{X} \approx
 Confidence intervals give a range of values that is likely to contain the true value
 
 #+BEAMER: \pause
-To start, we select a probability value for our confidence level: usually 95\%
+To start, we select a probability value for our confidence level: usually 95%
 
 * Confidence Intervals
 
@@ -310,7 +312,7 @@ Put differently
 
 CI($\alpha$) = $\overline{X} - z_{\frac{\alpha}{2}} \times SE$,  $\overline{X} + z_{\frac{\alpha}{2}} \times SE$
 
-$z_{\frac{\alpha}{2}}$ is the critical value which equals $(1 − \frac{\alpha}{2})$ quantile of the standard normal distribution
+$z_{\frac{\alpha}{2}}$ is the critical value which equals (1 − $\frac{\alpha}{2})$ quantile of the standard normal distribution
 
 * Confidence interval
 
@@ -339,7 +341,7 @@ Technically the CI is *not* the probability of the true parameter being between 
 #+BEAMER: \pause
 Remember, in our view the true parameter is fixed
 
-Instead: "955% confidence intervals contain the true value of the parameter 95% of the time during a hypothetically repeated data generating process" (Imai 2017)
+Instead: "95% confidence intervals contain the true value of the parameter 95% of the time during a hypothetically repeated data generating process" (Imai 2017)
 
 * Confidence interval interpretation
 
@@ -353,7 +355,7 @@ CI($\alpha$) = $\overline{X} - z_{\frac{\alpha}{2}} \times SE$,  $\overline{X} +
 
 #+BEAMER: \pause
 
-CI(0.05) = $0.55 - 1.96 \times 0.013$,  0.55 +  1.96 \times 0.013$ = 0.524, 0.576
+CI(0.05) = $0.55 - 1.96 \times 0.013$,  $0.55 +  1.96 \times 0.013$ = 0.524, 0.576
 
 
 * Confidence interval
@@ -363,7 +365,7 @@ What if we don't know the variance of the estimator?
 Let's use the variance of the sample?
 
 #+begin_src R :eval no
-x <- rbinom(1000,1,0.7)
+x <- rbinom(1500,1,0.7)
 var <-var(x)/1500
 SE <- sqrt(var)
 #+end_src
@@ -376,7 +378,7 @@ SE = 0.013
 #+begin_src R :eval no
 xbar <- rep(NA, 10000)
 for(i in 1:10000){
-  x <- rbinom(1000,1,0.7)
+  x <- rbinom(1500,1,0.55)
   xbar[i] <-mean(x)
 }
 #+end_src
