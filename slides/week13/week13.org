@@ -384,3 +384,70 @@ for(i in 1:10000){
 #+end_src
 
 Write an R-script to test our confidence interval for Jimbo!
+
+
+* Margin of Error in Surveys
+
+- Margin of error is usually the difference from estimate to upper/lower 95\% confidence interval
+
+- Margin of error: $z_{0.025} \times \hat{SE} \approx  z_{0.025} \times \sqrt{\frac{\overline{X} \times (1-\overline{X})}{N}}$
+
+
+* From Margin of Error to Sample Size
+
+N $\approx \frac{1.96 \times p \times (1-p)}{\text{margin of error}^{2}}$
+
+
+* In class Exercise
+:PROPERTIES:
+    :BEAMER_opt: shrink=25
+    :END:
+
+To isolate the causal effect of a criminal record for black and white applicants, Pager ran an audit experiment. In this type of experiment, researchers present two similar people that differ only according to one trait thought to be the source of discrimination.
+
+To examine the role of a criminal record, Pager hired a pair of white men and a pair of black men and instructed them to apply for existing entry-level jobs in the city of Milwaukee. The men in each pair were matched on a number of dimensions, including physical appearance and self-presentation. As much as possible, the only difference between the two was that Pager randomly varied which individual in the pair would indicate to potential employers that he had a criminal record. Further, each week, the pair alternated which applicant would present himself as an ex-felon. To determine how incarceration and race influence employment chances, she compared callback rates among applicants with and without a criminal background and calculated how those callback rates varied by race.
+
+* In class Exercise
+
+Download data criminalrecord.csv from the class website and read into /R/
+
+Summarize the data, what variables do you see?
+
+
+* In class Exercise
+:PROPERTIES:
+    :BEAMER_opt: shrink=30
+    :END:
+
+
+| Name        | Description                                                                                                  |
+| jobid       | Job ID number                                                                                                |
+| callback    | 1 if tester received a callback, 0 if the tester did not receive a callback.                                 |
+| black       | 1 if the tester is black, 0 if the tester is white.                                                          |
+| crimrec     | 1 if the tester has a criminal record, 0 if the tester does not.                                             |
+| interact    | 1 if tester interacted with employer during application, 0 if tester doesn’t      |
+| city        | 1 is job is located in the city center, 0 if job is located in the suburbs.                                  |
+| distance    | Job’s average distance to downtown.                                                                          |
+| custserv    | 1 if job is in the costumer service sector, 0 if it is not.                                                  |
+| manualskill | 1 if job requires manual skills, 0 if it does not.                                                           |
+
+
+* Question 1
+
+How many observations are in the data? In how many cases is the tester black? In how many cases is he white?
+
+* Question 2
+
+Now we examine the central question of the study. Calculate the proportion of callbacks for white applicants with a criminal record, white applicants without a criminal record, black applicants with a criminal record, and black applicants without a criminal record.
+
+* Question 3
+
+Now consider the callback rate for white applicants with a criminal record. Construct a 95% confidence interval around this estimate. Also, construct a 99% confidence interval around this estimate.
+
+* Question 4
+
+Calculate the estimated effect of a criminal record for white applicants by comparing the callback rate in the treatment condition and the callback rate in the control condition. Create a 95% confidence interval around this estimate. Next, describe the estimate and confidence interval in a way that could be understood by a general audience.
+
+* Question 5
+
+Assuming a null hypothesis that there is no difference in callback rates between white people with a criminal record and white people without a criminal record, what is the probability that we would observe a difference as large or larger than the one that we observed in a sample of this size?

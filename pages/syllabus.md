@@ -553,7 +553,7 @@ notification.__
 #### Monday, November 19th: In Class Exercises on Uncertainty
 - Read & Work through QSS Chapter 7.1.5 - 7.1.6
 - Submit Peer-Review Comments for Writing Assignment 2 on eCampus
-
+- [Data Criminal Record](../slides/week13/criminalrecord.csv)
 
 
 #### Wednesday, November 21st:
