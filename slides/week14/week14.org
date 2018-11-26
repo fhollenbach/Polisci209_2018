@@ -1,0 +1,32 @@
+
+
+
+#+OPTIONS: H:1
+#+LATEX_CLASS: beamer
+#+COLUMNS: %45ITEM %10BEAMER_env(Env) %10BEAMER_act(Act) %4BEAMER_col(Col) %8BEAMER_opt(Opt)
+#+BEAMER_THEME: metropolis
+#+BEAMER_COLOR_THEME:
+#+BEAMER_FONT_THEME:
+#+BEAMER_INNER_THEME:
+#+BEAMER_OUTER_THEME:
+#+BEAMER_HEADER:
+
+
+#+LATEX_HEADER: \setbeamertemplate{frame footer}{\insertshortauthor}
+
+#+LATEX_HEADER: \setbeamerfont{page number in head/foot}{size=\tiny}
+#+LATEX_HEADER: \setbeamercolor{footline}{fg=gray}
+#+LATEX_HEADER: \usepackage{amsmath}
+#+LATEX_HEADER: \author{Florian Hollenbach}
+
+
+#+TITLE: Political Science 209 - Fall 2018
+#+SUBTITLE: Hypothesis Testing
+#+AUTHOR: Florian Hollenbach
+#+DATE: \today
+#+EMAIL: fhollenbach@tamu.edu
+#+OPTIONS: toc:nil
+#+LATEX_HEADER: \usepackage[english]{isodate}
+#+LATEX_HEADER: \usepackage{amsmath,amsthm,amssymb,amsfonts}
+#+LATEX_HEADER: \newcommand{\E}{\mathbb{E}}
+#+LATEX_HEADER: \newcommand{\V}{\mathbb{V}}

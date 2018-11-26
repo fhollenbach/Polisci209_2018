@@ -398,6 +398,79 @@ Write an R-script to test our confidence interval for Jimbo!
 N $\approx \frac{1.96 \times p \times (1-p)}{\text{margin of error}^{2}}$
 
 
+* From Margin of Error to Sample Size
+
+The estimates of uncertainty discussed here only account for uncertainty due to random sampling!
+
+If there are other sources of bias, these can still be present and are unaccounted for.
+
+*what are two possibly reasons for bias in surveys?*
+
+#+BEAMER: \pause
+
+1. unit non-response bias
+2. item non-response bias
+
+* Uncertainty in Randomized Control Trials
+
+How do we estimate the ATE in RTCs?
+
+#+BEAMER: \pause
+
+Difference in means between treatment and control group
+
+* Uncertainty in Randomized Control Trials
+
+sample average in treated group $\overline{X}_{c}$ and control group $\overline{X}_{c}$
+
+#+BEAMER: \pause
+
+
+Standard error for the average in each group:
+1. $\hat{SE}_{t} = \sqrt{\frac{\hat{\sigma}^{2}_{t}}{N_{t}}}$
+2. $\hat{SE}_{c} = \sqrt{\frac{\hat{\sigma}^{2}_{c}}{N_{c}}}$
+
+What do we use for $\hat{\sigma^{2}}$?
+#+BEAMER: \pause
+sample variance! $\frac{\sum (\overline{X} - X_{i})^{2}}{N}$
+
+* Uncertainty in Randomized Control Trials
+
+We can use these SEs to construct confidence intervals around each of the averages, same process as for the survey (*if the samples are large enough*)
+
+But, this does not help us to calculate uncertainty for the difference in means.
+
+
+* Uncertainty in Randomized Control Trials
+
+Standard Error for difference in means estimator ($\overline{X}_{t} - \overline{X}_{c}$):
+
+$\hat{SE} = \sqrt{\frac{\V(X_{t})}{N_{t}} + \frac{\V(X_{c})}{N_{c}}}$
+
+* Uncertainty in Randomized Control Trials
+
+We can use the standard error to construct a 95% confidence interval for the difference in means:
+
+Example: ATE = 3.5, SE = 2.65
+
+CI?
+
+* Uncertainty in Randomized Control Trials
+
+We can use the standard error to construct a 95% confidence interval for the difference in means:
+
+Example: ATE = 3.5, SE = 2.65
+
+CI(0.05) = $3.5 - 1.96 \times 2.65$,  $3.5 +  1.96 \times 2.65$ = -1,694, 8.694
+
+*Too much uncertainty*
+
+
+* Uncertainty in Randomized Control Trials
+
+When evaluating effects, we usually judge them based on whether the 95% confidence interval covers zero or not.
+
+
 * In class Exercise
 :PROPERTIES:
     :BEAMER_opt: shrink=25
