@@ -580,10 +580,11 @@ Turkey Break!
 ## Week 15
 
 #### Monday, December 3rd: Review of Uncertainty
-- Assignment due: QSS exercise 7.5.3
+- Assignment due: QSS exercise 7.5.3 (only questions 1, 2, & 4)
 
 #### Wednesday, December 5th
 - Review for exam
+- Prepare questions to review
 
 
 ## Friday, December 7th: Exam for 209-905 from 10:00 – 12:00 p.m. (noon)
