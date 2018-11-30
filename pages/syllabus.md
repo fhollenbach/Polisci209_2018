@@ -573,7 +573,7 @@ Turkey Break!
 #### Friday, November 30th: In class Exercise on Regression with Uncertainty
 - Read & Work through QSS Chapter 7.3.5-7.4
 - Homework finish SWIRL Exercise UNCERTAINTY 3
-
+- [Last slides](../slides/week14/week14.pdf)
 
 
 
@@ -581,6 +581,7 @@ Turkey Break!
 
 #### Monday, December 3rd: Review of Uncertainty
 - Assignment due: QSS exercise 7.5.3 (only questions 1, 2, & 4)
+- [Data Homework](../slides/week14/nazis.csv)
 
 #### Wednesday, December 5th
 - Review for exam

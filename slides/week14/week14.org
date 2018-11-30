@@ -30,3 +30,35 @@
 #+LATEX_HEADER: \usepackage{amsmath,amsthm,amssymb,amsfonts}
 #+LATEX_HEADER: \newcommand{\E}{\mathbb{E}}
 #+LATEX_HEADER: \newcommand{\V}{\mathbb{V}}
+
+
+
+* Hypothesis Testing
+
+Goal: Try to determine whether result is due to chance or not
+
+Method: "/Proof/" by contradiction
+
+We try to reject the /null hypothesis/
+
+* Hypothesis Testing
+
+Generally we have two hypotheses:
+
+1.$H_{0}$ Null hypothesis: no relationship
+
+2.$H_{1}$ Alternative hypothesis: complement to null hypothesis: expected relationship
+
+* Hypothesis Testing
+
+We can *never* prove a hypothesis to be true or reject a hypothesis with certainty
+
+Instead, we may *fail to reject the null*
+
+We use data and statistical test to infer whether we can /reject or fail to reject the null/
+
+
+* Hypothesis Testing
+
+#+ATTR_LATEX: :width 9cm
+[[~/Documents/GitHub/Polisci209_2018/slides/week14/hyp.png]]
