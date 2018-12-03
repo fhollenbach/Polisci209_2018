@@ -421,7 +421,7 @@ Difference in means between treatment and control group
 
 * Uncertainty in Randomized Control Trials
 
-sample average in treated group $\overline{X}_{c}$ and control group $\overline{X}_{c}$
+sample average in treated group $\overline{X}_{t}$ and control group $\overline{X}_{c}$
 
 #+BEAMER: \pause
 
